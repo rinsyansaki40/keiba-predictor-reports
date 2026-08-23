@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>競馬予測レポート 2026-08-23</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --fg: #1a1a1a; --card-bg: #ffffff; --border: #e0e0dc;
+    --accent: #b3311f; --muted: #6b6b68; --good: #1f7a3f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161614; --fg: #ececea; --card-bg: #211f1c; --border: #3a3733; --muted: #a3a09b; --good: #4ecb7c; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 16px; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+    line-height: 1.5; max-width: 640px; margin-left: auto; margin-right: auto;
+  }
+  h1 { font-size: 1.3rem; margin-bottom: 4px; }
+  h2 { font-size: 1.05rem; border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-top: 28px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
+  .pick-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-top: 10px;
+  }
+  .pick-head { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); }
+  .pick-body { margin-top: 6px; font-size: 1.05rem; font-weight: 600; }
+  .pick-body .bet-type { color: var(--accent); margin-right: 8px; }
+  .pick-foot { margin-top: 8px; display: flex; gap: 14px; font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .pick-foot .stake { color: var(--good); font-weight: 600; }
+  .race-block {
+    border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px;
+    margin-top: 10px; background: var(--card-bg);
+  }
+  .race-block-head { font-weight: 600; }
+  .honmei { font-size: 0.9rem; color: var(--muted); margin: 4px 0; }
+  .no-rec { color: var(--muted); font-style: italic; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--border); }
+  .odds-detail, .ref-detail { margin-top: 8px; font-size: 0.85rem; color: var(--muted); }
+  .odds-detail summary, .ref-detail summary { cursor: pointer; }
+</style>
+</head>
+<body>
+  <h1>競馬予測レポート</h1>
+  <div class="subtitle">2026-08-23 ／ 予算1日10,000円(均等分割)</div>
+  
+        <section>
+          <h2>本日買うべきレース(3レース、合計9,900円)</h2>
+          
+    <div class="pick-card">
+      <div class="pick-head">
+        <span class="post-time">09:50</span>
+        <span class="race-name">2歳未勝利(中京1レース)</span>
+      </div>
+      <div class="pick-body">
+        <span class="bet-type">馬連</span>
+        <span class="selection">2-5 ラインエレガント・ベニバナ</span>
+      </div>
+      <div class="pick-foot">
+        <span class="stake">購入額 3,300円</span>
+        <span class="ev">EV 1.08</span>
+        <span class="odds">推定オッズ 4.8倍</span>
+      </div>
+    </div>
+    
+    <div class="pick-card">
+      <div class="pick-head">
+        <span class="post-time">10:10</span>
+        <span class="race-name">2歳新馬(新潟2レース)</span>
+      </div>
+      <div class="pick-body">
+        <span class="bet-type">三連複</span>
+        <span class="selection">1-3-7 オプティミスタ・プロテウス・タイヴァス</span>
+      </div>
+      <div class="pick-foot">
+        <span class="stake">購入額 3,300円</span>
+        <span class="ev">EV 1.21</span>
+        <span class="odds">推定オッズ 57.1倍</span>
+      </div>
+    </div>
+    
+    <div class="pick-card">
+      <div class="pick-head">
+        <span class="post-time">16:10</span>
+        <span class="race-name">豊川特別(中京8レース)</span>
+      </div>
+      <div class="pick-body">
+        <span class="bet-type">馬連</span>
+        <span class="selection">10-11 ゼンノフォトン・カーリキュー</span>
+      </div>
+      <div class="pick-foot">
+        <span class="stake">購入額 3,300円</span>
+        <span class="ev">EV 1.21</span>
+        <span class="odds">推定オッズ 16.4倍</span>
+      </div>
+    </div>
+    
+        </section>
+        
+  <section>
+    <h2>全レースのおすすめ買い目</h2>
+    
+    <div class="race-block">
+      <div class="race-block-head">09:40 2歳未勝利(新潟1レース)</div>
+      <p class='honmei'>◎本命: 12 ノーセット</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>10-12 セイウントレジャ・ノーセット</td><td>8.9倍</td><td>0.88</td></tr><tr><td>馬単</td><td>12-&gt;7 ノーセット-&gt;クールストラッチン</td><td>7.4倍</td><td>0.87</td></tr><tr><td>三連複</td><td>6-7-12 クールボビー・クールストラッチン・ノーセット</td><td>9.4倍</td><td>0.63</td></tr><tr><td>三連単</td><td>12-&gt;6-&gt;2 ノーセット-&gt;クールボビー-&gt;ディスペアーホープ</td><td>24.2倍</td><td>0.66</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>12 ノーセット</td><td>3.1倍</td><td>1.2倍</td><td>-1.9</td></tr><tr><td>2 ディスペアーホープ</td><td>7.5倍</td><td>11.5倍</td><td>+4.0</td></tr><tr><td>7 クールストラッチン</td><td>10.4倍</td><td>20.2倍</td><td>+9.8</td></tr><tr><td>6 クールボビー</td><td>15.6倍</td><td>6.4倍</td><td>-9.2</td></tr><tr><td>10 セイウントレジャ</td><td>18.0倍</td><td>26.2倍</td><td>+8.2</td></tr><tr><td>1 ソースウィート</td><td>30.2倍</td><td>35.2倍</td><td>+5.0</td></tr><tr><td>9 レオリアライズ</td><td>84.3倍</td><td>28.9倍</td><td>-55.4</td></tr><tr><td>11 センカンナガト</td><td>115.5倍</td><td>51.8倍</td><td>-63.7</td></tr><tr><td>3 ドッカイッチャッテ</td><td>137.2倍</td><td>30.9倍</td><td>-106.3</td></tr><tr><td>5 コスモティタノ</td><td>153.3倍</td><td>74.6倍</td><td>-78.7</td></tr><tr><td>8 シュアシング</td><td>234.0倍</td><td>76.9倍</td><td>-157.1</td></tr><tr><td>4 スノーキャップ</td><td>290.6倍</td><td>91.6倍</td><td>-199.0</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">09:50 2歳未勝利(中京1レース)</div>
+      <p class='honmei'>◎本命: 5 ベニバナ</p>
+      <table class='rec-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>2-5 ラインエレガント・ベニバナ</td><td>4.8倍</td><td>1.08</td></tr></tbody></table>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬単</td><td>5-&gt;2 ベニバナ-&gt;ラインエレガント</td><td>8.6倍</td><td>1.02</td></tr><tr><td>三連複</td><td>1-2-5 ビバームス・ラインエレガント・ベニバナ</td><td>8.0倍</td><td>0.79</td></tr><tr><td>三連単</td><td>4-&gt;2-&gt;5 プリンキピッサ-&gt;ラインエレガント-&gt;ベニバナ</td><td>21.1倍</td><td>0.69</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>5 ベニバナ</td><td>2.6倍</td><td>1.6倍</td><td>-1.0</td></tr><tr><td>4 プリンキピッサ</td><td>3.4倍</td><td>4.7倍</td><td>+1.3</td></tr><tr><td>2 ラインエレガント</td><td>4.3倍</td><td>5.7倍</td><td>+1.4</td></tr><tr><td>1 ビバームス</td><td>7.3倍</td><td>10.0倍</td><td>+2.7</td></tr><tr><td>6 ウインクローバー</td><td>10.0倍</td><td>12.7倍</td><td>+2.7</td></tr><tr><td>3 パストザクラウン</td><td>27.5倍</td><td>16.5倍</td><td>-11.0</td></tr><tr><td>7 レットミーゴー</td><td>169.8倍</td><td>89.0倍</td><td>-80.8</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:00 3歳未勝利(札幌1レース)</div>
+      <p class='honmei'>◎本命: 3 アイビーミャーオ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>3-5 アイビーミャーオ・シェイプオブユー</td><td>8.3倍</td><td>0.76</td></tr><tr><td>馬単</td><td>3-&gt;5 アイビーミャーオ-&gt;シェイプオブユー</td><td>14.4倍</td><td>0.75</td></tr><tr><td>三連複</td><td>3-6-12 アイビーミャーオ・ニシノギャルズ・メイショウマドンナ</td><td>14.1倍</td><td>0.57</td></tr><tr><td>三連単</td><td>12-&gt;3-&gt;8 メイショウマドンナ-&gt;アイビーミャーオ-&gt;ロングフルスペック</td><td>36.4倍</td><td>0.55</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>3 アイビーミャーオ</td><td>2.3倍</td><td>1.4倍</td><td>-0.9</td></tr><tr><td>12 メイショウマドンナ</td><td>3.7倍</td><td>7.7倍</td><td>+4.0</td></tr><tr><td>8 ロングフルスペック</td><td>6.3倍</td><td>31.8倍</td><td>+25.5</td></tr><tr><td>5 シェイプオブユー</td><td>5.6倍</td><td>7.6倍</td><td>+2.0</td></tr><tr><td>9 ペイシャクロス</td><td>6.6倍</td><td>14.6倍</td><td>+8.0</td></tr><tr><td>6 ニシノギャルズ</td><td>10.3倍</td><td>16.9倍</td><td>+6.6</td></tr><tr><td>4 ルーチェコメット</td><td>21.9倍</td><td>20.4倍</td><td>-1.5</td></tr><tr><td>10 ベルグランボヌール</td><td>17.5倍</td><td>13.2倍</td><td>-4.3</td></tr><tr><td>11 アジーザム</td><td>64.0倍</td><td>73.6倍</td><td>+9.6</td></tr><tr><td>7 トリアングルレディ</td><td>105.9倍</td><td>157.0倍</td><td>+51.1</td></tr><tr><td>1 アーミル</td><td>118.3倍</td><td>131.7倍</td><td>+13.4</td></tr><tr><td>2 アッシュグレイス</td><td>156.3倍</td><td>230.6倍</td><td>+74.3</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:10 2歳新馬(新潟2レース)</div>
+      <p class='honmei'>◎本命: 3 プロテウス</p>
+      <table class='rec-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>三連複</td><td>1-3-7 オプティミスタ・プロテウス・タイヴァス</td><td>57.1倍</td><td>1.21</td></tr></tbody></table>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>1-3 オプティミスタ・プロテウス</td><td>21.7倍</td><td>0.90</td></tr><tr><td>馬単</td><td>3-&gt;1 プロテウス-&gt;オプティミスタ</td><td>42.7倍</td><td>0.86</td></tr><tr><td>三連単</td><td>9-&gt;3-&gt;1 オーロラトレイル-&gt;プロテウス-&gt;オプティミスタ</td><td>278.8倍</td><td>1.16</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>3 プロテウス</td><td>34.0倍</td><td>4.6倍</td><td>-29.4</td></tr><tr><td>1 オプティミスタ</td><td>44.6倍</td><td>13.5倍</td><td>-31.1</td></tr><tr><td>7 タイヴァス</td><td>54.0倍</td><td>7.8倍</td><td>-46.2</td></tr><tr><td>9 オーロラトレイル</td><td>57.9倍</td><td>7.7倍</td><td>-50.2</td></tr><tr><td>6 アルバスタキヤ</td><td>59.0倍</td><td>15.5倍</td><td>-43.5</td></tr><tr><td>10 ロジグローリー</td><td>61.8倍</td><td>21.0倍</td><td>-40.8</td></tr><tr><td>5 ゼラニウム</td><td>43.3倍</td><td>15.3倍</td><td>-28.0</td></tr><tr><td>2 ノーブルフォース</td><td>64.3倍</td><td>76.1倍</td><td>+11.8</td></tr><tr><td>11 フォルスラヴィ</td><td>64.3倍</td><td>7.3倍</td><td>-57.0</td></tr><tr><td>8 スロノス</td><td>64.5倍</td><td>2.9倍</td><td>-61.6</td></tr><tr><td>4 グランドストーリー</td><td>71.4倍</td><td>22.9倍</td><td>-48.5</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:20 2歳新馬(中京2レース)</div>
+      <p class='honmei'>◎本命: 4 エトワールハマー</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>4-7 エトワールハマー・マンナット</td><td>8.8倍</td><td>0.84</td></tr><tr><td>馬単</td><td>5-&gt;4 マスリュウオー-&gt;エトワールハマー</td><td>7.4倍</td><td>0.89</td></tr><tr><td>三連複</td><td>4-5-6 エトワールハマー・マスリュウオー・ケイアイトリノ</td><td>10.3倍</td><td>0.68</td></tr><tr><td>三連単</td><td>7-&gt;4-&gt;5 マンナット-&gt;エトワールハマー-&gt;マスリュウオー</td><td>37.6倍</td><td>0.68</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>4 エトワールハマー</td><td>6.4倍</td><td>5.8倍</td><td>-0.6</td></tr><tr><td>5 マスリュウオー</td><td>6.5倍</td><td>6.2倍</td><td>-0.3</td></tr><tr><td>7 マンナット</td><td>17.9倍</td><td>4.5倍</td><td>-13.4</td></tr><tr><td>3 バヤールロック</td><td>28.3倍</td><td>13.5倍</td><td>-14.8</td></tr><tr><td>2 キトゥンズクラフト</td><td>28.4倍</td><td>2.4倍</td><td>-26.0</td></tr><tr><td>6 ケイアイトリノ</td><td>27.5倍</td><td>11.6倍</td><td>-15.9</td></tr><tr><td>1 コルソヴェローチェ</td><td>32.4倍</td><td>14.1倍</td><td>-18.3</td></tr><tr><td>8 リヴァイアサン</td><td>53.4倍</td><td>14.2倍</td><td>-39.2</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:30 2歳未勝利(札幌2レース)</div>
+      <p class='honmei'>◎本命: 5 ティアラード</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>5-9 ティアラード・アルデシンザン</td><td>6.9倍</td><td>0.70</td></tr><tr><td>馬単</td><td>9-&gt;5 アルデシンザン-&gt;ティアラード</td><td>14.5倍</td><td>0.76</td></tr><tr><td>三連複</td><td>1-5-8 デザートスピリット・ティアラード・サンレガート</td><td>17.2倍</td><td>0.51</td></tr><tr><td>三連単</td><td>5-&gt;9-&gt;1 ティアラード-&gt;アルデシンザン-&gt;デザートスピリット</td><td>36.3倍</td><td>0.46</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>5 ティアラード</td><td>1.9倍</td><td>2.5倍</td><td>+0.6</td></tr><tr><td>1 デザートスピリット</td><td>2.8倍</td><td>3.7倍</td><td>+0.9</td></tr><tr><td>9 アルデシンザン</td><td>3.6倍</td><td>8.4倍</td><td>+4.8</td></tr><tr><td>12 ムッチリスタイル</td><td>6.5倍</td><td>6.5倍</td><td>-0.0</td></tr><tr><td>8 サンレガート</td><td>6.7倍</td><td>14.3倍</td><td>+7.6</td></tr><tr><td>4 シガレス</td><td>6.5倍</td><td>23.0倍</td><td>+16.5</td></tr><tr><td>11 シークレットタワー</td><td>9.2倍</td><td>38.6倍</td><td>+29.4</td></tr><tr><td>2 トムクリオーザ</td><td>13.9倍</td><td>15.5倍</td><td>+1.6</td></tr><tr><td>10 ウィルレーヴィア</td><td>20.0倍</td><td>38.0倍</td><td>+18.0</td></tr><tr><td>3 リーゼントエース</td><td>20.6倍</td><td>25.2倍</td><td>+4.6</td></tr><tr><td>6 セールデュクール</td><td>63.3倍</td><td>34.4倍</td><td>-28.9</td></tr><tr><td>7 サンシルヴァリー</td><td>57.3倍</td><td>65.2倍</td><td>+7.9</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:40 2歳新馬(新潟3レース)</div>
+      <p class='honmei'>◎本命: 7 ガネット</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>2-7 ヴィゴーレテソーロ・ガネット</td><td>16.5倍</td><td>0.81</td></tr><tr><td>馬単</td><td>7-&gt;12 ガネット-&gt;ヴァルブロッサ</td><td>29.9倍</td><td>0.99</td></tr><tr><td>三連複</td><td>1-3-7 デススパイラル・ティシポネ・ガネット</td><td>37.2倍</td><td>0.66</td></tr><tr><td>三連単</td><td>3-&gt;12-&gt;7 ティシポネ-&gt;ヴァルブロッサ-&gt;ガネット</td><td>168.6倍</td><td>0.65</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>7 ガネット</td><td>7.6倍</td><td>6.1倍</td><td>-1.5</td></tr><tr><td>3 ティシポネ</td><td>11.6倍</td><td>10.3倍</td><td>-1.3</td></tr><tr><td>12 ヴァルブロッサ</td><td>12.2倍</td><td>6.0倍</td><td>-6.2</td></tr><tr><td>2 ヴィゴーレテソーロ</td><td>12.3倍</td><td>12.0倍</td><td>-0.3</td></tr><tr><td>1 デススパイラル</td><td>13.1倍</td><td>12.5倍</td><td>-0.6</td></tr><tr><td>8 ルーチェルナーレ</td><td>13.8倍</td><td>33.9倍</td><td>+20.1</td></tr><tr><td>9 ドミナント</td><td>16.4倍</td><td>2.5倍</td><td>-13.9</td></tr><tr><td>6 ランブリングガール</td><td>19.9倍</td><td>18.7倍</td><td>-1.2</td></tr><tr><td>4 レイヤードホワイト</td><td>28.2倍</td><td>21.5倍</td><td>-6.7</td></tr><tr><td>10 ヒーローシー</td><td>50.2倍</td><td>79.5倍</td><td>+29.3</td></tr><tr><td>5 セイウンシャラ</td><td>70.1倍</td><td>34.1倍</td><td>-36.0</td></tr><tr><td>11 コンセルノ</td><td>74.1倍</td><td>10.8倍</td><td>-63.3</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:50 2歳新馬(中京3レース)</div>
+      <p class='honmei'>◎本命: 4 ファミーリエ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>4-5 ファミーリエ・コトテーラー</td><td>16.3倍</td><td>0.83</td></tr><tr><td>馬単</td><td>4-&gt;2 ファミーリエ-&gt;サンクサンス</td><td>23.8倍</td><td>0.84</td></tr><tr><td>三連複</td><td>3-4-5 エイダンバローズ・ファミーリエ・コトテーラー</td><td>19.4倍</td><td>0.72</td></tr><tr><td>三連単</td><td>2-&gt;4-&gt;3 サンクサンス-&gt;ファミーリエ-&gt;エイダンバローズ</td><td>80.6倍</td><td>0.53</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>4 ファミーリエ</td><td>11.6倍</td><td>6.8倍</td><td>-4.8</td></tr><tr><td>3 エイダンバローズ</td><td>12.6倍</td><td>3.7倍</td><td>-8.9</td></tr><tr><td>2 サンクサンス</td><td>18.9倍</td><td>15.1倍</td><td>-3.8</td></tr><tr><td>8 ヴィスタグロッサ</td><td>22.1倍</td><td>16.8倍</td><td>-5.3</td></tr><tr><td>5 コトテーラー</td><td>26.1倍</td><td>17.7倍</td><td>-8.4</td></tr><tr><td>7 スティルラブハー</td><td>26.8倍</td><td>7.0倍</td><td>-19.8</td></tr><tr><td>6 セーズアマゾネス</td><td>31.7倍</td><td>8.4倍</td><td>-23.3</td></tr><tr><td>1 ポッドハンター</td><td>34.5倍</td><td>9.5倍</td><td>-25.0</td></tr><tr><td>9 ヴァーヴイレヴン</td><td>88.6倍</td><td>3.4倍</td><td>-85.2</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:00 3歳未勝利(札幌3レース)</div>
+      <p class='honmei'>◎本命: 11 アオイミズホ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>7-11 ジェイストリーク・アオイミズホ</td><td>8.2倍</td><td>0.72</td></tr><tr><td>馬単</td><td>11-&gt;10 アオイミズホ-&gt;エクラドット</td><td>25.5倍</td><td>0.79</td></tr><tr><td>三連複</td><td>2-7-11 ホウオウファラオ・ジェイストリーク・アオイミズホ</td><td>22.1倍</td><td>0.54</td></tr><tr><td>三連単</td><td>13-&gt;7-&gt;11 ファイアリービート-&gt;ジェイストリーク-&gt;アオイミズホ</td><td>78.0倍</td><td>0.51</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>11 アオイミズホ</td><td>3.5倍</td><td>3.6倍</td><td>+0.1</td></tr><tr><td>7 ジェイストリーク</td><td>4.5倍</td><td>6.8倍</td><td>+2.3</td></tr><tr><td>13 ファイアリービート</td><td>5.8倍</td><td>5.9倍</td><td>+0.1</td></tr><tr><td>10 エクラドット</td><td>8.3倍</td><td>13.0倍</td><td>+4.7</td></tr><tr><td>2 ホウオウファラオ</td><td>7.9倍</td><td>12.5倍</td><td>+4.6</td></tr><tr><td>4 レジオンポレール</td><td>13.1倍</td><td>7.4倍</td><td>-5.7</td></tr><tr><td>8 メイショウライゴー</td><td>11.9倍</td><td>14.7倍</td><td>+2.8</td></tr><tr><td>5 セラサイト</td><td>13.9倍</td><td>10.2倍</td><td>-3.7</td></tr><tr><td>6 セブンワンダーズ</td><td>17.2倍</td><td>18.3倍</td><td>+1.1</td></tr><tr><td>1 ブルーエ</td><td>13.3倍</td><td>26.9倍</td><td>+13.6</td></tr><tr><td>9 ジェッディンデデン</td><td>56.2倍</td><td>58.6倍</td><td>+2.4</td></tr><tr><td>14 アメリカンダンス</td><td>103.6倍</td><td>17.4倍</td><td>-86.2</td></tr><tr><td>3 ブルーアンビエンス</td><td>92.3倍</td><td>35.6倍</td><td>-56.7</td></tr><tr><td>12 ヒマラヤミュサ</td><td>222.1倍</td><td>115.9倍</td><td>-106.2</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:10 3歳未勝利(新潟4レース)</div>
+      <p class='honmei'>◎本命: 7 メビウスロマンス</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-10 ユイハホンキダゼ・ジーティーニッツァ</td><td>8.1倍</td><td>0.81</td></tr><tr><td>馬単</td><td>7-&gt;6 メビウスロマンス-&gt;ユイハホンキダゼ</td><td>14.9倍</td><td>0.76</td></tr><tr><td>三連複</td><td>4-7-10 ジャガーライズ・メビウスロマンス・ジーティーニッツァ</td><td>17.4倍</td><td>0.67</td></tr><tr><td>三連単</td><td>10-&gt;6-&gt;7 ジーティーニッツァ-&gt;ユイハホンキダゼ-&gt;メビウスロマンス</td><td>28.9倍</td><td>0.50</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>7 メビウスロマンス</td><td>3.8倍</td><td>11.1倍</td><td>+7.3</td></tr><tr><td>10 ジーティーニッツァ</td><td>3.8倍</td><td>6.0倍</td><td>+2.2</td></tr><tr><td>6 ユイハホンキダゼ</td><td>6.1倍</td><td>9.8倍</td><td>+3.7</td></tr><tr><td>1 ミッキーサウザンド</td><td>10.8倍</td><td>4.8倍</td><td>-6.0</td></tr><tr><td>12 ミエスタ</td><td>12.4倍</td><td>7.7倍</td><td>-4.7</td></tr><tr><td>4 ジャガーライズ</td><td>26.4倍</td><td>7.3倍</td><td>-19.1</td></tr><tr><td>8 ヴェロシスタ</td><td>37.2倍</td><td>19.3倍</td><td>-17.9</td></tr><tr><td>14 ブルーダイヤシチー</td><td>34.4倍</td><td>9.7倍</td><td>-24.7</td></tr><tr><td>11 ゼフィリア</td><td>78.8倍</td><td>27.6倍</td><td>-51.2</td></tr><tr><td>5 フランシスガリバー</td><td>78.8倍</td><td>17.2倍</td><td>-61.6</td></tr><tr><td>13 サトミノアカリ</td><td>94.7倍</td><td>8.3倍</td><td>-86.4</td></tr><tr><td>15 ノーブルスアーク</td><td>143.9倍</td><td>37.9倍</td><td>-106.0</td></tr><tr><td>9 ダイユウレゾナンス</td><td>397.8倍</td><td>92.3倍</td><td>-305.5</td></tr><tr><td>3 ピクシーゲイル</td><td>467.4倍</td><td>105.6倍</td><td>-361.8</td></tr><tr><td>2 パッサージュワイズ</td><td>445.2倍</td><td>141.6倍</td><td>-303.6</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:20 3歳未勝利(中京4レース)</div>
+      <p class='honmei'>◎本命: 2 グリーンゴー</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>2-8 グリーンゴー・クリノリキオー</td><td>16.1倍</td><td>0.78</td></tr><tr><td>馬単</td><td>2-&gt;12 グリーンゴー-&gt;インドミタビリティ</td><td>7.0倍</td><td>0.73</td></tr><tr><td>三連複</td><td>2-3-12 グリーンゴー・アクシュラ・インドミタビリティ</td><td>17.8倍</td><td>0.62</td></tr><tr><td>三連単</td><td>12-&gt;2-&gt;10 インドミタビリティ-&gt;グリーンゴー-&gt;グランワールド</td><td>24.2倍</td><td>0.58</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>2 グリーンゴー</td><td>3.5倍</td><td>2.7倍</td><td>-0.8</td></tr><tr><td>12 インドミタビリティ</td><td>4.8倍</td><td>5.2倍</td><td>+0.4</td></tr><tr><td>10 グランワールド</td><td>9.0倍</td><td>11.7倍</td><td>+2.7</td></tr><tr><td>9 キタノハイテイル</td><td>14.9倍</td><td>14.4倍</td><td>-0.5</td></tr><tr><td>8 クリノリキオー</td><td>17.5倍</td><td>6.8倍</td><td>-10.7</td></tr><tr><td>4 タイセイゼスティ</td><td>23.5倍</td><td>10.5倍</td><td>-13.0</td></tr><tr><td>3 アクシュラ</td><td>28.0倍</td><td>22.8倍</td><td>-5.2</td></tr><tr><td>15 レディトゥフライト</td><td>26.7倍</td><td>23.8倍</td><td>-2.9</td></tr><tr><td>6 ニシノエビガタメ</td><td>51.3倍</td><td>14.7倍</td><td>-36.6</td></tr><tr><td>7 グレートアゲイン</td><td>110.4倍</td><td>26.6倍</td><td>-83.8</td></tr><tr><td>5 レッドセドナ</td><td>119.4倍</td><td>26.8倍</td><td>-92.6</td></tr><tr><td>13 メイショウゴッホ</td><td>144.3倍</td><td>71.7倍</td><td>-72.6</td></tr><tr><td>1 メイショウイッカク</td><td>143.9倍</td><td>32.9倍</td><td>-111.0</td></tr><tr><td>14 ミニュイ</td><td>226.8倍</td><td>53.9倍</td><td>-172.9</td></tr><tr><td>11 チュウワヘネシー</td><td>496.9倍</td><td>138.0倍</td><td>-358.9</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:30 3歳未勝利(札幌4レース)</div>
+      <p class='honmei'>◎本命: 5 メイショウテンジン</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>5-10 メイショウテンジン・リネアベルタ</td><td>13.9倍</td><td>0.73</td></tr><tr><td>馬単</td><td>12-&gt;8 レッドアイスピア-&gt;リアララ</td><td>21.7倍</td><td>0.64</td></tr><tr><td>三連複</td><td>3-5-8 ロジスカヤ・メイショウテンジン・リアララ</td><td>16.7倍</td><td>0.72</td></tr><tr><td>三連単</td><td>12-&gt;8-&gt;5 レッドアイスピア-&gt;リアララ-&gt;メイショウテンジン</td><td>59.4倍</td><td>0.53</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>5 メイショウテンジン</td><td>4.3倍</td><td>13.0倍</td><td>+8.7</td></tr><tr><td>12 レッドアイスピア</td><td>4.8倍</td><td>7.2倍</td><td>+2.4</td></tr><tr><td>8 リアララ</td><td>5.5倍</td><td>2.4倍</td><td>-3.1</td></tr><tr><td>3 ロジスカヤ</td><td>6.9倍</td><td>20.1倍</td><td>+13.2</td></tr><tr><td>10 リネアベルタ</td><td>7.7倍</td><td>14.5倍</td><td>+6.8</td></tr><tr><td>4 スカイピア</td><td>14.7倍</td><td>10.7倍</td><td>-4.0</td></tr><tr><td>6 ファイティンアスク</td><td>22.1倍</td><td>22.4倍</td><td>+0.3</td></tr><tr><td>16 アドマイヤパープル</td><td>31.7倍</td><td>10.5倍</td><td>-21.2</td></tr><tr><td>9 ヴェンデボヌール</td><td>37.2倍</td><td>15.1倍</td><td>-22.1</td></tr><tr><td>11 ニットウエース</td><td>59.0倍</td><td>81.1倍</td><td>+22.1</td></tr><tr><td>13 ゲフィオン</td><td>47.0倍</td><td>48.0倍</td><td>+1.0</td></tr><tr><td>1 ドンレミラピュセル</td><td>47.4倍</td><td>46.3倍</td><td>-1.1</td></tr><tr><td>14 チャーミングアイ</td><td>102.3倍</td><td>24.8倍</td><td>-77.5</td></tr><tr><td>2 ブレッティレディ</td><td>97.8倍</td><td>13.3倍</td><td>-84.5</td></tr><tr><td>7 ユーベルジーク</td><td>122.2倍</td><td>40.5倍</td><td>-81.7</td></tr><tr><td>15 ウォーターブビンガ</td><td>190.5倍</td><td>80.8倍</td><td>-109.7</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:40 3歳未勝利(新潟5レース)</div>
+      <p class='honmei'>◎本命: 4 バンオンタイム</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>4-6 バンオンタイム・フジサン</td><td>14.2倍</td><td>0.74</td></tr><tr><td>馬単</td><td>2-&gt;4 ソロンゴ-&gt;バンオンタイム</td><td>20.0倍</td><td>0.81</td></tr><tr><td>三連複</td><td>4-10-15 バンオンタイム・ワイズファミリア・ポポラヴィスタ</td><td>13.4倍</td><td>0.53</td></tr><tr><td>三連単</td><td>4-&gt;10-&gt;2 バンオンタイム-&gt;ワイズファミリア-&gt;ソロンゴ</td><td>46.2倍</td><td>0.58</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>4 バンオンタイム</td><td>4.0倍</td><td>4.1倍</td><td>+0.1</td></tr><tr><td>10 ワイズファミリア</td><td>8.0倍</td><td>9.2倍</td><td>+1.2</td></tr><tr><td>2 ソロンゴ</td><td>10.0倍</td><td>11.2倍</td><td>+1.2</td></tr><tr><td>15 ポポラヴィスタ</td><td>11.6倍</td><td>17.9倍</td><td>+6.3</td></tr><tr><td>6 フジサン</td><td>20.5倍</td><td>17.4倍</td><td>-3.1</td></tr><tr><td>5 メイショウコハル</td><td>17.0倍</td><td>10.9倍</td><td>-6.1</td></tr><tr><td>9 ジーナグレイス</td><td>19.6倍</td><td>14.2倍</td><td>-5.4</td></tr><tr><td>14 ウラヌスリング</td><td>21.3倍</td><td>4.6倍</td><td>-16.7</td></tr><tr><td>8 ソフィア</td><td>73.8倍</td><td>36.9倍</td><td>-36.9</td></tr><tr><td>12 シェリーシュシュ</td><td>101.8倍</td><td>9.0倍</td><td>-92.8</td></tr><tr><td>18 ピコプリンセス</td><td>130.8倍</td><td>56.4倍</td><td>-74.4</td></tr><tr><td>3 エリオステモン</td><td>145.9倍</td><td>33.5倍</td><td>-112.4</td></tr><tr><td>7 アオゾラランチ</td><td>135.0倍</td><td>72.0倍</td><td>-63.0</td></tr><tr><td>11 ロックユアライフ</td><td>180.0倍</td><td>15.3倍</td><td>-164.7</td></tr><tr><td>13 ウッケン</td><td>161.5倍</td><td>107.1倍</td><td>-54.4</td></tr><tr><td>16 ソアサージュ</td><td>178.6倍</td><td>78.2倍</td><td>-100.4</td></tr><tr><td>17 ルサフィール</td><td>249.7倍</td><td>51.6倍</td><td>-198.1</td></tr><tr><td>1 スコアレジーナ</td><td>294.8倍</td><td>55.6倍</td><td>-239.2</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:50 3歳以上1勝クラス(中京5レース)</div>
+      <p class='honmei'>◎本命: 6 ヴィスコンテッサ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-11 ヴィスコンテッサ・シルバーリム</td><td>8.3倍</td><td>0.74</td></tr><tr><td>馬単</td><td>6-&gt;11 ヴィスコンテッサ-&gt;シルバーリム</td><td>14.7倍</td><td>0.73</td></tr><tr><td>三連複</td><td>6-10-11 ヴィスコンテッサ・メイショウピリカ・シルバーリム</td><td>14.4倍</td><td>0.72</td></tr><tr><td>三連単</td><td>6-&gt;1-&gt;10 ヴィスコンテッサ-&gt;ベルシュヴァル-&gt;メイショウピリカ</td><td>26.2倍</td><td>0.48</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>6 ヴィスコンテッサ</td><td>3.9倍</td><td>2.1倍</td><td>-1.8</td></tr><tr><td>1 ベルシュヴァル</td><td>6.0倍</td><td>8.8倍</td><td>+2.8</td></tr><tr><td>10 メイショウピリカ</td><td>8.5倍</td><td>6.8倍</td><td>-1.7</td></tr><tr><td>11 シルバーリム</td><td>11.4倍</td><td>10.1倍</td><td>-1.3</td></tr><tr><td>5 マーゴットレジーナ</td><td>18.6倍</td><td>20.9倍</td><td>+2.3</td></tr><tr><td>7 アグレイビューティ</td><td>21.0倍</td><td>25.1倍</td><td>+4.1</td></tr><tr><td>9 シェーラ</td><td>32.7倍</td><td>15.2倍</td><td>-17.5</td></tr><tr><td>8 オモイヲノセテ</td><td>43.0倍</td><td>24.1倍</td><td>-18.9</td></tr><tr><td>4 エレガンシア</td><td>48.9倍</td><td>10.5倍</td><td>-38.4</td></tr><tr><td>2 カポレイラ</td><td>88.0倍</td><td>40.5倍</td><td>-47.5</td></tr><tr><td>3 ブルーミングローズ</td><td>79.4倍</td><td>8.5倍</td><td>-70.9</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">12:20 2歳新馬(札幌5レース)</div>
+      <p class='honmei'>◎本命: 6 マテンロウバモス</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-7 マテンロウバモス・バトルナイト</td><td>12.5倍</td><td>0.83</td></tr><tr><td>馬単</td><td>5-&gt;6 ソフィーサンライズ-&gt;マテンロウバモス</td><td>25.4倍</td><td>0.82</td></tr><tr><td>三連複</td><td>2-6-7 アオイゲート・マテンロウバモス・バトルナイト</td><td>19.4倍</td><td>0.66</td></tr><tr><td>三連単</td><td>4-&gt;6-&gt;5 ボディビルダー-&gt;マテンロウバモス-&gt;ソフィーサンライズ</td><td>98.0倍</td><td>0.50</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>6 マテンロウバモス</td><td>2.4倍</td><td>2.5倍</td><td>+0.1</td></tr><tr><td>3 ヴァンドレスト</td><td>3.2倍</td><td>2.4倍</td><td>-0.8</td></tr><tr><td>7 バトルナイト</td><td>3.2倍</td><td>11.1倍</td><td>+7.9</td></tr><tr><td>5 ソフィーサンライズ</td><td>3.3倍</td><td>18.1倍</td><td>+14.8</td></tr><tr><td>2 アオイゲート</td><td>3.2倍</td><td>7.7倍</td><td>+4.5</td></tr><tr><td>4 ボディビルダー</td><td>3.5倍</td><td>11.8倍</td><td>+8.3</td></tr><tr><td>1 リズムオブサンダー</td><td>4.3倍</td><td>10.8倍</td><td>+6.5</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">12:50 3歳以上1勝クラス(札幌6レース)</div>
+      <p class='honmei'>◎本命: 2 ルールザウェイヴ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>2-10 ルールザウェイヴ・ファニーバニー</td><td>19.0倍</td><td>0.75</td></tr><tr><td>馬単</td><td>4-&gt;6 モノポリオ-&gt;モルニケ</td><td>12.7倍</td><td>0.75</td></tr><tr><td>三連複</td><td>2-4-10 ルールザウェイヴ・モノポリオ・ファニーバニー</td><td>17.7倍</td><td>0.49</td></tr><tr><td>三連単</td><td>6-&gt;2-&gt;4 モルニケ-&gt;ルールザウェイヴ-&gt;モノポリオ</td><td>27.4倍</td><td>0.40</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>2 ルールザウェイヴ</td><td>2.1倍</td><td>3.1倍</td><td>+1.0</td></tr><tr><td>6 モルニケ</td><td>2.4倍</td><td>6.6倍</td><td>+4.2</td></tr><tr><td>4 モノポリオ</td><td>2.2倍</td><td>3.5倍</td><td>+1.3</td></tr><tr><td>12 サンセットゴールド</td><td>7.2倍</td><td>24.6倍</td><td>+17.4</td></tr><tr><td>10 ファニーバニー</td><td>6.1倍</td><td>8.3倍</td><td>+2.2</td></tr><tr><td>14 ベアサナエチャン</td><td>7.5倍</td><td>13.8倍</td><td>+6.3</td></tr><tr><td>1 ゴーゴーリチャード</td><td>9.4倍</td><td>14.6倍</td><td>+5.2</td></tr><tr><td>5 ルクスアドラー</td><td>25.5倍</td><td>18.3倍</td><td>-7.2</td></tr><tr><td>8 オーケーダイナ</td><td>34.5倍</td><td>39.9倍</td><td>+5.4</td></tr><tr><td>3 クイーンズワーフ</td><td>32.4倍</td><td>22.6倍</td><td>-9.8</td></tr><tr><td>7 ブライトフレア</td><td>54.1倍</td><td>50.1倍</td><td>-4.0</td></tr><tr><td>9 サンウリエル</td><td>51.1倍</td><td>41.1倍</td><td>-10.0</td></tr><tr><td>13 クラインシュミット</td><td>70.1倍</td><td>94.0倍</td><td>+23.9</td></tr><tr><td>11 ホウオウペトリュス</td><td>82.5倍</td><td>47.1倍</td><td>-35.4</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">13:25 3歳以上1勝クラス(札幌7レース)</div>
+      <p class='honmei'>◎本命: 8 ミスターエメラルド</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>4-7 リバーソニック・アスクガンバーレ</td><td>7.3倍</td><td>0.73</td></tr><tr><td>馬単</td><td>8-&gt;10 ミスターエメラルド-&gt;ダイシンレアレア</td><td>12.4倍</td><td>0.78</td></tr><tr><td>三連複</td><td>4-7-10 リバーソニック・アスクガンバーレ・ダイシンレアレア</td><td>6.4倍</td><td>0.66</td></tr><tr><td>三連単</td><td>10-&gt;4-&gt;8 ダイシンレアレア-&gt;リバーソニック-&gt;ミスターエメラルド</td><td>31.9倍</td><td>0.39</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>8 ミスターエメラルド</td><td>5.0倍</td><td>8.4倍</td><td>+3.4</td></tr><tr><td>7 アスクガンバーレ</td><td>4.7倍</td><td>3.7倍</td><td>-1.0</td></tr><tr><td>10 ダイシンレアレア</td><td>4.6倍</td><td>5.4倍</td><td>+0.8</td></tr><tr><td>4 リバーソニック</td><td>5.0倍</td><td>8.7倍</td><td>+3.7</td></tr><tr><td>9 ステイアンビシャス</td><td>9.0倍</td><td>6.0倍</td><td>-3.0</td></tr><tr><td>5 ニヒトツーゼーア</td><td>67.3倍</td><td>8.1倍</td><td>-59.2</td></tr><tr><td>6 トライゴーニック</td><td>60.4倍</td><td>7.4倍</td><td>-53.0</td></tr><tr><td>3 タイキフィアリーベ</td><td>69.0倍</td><td>15.0倍</td><td>-54.0</td></tr><tr><td>1 シーリュウシー</td><td>88.8倍</td><td>38.2倍</td><td>-50.6</td></tr><tr><td>2 シドニーホバート</td><td>115.4倍</td><td>49.7倍</td><td>-65.7</td></tr><tr><td>11 ブーケドグレイス</td><td>229.3倍</td><td>34.0倍</td><td>-195.3</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">14:01 3歳以上1勝クラス(札幌8レース)</div>
+      <p class='honmei'>◎本命: 8 ダノンプレサージュ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>1-8 シニャンガ・ダノンプレサージュ</td><td>4.4倍</td><td>0.77</td></tr><tr><td>馬単</td><td>8-&gt;9 ダノンプレサージュ-&gt;マイネルシンベリン</td><td>11.4倍</td><td>0.85</td></tr><tr><td>三連複</td><td>7-8-9 ジェルブロア・ダノンプレサージュ・マイネルシンベリン</td><td>16.0倍</td><td>0.74</td></tr><tr><td>三連単</td><td>1-&gt;9-&gt;8 シニャンガ-&gt;マイネルシンベリン-&gt;ダノンプレサージュ</td><td>26.5倍</td><td>0.51</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>8 ダノンプレサージュ</td><td>3.3倍</td><td>3.7倍</td><td>+0.4</td></tr><tr><td>1 シニャンガ</td><td>3.5倍</td><td>5.4倍</td><td>+1.9</td></tr><tr><td>9 マイネルシンベリン</td><td>4.4倍</td><td>5.0倍</td><td>+0.6</td></tr><tr><td>7 ジェルブロア</td><td>10.2倍</td><td>7.3倍</td><td>-2.9</td></tr><tr><td>3 ブランヴァンダイク</td><td>12.8倍</td><td>9.9倍</td><td>-2.9</td></tr><tr><td>5 ララオウ</td><td>11.6倍</td><td>7.4倍</td><td>-4.2</td></tr><tr><td>4 シャルムグリーン</td><td>17.2倍</td><td>27.0倍</td><td>+9.8</td></tr><tr><td>2 サクラアドリア</td><td>34.0倍</td><td>7.2倍</td><td>-26.8</td></tr><tr><td>6 ピティロディア</td><td>70.4倍</td><td>35.8倍</td><td>-34.6</td></tr><tr><td>10 ゴールドジェスター</td><td>80.6倍</td><td>73.2倍</td><td>-7.4</td></tr><tr><td>11 ソワンドヴィクター</td><td>147.4倍</td><td>71.6倍</td><td>-75.8</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">14:35 ルスツ特別(札幌9レース)</div>
+      <p class='honmei'>◎本命: 5 エチゴドラゴン</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>5-8 エチゴドラゴン・ジャケットポケット</td><td>9.0倍</td><td>0.76</td></tr><tr><td>馬単</td><td>5-&gt;8 エチゴドラゴン-&gt;ジャケットポケット</td><td>15.6倍</td><td>0.81</td></tr><tr><td>三連複</td><td>5-11-13 エチゴドラゴン・メイショウテンク・エイシンインアウト</td><td>15.4倍</td><td>0.67</td></tr><tr><td>三連単</td><td>5-&gt;8-&gt;11 エチゴドラゴン-&gt;ジャケットポケット-&gt;メイショウテンク</td><td>59.2倍</td><td>0.61</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>5 エチゴドラゴン</td><td>4.3倍</td><td>4.8倍</td><td>+0.5</td></tr><tr><td>11 メイショウテンク</td><td>9.5倍</td><td>3.7倍</td><td>-5.8</td></tr><tr><td>2 ハルフロンティア</td><td>12.5倍</td><td>11.6倍</td><td>-0.9</td></tr><tr><td>8 ジャケットポケット</td><td>15.3倍</td><td>10.2倍</td><td>-5.1</td></tr><tr><td>13 エイシンインアウト</td><td>14.7倍</td><td>6.5倍</td><td>-8.2</td></tr><tr><td>9 サイン</td><td>20.5倍</td><td>12.1倍</td><td>-8.4</td></tr><tr><td>3 デルシエロ</td><td>24.0倍</td><td>11.6倍</td><td>-12.4</td></tr><tr><td>1 アドミラルシップ</td><td>29.3倍</td><td>8.9倍</td><td>-20.4</td></tr><tr><td>12 ダノンシーホーク</td><td>47.8倍</td><td>29.8倍</td><td>-18.0</td></tr><tr><td>7 ドーギッド</td><td>112.5倍</td><td>31.6倍</td><td>-80.9</td></tr><tr><td>6 マイネルマスター</td><td>121.0倍</td><td>19.0倍</td><td>-102.0</td></tr><tr><td>10 ユメシルベ</td><td>132.3倍</td><td>53.7倍</td><td>-78.6</td></tr><tr><td>4 グランツローゼ</td><td>204.6倍</td><td>39.1倍</td><td>-165.5</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">14:50 古町S(新潟6レース)</div>
+      <p class='honmei'>◎本命: 13 ロフティストーリー</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>11-13 リバートゥルー・ロフティストーリー</td><td>22.5倍</td><td>0.82</td></tr><tr><td>馬単</td><td>7-&gt;13 ブレトワルダ-&gt;ロフティストーリー</td><td>24.4倍</td><td>0.71</td></tr><tr><td>三連複</td><td>5-7-14 パフ・ブレトワルダ・アラレタバシル</td><td>36.8倍</td><td>0.69</td></tr><tr><td>三連単</td><td>14-&gt;13-&gt;7 アラレタバシル-&gt;ロフティストーリー-&gt;ブレトワルダ</td><td>85.3倍</td><td>0.41</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>13 ロフティストーリー</td><td>24.7倍</td><td>7.4倍</td><td>-17.3</td></tr><tr><td>14 アラレタバシル</td><td>16.1倍</td><td>4.5倍</td><td>-11.6</td></tr><tr><td>7 ブレトワルダ</td><td>22.1倍</td><td>5.6倍</td><td>-16.5</td></tr><tr><td>5 パフ</td><td>33.5倍</td><td>13.5倍</td><td>-20.0</td></tr><tr><td>11 リバートゥルー</td><td>34.2倍</td><td>11.7倍</td><td>-22.5</td></tr><tr><td>8 プルートマスター</td><td>49.7倍</td><td>8.4倍</td><td>-41.3</td></tr><tr><td>1 クロニクル</td><td>73.4倍</td><td>7.9倍</td><td>-65.5</td></tr><tr><td>10 ヴァナルガンド</td><td>86.8倍</td><td>26.7倍</td><td>-60.1</td></tr><tr><td>15 モモンウールー</td><td>81.7倍</td><td>14.6倍</td><td>-67.1</td></tr><tr><td>9 ユキノロイヤル</td><td>93.5倍</td><td>29.4倍</td><td>-64.1</td></tr><tr><td>4 オンザライン</td><td>92.8倍</td><td>21.1倍</td><td>-71.7</td></tr><tr><td>2 アークドール</td><td>92.0倍</td><td>17.4倍</td><td>-74.6</td></tr><tr><td>3 エンセリオ</td><td>175.1倍</td><td>73.7倍</td><td>-101.4</td></tr><tr><td>12 ルクスビッグスター</td><td>243.3倍</td><td>20.2倍</td><td>-223.1</td></tr><tr><td>6 エスティメート</td><td>264.9倍</td><td>103.2倍</td><td>-161.7</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">15:01 有松特別(中京6レース)</div>
+      <p class='honmei'>◎本命: 10 サーディンラン</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>5-11 ビップディラン・コルドンブルー</td><td>17.9倍</td><td>0.83</td></tr><tr><td>馬単</td><td>11-&gt;3 コルドンブルー-&gt;ジーティーマン</td><td>14.3倍</td><td>0.69</td></tr><tr><td>三連複</td><td>10-11-12 サーディンラン・コルドンブルー・リカントロポ</td><td>13.3倍</td><td>0.66</td></tr><tr><td>三連単</td><td>11-&gt;10-&gt;3 コルドンブルー-&gt;サーディンラン-&gt;ジーティーマン</td><td>26.8倍</td><td>0.56</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>10 サーディンラン</td><td>8.0倍</td><td>3.8倍</td><td>-4.2</td></tr><tr><td>11 コルドンブルー</td><td>6.6倍</td><td>9.6倍</td><td>+3.0</td></tr><tr><td>3 ジーティーマン</td><td>11.3倍</td><td>7.4倍</td><td>-3.9</td></tr><tr><td>5 ビップディラン</td><td>18.5倍</td><td>6.3倍</td><td>-12.2</td></tr><tr><td>12 リカントロポ</td><td>23.8倍</td><td>18.8倍</td><td>-5.0</td></tr><tr><td>8 アロンソア</td><td>46.1倍</td><td>13.0倍</td><td>-33.1</td></tr><tr><td>7 セブンマイスター</td><td>51.3倍</td><td>4.9倍</td><td>-46.4</td></tr><tr><td>9 オックスアイ</td><td>89.1倍</td><td>26.5倍</td><td>-62.6</td></tr><tr><td>2 テーオーシュタイン</td><td>78.5倍</td><td>24.7倍</td><td>-53.8</td></tr><tr><td>4 ミッキースターダム</td><td>83.0倍</td><td>13.5倍</td><td>-69.5</td></tr><tr><td>14 ワンモアスマイル</td><td>90.1倍</td><td>27.9倍</td><td>-62.2</td></tr><tr><td>1 ギフテッド</td><td>161.1倍</td><td>25.1倍</td><td>-136.0</td></tr><tr><td>6 アイキャンドウイッ</td><td>188.6倍</td><td>31.7倍</td><td>-156.9</td></tr><tr><td>13 ムーンウォーリア</td><td>396.6倍</td><td>141.2倍</td><td>-255.4</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">15:10 WASJ第3戦(札幌10レース)</div>
+      <p class='honmei'>◎本命: 11 アオハルブルース</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>8-11 ハヤブサオヒメサマ・アオハルブルース</td><td>16.0倍</td><td>0.78</td></tr><tr><td>馬単</td><td>9-&gt;11 ヒミノエトワール-&gt;アオハルブルース</td><td>17.3倍</td><td>0.83</td></tr><tr><td>三連複</td><td>1-3-11 ローズマイスター・ハイクオリティ・アオハルブルース</td><td>19.9倍</td><td>0.55</td></tr><tr><td>三連単</td><td>3-&gt;11-&gt;9 ハイクオリティ-&gt;アオハルブルース-&gt;ヒミノエトワール</td><td>40.5倍</td><td>0.52</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>11 アオハルブルース</td><td>4.8倍</td><td>7.7倍</td><td>+2.9</td></tr><tr><td>3 ハイクオリティ</td><td>6.4倍</td><td>8.1倍</td><td>+1.7</td></tr><tr><td>9 ヒミノエトワール</td><td>10.8倍</td><td>12.4倍</td><td>+1.6</td></tr><tr><td>4 セイントホース</td><td>15.2倍</td><td>9.3倍</td><td>-5.9</td></tr><tr><td>8 ハヤブサオヒメサマ</td><td>16.5倍</td><td>7.6倍</td><td>-8.9</td></tr><tr><td>1 ローズマイスター</td><td>16.7倍</td><td>5.2倍</td><td>-11.5</td></tr><tr><td>6 ユウェンタース</td><td>25.0倍</td><td>9.0倍</td><td>-16.0</td></tr><tr><td>10 カスバートテソーロ</td><td>24.2倍</td><td>8.6倍</td><td>-15.6</td></tr><tr><td>7 レッドライトニング</td><td>45.9倍</td><td>9.4倍</td><td>-36.5</td></tr><tr><td>12 ヒルノピレネー</td><td>58.9倍</td><td>16.9倍</td><td>-42.0</td></tr><tr><td>14 ウインハルモニア</td><td>97.0倍</td><td>23.7倍</td><td>-73.3</td></tr><tr><td>13 マーシヴィガラス</td><td>120.3倍</td><td>36.9倍</td><td>-83.4</td></tr><tr><td>2 クリノラピダス</td><td>178.8倍</td><td>55.5倍</td><td>-123.3</td></tr><tr><td>5 オーロラアーク</td><td>191.3倍</td><td>99.6倍</td><td>-91.7</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">15:25 新潟2歳S(新潟7レース)</div>
+      <p class='honmei'>◎本命: 2 レッチュベルク</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>1-2 シャンデヴァーグ・レッチュベルク</td><td>5.9倍</td><td>0.85</td></tr><tr><td>馬単</td><td>2-&gt;1 レッチュベルク-&gt;シャンデヴァーグ</td><td>11.3倍</td><td>0.83</td></tr><tr><td>三連複</td><td>2-7-10 レッチュベルク・トウシンマジック・インカルナータ</td><td>10.2倍</td><td>0.61</td></tr><tr><td>三連単</td><td>1-&gt;2-&gt;10 シャンデヴァーグ-&gt;レッチュベルク-&gt;インカルナータ</td><td>30.5倍</td><td>0.59</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>2 レッチュベルク</td><td>3.8倍</td><td>3.5倍</td><td>-0.3</td></tr><tr><td>10 インカルナータ</td><td>4.5倍</td><td>4.9倍</td><td>+0.4</td></tr><tr><td>1 シャンデヴァーグ</td><td>4.5倍</td><td>4.5倍</td><td>+0.0</td></tr><tr><td>3 トップチェッカー</td><td>6.7倍</td><td>6.8倍</td><td>+0.1</td></tr><tr><td>7 トウシンマジック</td><td>7.7倍</td><td>3.7倍</td><td>-4.0</td></tr><tr><td>9 スイートアリッサム</td><td>36.0倍</td><td>14.0倍</td><td>-22.0</td></tr><tr><td>4 アイデアルカット</td><td>49.9倍</td><td>101.5倍</td><td>+51.6</td></tr><tr><td>5 エレスレイプニル</td><td>64.2倍</td><td>71.1倍</td><td>+6.9</td></tr><tr><td>6 マインドフルネス</td><td>81.4倍</td><td>28.6倍</td><td>-52.8</td></tr><tr><td>8 マイホームパパ</td><td>128.6倍</td><td>98.1倍</td><td>-30.5</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">15:35 名古屋城S(中京7レース)</div>
+      <p class='honmei'>◎本命: 2 スナークラファエロ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>5-9 ハギノサステナブル・マーズオデッセイ</td><td>14.9倍</td><td>0.77</td></tr><tr><td>馬単</td><td>2-&gt;5 スナークラファエロ-&gt;ハギノサステナブル</td><td>18.7倍</td><td>0.70</td></tr><tr><td>三連複</td><td>1-5-9 トリポリタニア・ハギノサステナブル・マーズオデッセイ</td><td>17.4倍</td><td>0.73</td></tr><tr><td>三連単</td><td>1-&gt;9-&gt;2 トリポリタニア-&gt;マーズオデッセイ-&gt;スナークラファエロ</td><td>46.5倍</td><td>0.55</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>2 スナークラファエロ</td><td>6.3倍</td><td>5.4倍</td><td>-0.9</td></tr><tr><td>9 マーズオデッセイ</td><td>7.6倍</td><td>9.6倍</td><td>+2.0</td></tr><tr><td>1 トリポリタニア</td><td>8.7倍</td><td>3.5倍</td><td>-5.2</td></tr><tr><td>5 ハギノサステナブル</td><td>8.1倍</td><td>8.9倍</td><td>+0.8</td></tr><tr><td>13 ハピ</td><td>13.5倍</td><td>8.6倍</td><td>-4.9</td></tr><tr><td>15 レッドプロフェシー</td><td>30.8倍</td><td>12.6倍</td><td>-18.2</td></tr><tr><td>6 リチュアル</td><td>65.2倍</td><td>15.7倍</td><td>-49.5</td></tr><tr><td>10 ミッキークレスト</td><td>79.4倍</td><td>16.7倍</td><td>-62.7</td></tr><tr><td>4 ロードプレジール</td><td>41.7倍</td><td>14.6倍</td><td>-27.1</td></tr><tr><td>7 ペイシャモノノフ</td><td>83.8倍</td><td>17.6倍</td><td>-66.2</td></tr><tr><td>8 マンマリアーレ</td><td>116.1倍</td><td>48.0倍</td><td>-68.1</td></tr><tr><td>12 ブルーサン</td><td>64.2倍</td><td>46.6倍</td><td>-17.6</td></tr><tr><td>3 マリアナトレンチ</td><td>157.3倍</td><td>29.4倍</td><td>-127.9</td></tr><tr><td>11 マリオロード</td><td>192.2倍</td><td>54.8倍</td><td>-137.4</td></tr><tr><td>16 ラインオブソウル</td><td>205.4倍</td><td>60.7倍</td><td>-144.7</td></tr><tr><td>14 メイショウユズルハ</td><td>194.8倍</td><td>56.1倍</td><td>-138.7</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">15:45 キーンランドC(札幌11レース)</div>
+      <p class='honmei'>◎本命: 3 パンジャタワー</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>3-4 パンジャタワー・エーティーマクフィ</td><td>16.9倍</td><td>0.73</td></tr><tr><td>馬単</td><td>3-&gt;1 パンジャタワー-&gt;ナムラクララ</td><td>26.2倍</td><td>0.75</td></tr><tr><td>三連複</td><td>1-3-8 ナムラクララ・パンジャタワー・ウインカーネリアン</td><td>27.8倍</td><td>0.56</td></tr><tr><td>三連単</td><td>3-&gt;8-&gt;13 パンジャタワー-&gt;ウインカーネリアン-&gt;ロジケープ</td><td>115.1倍</td><td>0.64</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>3 パンジャタワー</td><td>2.4倍</td><td>2.3倍</td><td>-0.1</td></tr><tr><td>13 ロジケープ</td><td>4.2倍</td><td>5.7倍</td><td>+1.5</td></tr><tr><td>15 エイシンディード</td><td>4.7倍</td><td>15.4倍</td><td>+10.7</td></tr><tr><td>8 ウインカーネリアン</td><td>4.0倍</td><td>9.7倍</td><td>+5.7</td></tr><tr><td>1 ナムラクララ</td><td>4.9倍</td><td>16.4倍</td><td>+11.5</td></tr><tr><td>4 エーティーマクフィ</td><td>5.2倍</td><td>10.2倍</td><td>+5.0</td></tr><tr><td>14 サウンドモリアーナ</td><td>10.4倍</td><td>15.3倍</td><td>+4.9</td></tr><tr><td>16 ロードフォアエース</td><td>13.5倍</td><td>38.6倍</td><td>+25.1</td></tr><tr><td>2 ルシード</td><td>11.5倍</td><td>17.1倍</td><td>+5.6</td></tr><tr><td>10 ダノンマッキンリー</td><td>14.9倍</td><td>14.4倍</td><td>-0.5</td></tr><tr><td>11 リラエンブレム</td><td>22.9倍</td><td>37.1倍</td><td>+14.2</td></tr><tr><td>12 レッドアヴァンティ</td><td>33.4倍</td><td>144.8倍</td><td>+111.4</td></tr><tr><td>5 ゾンニッヒ</td><td>31.0倍</td><td>22.5倍</td><td>-8.5</td></tr><tr><td>9 イツモニコニコ</td><td>36.6倍</td><td>53.6倍</td><td>+17.0</td></tr><tr><td>6 ジョーメッドヴィン</td><td>49.3倍</td><td>95.8倍</td><td>+46.5</td></tr><tr><td>7 マイネルジェロディ</td><td>79.5倍</td><td>205.3倍</td><td>+125.8</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">16:01 飯豊特別(新潟8レース)</div>
+      <p class='honmei'>◎本命: 6 ナルキッソス</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-12 ナルキッソス・ホウオウシェリー</td><td>10.8倍</td><td>0.76</td></tr><tr><td>馬単</td><td>6-&gt;7 ナルキッソス-&gt;ラパンチュール</td><td>13.4倍</td><td>0.78</td></tr><tr><td>三連複</td><td>6-7-8 ナルキッソス・ラパンチュール・レイククレセント</td><td>16.4倍</td><td>0.71</td></tr><tr><td>三連単</td><td>6-&gt;7-&gt;11 ナルキッソス-&gt;ラパンチュール-&gt;パワースナッチ</td><td>35.1倍</td><td>0.52</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>6 ナルキッソス</td><td>5.9倍</td><td>3.3倍</td><td>-2.6</td></tr><tr><td>11 パワースナッチ</td><td>6.0倍</td><td>5.6倍</td><td>-0.4</td></tr><tr><td>7 ラパンチュール</td><td>6.4倍</td><td>3.9倍</td><td>-2.5</td></tr><tr><td>12 ホウオウシェリー</td><td>7.5倍</td><td>9.7倍</td><td>+2.2</td></tr><tr><td>8 レイククレセント</td><td>12.5倍</td><td>6.6倍</td><td>-5.9</td></tr><tr><td>5 シルバーレイン</td><td>29.8倍</td><td>18.5倍</td><td>-11.3</td></tr><tr><td>2 コンテネレッツア</td><td>24.2倍</td><td>21.2倍</td><td>-3.0</td></tr><tr><td>1 ケイケイ</td><td>28.1倍</td><td>11.3倍</td><td>-16.8</td></tr><tr><td>3 マンウォル</td><td>75.9倍</td><td>44.3倍</td><td>-31.6</td></tr><tr><td>9 ユキノエミリオ</td><td>91.2倍</td><td>30.1倍</td><td>-61.1</td></tr><tr><td>4 ジオパーククラウン</td><td>157.4倍</td><td>95.2倍</td><td>-62.2</td></tr><tr><td>10 ジッピーレーサー</td><td>216.6倍</td><td>68.7倍</td><td>-147.9</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">16:10 豊川特別(中京8レース)</div>
+      <p class='honmei'>◎本命: 16 アパレイユ</p>
+      <table class='rec-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>10-11 ゼンノフォトン・カーリキュー</td><td>16.4倍</td><td>1.21</td></tr></tbody></table>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬単</td><td>16-&gt;11 アパレイユ-&gt;カーリキュー</td><td>15.7倍</td><td>0.83</td></tr><tr><td>三連複</td><td>11-12-16 カーリキュー・ケイアイマウンガ・アパレイユ</td><td>22.4倍</td><td>0.66</td></tr><tr><td>三連単</td><td>10-&gt;16-&gt;11 ゼンノフォトン-&gt;アパレイユ-&gt;カーリキュー</td><td>82.4倍</td><td>0.66</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>16 アパレイユ</td><td>11.8倍</td><td>4.5倍</td><td>-7.3</td></tr><tr><td>11 カーリキュー</td><td>16.0倍</td><td>4.7倍</td><td>-11.3</td></tr><tr><td>10 ゼンノフォトン</td><td>21.7倍</td><td>12.1倍</td><td>-9.6</td></tr><tr><td>2 ヴェルジーネ</td><td>25.7倍</td><td>7.3倍</td><td>-18.4</td></tr><tr><td>12 ケイアイマウンガ</td><td>39.3倍</td><td>12.4倍</td><td>-26.9</td></tr><tr><td>3 オプティモ</td><td>49.3倍</td><td>8.5倍</td><td>-40.8</td></tr><tr><td>5 サンライズブレイク</td><td>60.3倍</td><td>18.9倍</td><td>-41.4</td></tr><tr><td>7 ジャスパーメルチェ</td><td>59.5倍</td><td>22.2倍</td><td>-37.3</td></tr><tr><td>4 ワイルドブッター</td><td>111.7倍</td><td>17.6倍</td><td>-94.1</td></tr><tr><td>13 コマチチャン</td><td>106.6倍</td><td>16.4倍</td><td>-90.2</td></tr><tr><td>15 カフジキアッキエレ</td><td>121.7倍</td><td>36.8倍</td><td>-84.9</td></tr><tr><td>8 ラッキーバック</td><td>142.8倍</td><td>18.0倍</td><td>-124.8</td></tr><tr><td>14 ジャスパーノベル</td><td>199.6倍</td><td>26.7倍</td><td>-172.9</td></tr><tr><td>1 リトムテール</td><td>238.7倍</td><td>74.8倍</td><td>-163.9</td></tr><tr><td>9 ベルピルエット</td><td>260.8倍</td><td>27.3倍</td><td>-233.5</td></tr><tr><td>6 オドラニャソンソン</td><td>243.9倍</td><td>61.6倍</td><td>-182.3</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">16:20 WASJ第4戦(札幌12レース)</div>
+      <p class='honmei'>◎本命: 10 テルヒコウ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>8-10 ウインベラーノ・テルヒコウ</td><td>10.9倍</td><td>0.81</td></tr><tr><td>馬単</td><td>9-&gt;10 ルクスジニア-&gt;テルヒコウ</td><td>15.3倍</td><td>0.73</td></tr><tr><td>三連複</td><td>8-9-10 ウインベラーノ・ルクスジニア・テルヒコウ</td><td>13.5倍</td><td>0.65</td></tr><tr><td>三連単</td><td>9-&gt;10-&gt;12 ルクスジニア-&gt;テルヒコウ-&gt;ミリオンクラウン</td><td>41.2倍</td><td>0.52</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>10 テルヒコウ</td><td>4.3倍</td><td>7.0倍</td><td>+2.7</td></tr><tr><td>12 ミリオンクラウン</td><td>5.9倍</td><td>7.2倍</td><td>+1.3</td></tr><tr><td>9 ルクスジニア</td><td>6.4倍</td><td>6.3倍</td><td>-0.1</td></tr><tr><td>8 ウインベラーノ</td><td>7.7倍</td><td>10.8倍</td><td>+3.1</td></tr><tr><td>1 ミーントゥビー</td><td>10.6倍</td><td>3.8倍</td><td>-6.8</td></tr><tr><td>7 ベネスピラ</td><td>12.7倍</td><td>14.2倍</td><td>+1.5</td></tr><tr><td>4 ストームサンダー</td><td>38.4倍</td><td>17.4倍</td><td>-21.0</td></tr><tr><td>14 ワザモノ</td><td>35.4倍</td><td>9.8倍</td><td>-25.6</td></tr><tr><td>6 マルカオペラ</td><td>52.4倍</td><td>12.9倍</td><td>-39.5</td></tr><tr><td>3 バセリーナ</td><td>101.2倍</td><td>15.5倍</td><td>-85.7</td></tr><tr><td>11 ショウナンヤッホー</td><td>84.6倍</td><td>42.2倍</td><td>-42.4</td></tr><tr><td>2 マイネルフォルツァ</td><td>97.9倍</td><td>27.7倍</td><td>-70.2</td></tr><tr><td>5 レッセパッセ</td><td>118.3倍</td><td>45.0倍</td><td>-73.3</td></tr><tr><td>13 コスモスプモーニ</td><td>230.3倍</td><td>158.3倍</td><td>-72.0</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">16:35 3歳以上1勝クラス(新潟9レース)</div>
+      <p class='honmei'>◎本命: 15 ベルゼビュート</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>8-12 ホウオウルクソール・カセノアステリア</td><td>12.1倍</td><td>0.79</td></tr><tr><td>馬単</td><td>15-&gt;12 ベルゼビュート-&gt;カセノアステリア</td><td>11.1倍</td><td>0.86</td></tr><tr><td>三連複</td><td>11-12-15 ティピティーナ・カセノアステリア・ベルゼビュート</td><td>13.3倍</td><td>0.65</td></tr><tr><td>三連単</td><td>15-&gt;12-&gt;8 ベルゼビュート-&gt;カセノアステリア-&gt;ホウオウルクソール</td><td>38.4倍</td><td>0.51</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>15 ベルゼビュート</td><td>3.5倍</td><td>4.3倍</td><td>+0.8</td></tr><tr><td>12 カセノアステリア</td><td>4.5倍</td><td>7.8倍</td><td>+3.3</td></tr><tr><td>6 カンレイスター</td><td>5.1倍</td><td>11.2倍</td><td>+6.1</td></tr><tr><td>8 ホウオウルクソール</td><td>7.1倍</td><td>4.0倍</td><td>-3.1</td></tr><tr><td>11 ティピティーナ</td><td>9.1倍</td><td>13.0倍</td><td>+3.9</td></tr><tr><td>9 マオノクラッシュ</td><td>14.3倍</td><td>7.2倍</td><td>-7.1</td></tr><tr><td>13 バルジール</td><td>21.8倍</td><td>13.9倍</td><td>-7.9</td></tr><tr><td>2 リアライズタキオン</td><td>49.7倍</td><td>39.6倍</td><td>-10.1</td></tr><tr><td>14 エフエイト</td><td>47.4倍</td><td>18.7倍</td><td>-28.7</td></tr><tr><td>5 ワンモメンタム</td><td>48.3倍</td><td>18.7倍</td><td>-29.6</td></tr><tr><td>4 ハヌル</td><td>54.7倍</td><td>17.9倍</td><td>-36.8</td></tr><tr><td>3 カサブランカキッド</td><td>76.4倍</td><td>25.7倍</td><td>-50.7</td></tr><tr><td>1 シルバードン</td><td>153.4倍</td><td>72.9倍</td><td>-80.5</td></tr><tr><td>7 リッチハンター</td><td>219.5倍</td><td>50.4倍</td><td>-169.1</td></tr><tr><td>10 ダイユウファリーナ</td><td>170.6倍</td><td>93.0倍</td><td>-77.6</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">16:45 3歳以上障害未勝利(中京9レース)</div>
+      <p class='honmei'>◎本命: 3 アルヴィア</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>4-8 メイショウゲキリン・メイショウヘール</td><td>8.8倍</td><td>0.91</td></tr><tr><td>馬単</td><td>3-&gt;2 アルヴィア-&gt;グラウンドビート</td><td>10.9倍</td><td>0.91</td></tr><tr><td>三連複</td><td>2-4-8 グラウンドビート・メイショウゲキリン・メイショウヘール</td><td>10.1倍</td><td>0.83</td></tr><tr><td>三連単</td><td>3-&gt;2-&gt;4 アルヴィア-&gt;グラウンドビート-&gt;メイショウゲキリン</td><td>19.2倍</td><td>0.62</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>3 アルヴィア</td><td>3.4倍</td><td>4.1倍</td><td>+0.7</td></tr><tr><td>4 メイショウゲキリン</td><td>3.9倍</td><td>1.7倍</td><td>-2.2</td></tr><tr><td>2 グラウンドビート</td><td>4.7倍</td><td>9.4倍</td><td>+4.7</td></tr><tr><td>8 メイショウヘール</td><td>8.2倍</td><td>10.2倍</td><td>+2.0</td></tr><tr><td>1 サトノドルチェ</td><td>29.7倍</td><td>25.9倍</td><td>-3.8</td></tr><tr><td>7 シークレットキー</td><td>35.3倍</td><td>11.1倍</td><td>-24.2</td></tr><tr><td>5 ブルーセルリアン</td><td>86.7倍</td><td>20.5倍</td><td>-66.2</td></tr><tr><td>6 バトラーズワーフ</td><td>38.6倍</td><td>19.0倍</td><td>-19.6</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">17:10 3歳以上1勝クラス(新潟10レース)</div>
+      <p class='honmei'>◎本命: 11 イモータリス</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-11 ルーリングクラス・イモータリス</td><td>11.1倍</td><td>0.69</td></tr><tr><td>馬単</td><td>11-&gt;4 イモータリス-&gt;リポサンテ</td><td>13.5倍</td><td>0.76</td></tr><tr><td>三連複</td><td>3-4-6 オルグジェシダ・リポサンテ・ルーリングクラス</td><td>13.4倍</td><td>0.62</td></tr><tr><td>三連単</td><td>11-&gt;3-&gt;4 イモータリス-&gt;オルグジェシダ-&gt;リポサンテ</td><td>41.8倍</td><td>0.73</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>11 イモータリス</td><td>3.1倍</td><td>14.0倍</td><td>+10.9</td></tr><tr><td>4 リポサンテ</td><td>2.9倍</td><td>2.6倍</td><td>-0.3</td></tr><tr><td>3 オルグジェシダ</td><td>3.6倍</td><td>6.7倍</td><td>+3.1</td></tr><tr><td>6 ルーリングクラス</td><td>5.3倍</td><td>7.6倍</td><td>+2.3</td></tr><tr><td>9 ラヴィニール</td><td>6.4倍</td><td>7.2倍</td><td>+0.8</td></tr><tr><td>5 モウエエデショー</td><td>9.6倍</td><td>11.4倍</td><td>+1.8</td></tr><tr><td>7 ウィンスタンリー</td><td>25.3倍</td><td>11.7倍</td><td>-13.6</td></tr><tr><td>10 マイネルモメンタム</td><td>17.1倍</td><td>12.2倍</td><td>-4.9</td></tr><tr><td>12 キョウエイグッド</td><td>58.2倍</td><td>34.1倍</td><td>-24.1</td></tr><tr><td>8 スペードギニー</td><td>61.1倍</td><td>11.8倍</td><td>-49.3</td></tr><tr><td>2 クラウドセイル</td><td>90.0倍</td><td>87.6倍</td><td>-2.4</td></tr><tr><td>1 モルゲンゾンネ</td><td>111.7倍</td><td>119.6倍</td><td>+7.9</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">17:20 3歳未勝利(中京10レース)</div>
+      <p class='honmei'>◎本命: 12 メイショウナナシロ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>10-12 ボクサークラブ・メイショウナナシロ</td><td>22.8倍</td><td>0.95</td></tr><tr><td>馬単</td><td>12-&gt;11 メイショウナナシロ-&gt;ラミエルノムスコ</td><td>10.8倍</td><td>0.80</td></tr><tr><td>三連複</td><td>12-13-14 メイショウナナシロ・アビル・ブクブクー</td><td>13.5倍</td><td>0.81</td></tr><tr><td>三連単</td><td>13-&gt;11-&gt;12 アビル-&gt;ラミエルノムスコ-&gt;メイショウナナシロ</td><td>18.5倍</td><td>0.65</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>12 メイショウナナシロ</td><td>4.0倍</td><td>2.0倍</td><td>-2.0</td></tr><tr><td>13 アビル</td><td>4.9倍</td><td>6.4倍</td><td>+1.5</td></tr><tr><td>11 ラミエルノムスコ</td><td>7.2倍</td><td>11.4倍</td><td>+4.2</td></tr><tr><td>10 ボクサークラブ</td><td>28.8倍</td><td>9.5倍</td><td>-19.3</td></tr><tr><td>6 ロードファイター</td><td>30.5倍</td><td>13.3倍</td><td>-17.2</td></tr><tr><td>14 ブクブクー</td><td>30.6倍</td><td>18.2倍</td><td>-12.4</td></tr><tr><td>3 アルダ</td><td>45.7倍</td><td>10.9倍</td><td>-34.8</td></tr><tr><td>9 サラサキングスター</td><td>61.6倍</td><td>53.5倍</td><td>-8.1</td></tr><tr><td>5 エクスマウス</td><td>79.7倍</td><td>21.2倍</td><td>-58.5</td></tr><tr><td>2 ギレイ</td><td>62.2倍</td><td>25.4倍</td><td>-36.8</td></tr><tr><td>4 サトノディヴァイン</td><td>126.2倍</td><td>21.3倍</td><td>-104.9</td></tr><tr><td>1 ドリームゴーズオン</td><td>175.0倍</td><td>43.3倍</td><td>-131.7</td></tr><tr><td>8 セキゾウ</td><td>365.0倍</td><td>70.0倍</td><td>-295.0</td></tr><tr><td>7 グランセンチュリ</td><td>417.1倍</td><td>63.5倍</td><td>-353.6</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">17:40 3歳以上1勝クラス(新潟11レース)</div>
+      <p class='honmei'>◎本命: 7 ミエノブラボー</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>7-10 ミエノブラボー・ベルタソ</td><td>11.1倍</td><td>0.78</td></tr><tr><td>馬単</td><td>16-&gt;7 サツキレジーナ-&gt;ミエノブラボー</td><td>24.8倍</td><td>0.85</td></tr><tr><td>三連複</td><td>2-7-17 スカイダイバー・ミエノブラボー・ヨドノティアラ</td><td>19.3倍</td><td>0.70</td></tr><tr><td>三連単</td><td>7-&gt;10-&gt;17 ミエノブラボー-&gt;ベルタソ-&gt;ヨドノティアラ</td><td>46.5倍</td><td>0.66</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>7 ミエノブラボー</td><td>4.3倍</td><td>9.2倍</td><td>+4.9</td></tr><tr><td>17 ヨドノティアラ</td><td>7.1倍</td><td>3.2倍</td><td>-3.9</td></tr><tr><td>10 ベルタソ</td><td>15.3倍</td><td>12.3倍</td><td>-3.0</td></tr><tr><td>16 サツキレジーナ</td><td>15.3倍</td><td>6.0倍</td><td>-9.3</td></tr><tr><td>3 ジュエルドレーサー</td><td>33.2倍</td><td>11.2倍</td><td>-22.0</td></tr><tr><td>2 スカイダイバー</td><td>27.4倍</td><td>32.8倍</td><td>+5.4</td></tr><tr><td>14 リアアーテシアン</td><td>39.0倍</td><td>13.8倍</td><td>-25.2</td></tr><tr><td>4 テンペストヒロイン</td><td>53.7倍</td><td>26.0倍</td><td>-27.7</td></tr><tr><td>1 ルクスコロン</td><td>61.9倍</td><td>86.7倍</td><td>+24.8</td></tr><tr><td>12 シャルマンナナ</td><td>57.3倍</td><td>16.7倍</td><td>-40.6</td></tr><tr><td>6 ココソラーレ</td><td>45.8倍</td><td>10.1倍</td><td>-35.7</td></tr><tr><td>15 パーティーガール</td><td>98.4倍</td><td>11.4倍</td><td>-87.0</td></tr><tr><td>13 ポップグルーヴ</td><td>88.9倍</td><td>82.2倍</td><td>-6.7</td></tr><tr><td>8 スペルビア</td><td>142.8倍</td><td>24.9倍</td><td>-117.9</td></tr><tr><td>5 アルマグラース</td><td>156.0倍</td><td>73.6倍</td><td>-82.4</td></tr><tr><td>9 メイヨシュア</td><td>302.5倍</td><td>52.3倍</td><td>-250.2</td></tr><tr><td>11 オレイア</td><td>419.5倍</td><td>77.2倍</td><td>-342.3</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">17:50 3歳以上1勝クラス(中京11レース)</div>
+      <p class='honmei'>◎本命: 9 メイクワンズデイ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>4-9 エルハーベン・メイクワンズデイ</td><td>8.0倍</td><td>0.76</td></tr><tr><td>馬単</td><td>15-&gt;4 ダンデノン-&gt;エルハーベン</td><td>15.8倍</td><td>0.78</td></tr><tr><td>三連複</td><td>5-9-15 ペールノエル・メイクワンズデイ・ダンデノン</td><td>15.6倍</td><td>0.60</td></tr><tr><td>三連単</td><td>15-&gt;4-&gt;9 ダンデノン-&gt;エルハーベン-&gt;メイクワンズデイ</td><td>37.1倍</td><td>0.62</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>9 メイクワンズデイ</td><td>3.8倍</td><td>7.5倍</td><td>+3.7</td></tr><tr><td>15 ダンデノン</td><td>3.8倍</td><td>6.3倍</td><td>+2.5</td></tr><tr><td>4 エルハーベン</td><td>5.5倍</td><td>5.2倍</td><td>-0.3</td></tr><tr><td>7 アラビアンジョイ</td><td>6.3倍</td><td>9.4倍</td><td>+3.1</td></tr><tr><td>5 ペールノエル</td><td>9.9倍</td><td>8.8倍</td><td>-1.1</td></tr><tr><td>13 エンヴェロップ</td><td>17.2倍</td><td>12.0倍</td><td>-5.2</td></tr><tr><td>11 ペアレンツギフト</td><td>25.2倍</td><td>9.7倍</td><td>-15.5</td></tr><tr><td>6 ベルサ</td><td>42.1倍</td><td>9.1倍</td><td>-33.0</td></tr><tr><td>3 リピ</td><td>47.0倍</td><td>37.2倍</td><td>-9.8</td></tr><tr><td>17 リアライズブラーヴ</td><td>90.7倍</td><td>24.2倍</td><td>-66.5</td></tr><tr><td>1 オンザマーチ</td><td>70.9倍</td><td>52.0倍</td><td>-18.9</td></tr><tr><td>12 ルクスノア</td><td>90.4倍</td><td>17.5倍</td><td>-72.9</td></tr><tr><td>8 ロンティケチャップ</td><td>128.4倍</td><td>46.4倍</td><td>-82.0</td></tr><tr><td>16 ホウオウドルーリー</td><td>133.2倍</td><td>47.4倍</td><td>-85.8</td></tr><tr><td>14 チリーゴールド</td><td>164.7倍</td><td>29.9倍</td><td>-134.8</td></tr><tr><td>2 バーケンティン</td><td>194.1倍</td><td>47.2倍</td><td>-146.9</td></tr><tr><td>10 クインズセレネ</td><td>306.9倍</td><td>63.8倍</td><td>-243.1</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">18:10 3歳未勝利(新潟12レース)</div>
+      <p class='honmei'>◎本命: 7 クリムゾンリーフ</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>7-12 クリムゾンリーフ・テンカラットレター</td><td>15.2倍</td><td>0.82</td></tr><tr><td>馬単</td><td>7-&gt;5 クリムゾンリーフ-&gt;カズシ</td><td>14.6倍</td><td>0.76</td></tr><tr><td>三連複</td><td>7-8-12 クリムゾンリーフ・トルネードアイル・テンカラットレター</td><td>11.6倍</td><td>0.63</td></tr><tr><td>三連単</td><td>7-&gt;8-&gt;5 クリムゾンリーフ-&gt;トルネードアイル-&gt;カズシ</td><td>21.9倍</td><td>0.80</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>7 クリムゾンリーフ</td><td>2.7倍</td><td>1.5倍</td><td>-1.2</td></tr><tr><td>8 トルネードアイル</td><td>5.0倍</td><td>7.1倍</td><td>+2.1</td></tr><tr><td>3 フォンドルレール</td><td>8.7倍</td><td>7.2倍</td><td>-1.5</td></tr><tr><td>5 カズシ</td><td>17.7倍</td><td>20.7倍</td><td>+3.0</td></tr><tr><td>12 テンカラットレター</td><td>24.4倍</td><td>17.7倍</td><td>-6.7</td></tr><tr><td>4 タニセンローマ</td><td>31.3倍</td><td>32.1倍</td><td>+0.8</td></tr><tr><td>10 パンパネイラ</td><td>61.4倍</td><td>22.0倍</td><td>-39.4</td></tr><tr><td>2 ブルーブロディ</td><td>87.8倍</td><td>55.2倍</td><td>-32.6</td></tr><tr><td>1 チャームドウイング</td><td>113.0倍</td><td>14.2倍</td><td>-98.8</td></tr><tr><td>9 キチロクゴール</td><td>146.8倍</td><td>37.8倍</td><td>-109.0</td></tr><tr><td>6 ドロワ</td><td>178.1倍</td><td>58.4倍</td><td>-119.7</td></tr><tr><td>11 メイショウソラル</td><td>220.2倍</td><td>92.3倍</td><td>-127.9</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">18:20 3歳未勝利(中京12レース)</div>
+      <p class='honmei'>◎本命: 4 エバイダンス</p>
+      <p class='no-rec'>推奨馬券なし</p>
+      <details class='ref-detail'><summary>参考: その他の券種(金額推奨対象外)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>4-6 エバイダンス・ルナフィオーレ</td><td>14.0倍</td><td>0.85</td></tr><tr><td>馬単</td><td>4-&gt;9 エバイダンス-&gt;シャインゴーツ</td><td>14.0倍</td><td>0.75</td></tr><tr><td>三連複</td><td>4-14-16 エバイダンス・マクアケ・ヤマニンコルザ</td><td>19.6倍</td><td>0.61</td></tr><tr><td>三連単</td><td>14-&gt;9-&gt;4 マクアケ-&gt;シャインゴーツ-&gt;エバイダンス</td><td>43.7倍</td><td>0.55</td></tr></tbody></table></details>
+      <details class='odds-detail'><summary>予測オッズ・取得オッズ(参考)</summary><table class='odds-table'><thead><tr><th>馬</th><th>予測</th><th>取得</th><th>差分</th></tr></thead><tbody><tr><td>4 エバイダンス</td><td>3.5倍</td><td>5.8倍</td><td>+2.3</td></tr><tr><td>14 マクアケ</td><td>5.7倍</td><td>8.9倍</td><td>+3.2</td></tr><tr><td>9 シャインゴーツ</td><td>9.4倍</td><td>7.8倍</td><td>-1.6</td></tr><tr><td>7 アスターエポワス</td><td>11.9倍</td><td>7.6倍</td><td>-4.3</td></tr><tr><td>6 ルナフィオーレ</td><td>13.1倍</td><td>13.3倍</td><td>+0.2</td></tr><tr><td>16 ヤマニンコルザ</td><td>25.4倍</td><td>9.4倍</td><td>-16.0</td></tr><tr><td>5 ヒッグスボソン</td><td>19.1倍</td><td>9.1倍</td><td>-10.0</td></tr><tr><td>15 イッタレイッタレ</td><td>31.9倍</td><td>18.6倍</td><td>-13.3</td></tr><tr><td>11 ファイアプレイス</td><td>59.7倍</td><td>13.4倍</td><td>-46.3</td></tr><tr><td>13 アルミラージ</td><td>79.4倍</td><td>6.3倍</td><td>-73.1</td></tr><tr><td>2 ラッキーラグーン</td><td>113.1倍</td><td>62.3倍</td><td>-50.8</td></tr><tr><td>1 ロードフリューゲル</td><td>120.6倍</td><td>18.6倍</td><td>-102.0</td></tr><tr><td>8 ユウトザイシン</td><td>166.7倍</td><td>56.3倍</td><td>-110.4</td></tr><tr><td>10 フルドフォルク</td><td>176.1倍</td><td>55.9倍</td><td>-120.2</td></tr><tr><td>3 スターペスアンナ</td><td>234.2倍</td><td>66.4倍</td><td>-167.8</td></tr><tr><td>12 イットガール</td><td>420.5倍</td><td>74.9倍</td><td>-345.6</td></tr></tbody></table></details>
+    </div>
+    
+  </section>
+  <p class="subtitle" style="margin-top: 32px;">
+    ※本レポートは予測モデルによる参考情報です。的中・回収を保証するものではありません。
+    IPATへの自動投票は一切行いません。
+  </p>
+</body>
+</html>

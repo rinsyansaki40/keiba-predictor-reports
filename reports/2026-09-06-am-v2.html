@@ -41,6 +41,11 @@
   table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.85rem; }
   th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--border); }
   .rec-table th, .rec-table td { text-align: left; }
+
+table.sim{border-collapse:collapse;width:100%;font-size:0.9rem}
+table.sim th,table.sim td{border:1px solid var(--line,#ddd);padding:6px 8px;text-align:right}
+table.sim th{background:rgba(127,127,127,.08);font-weight:600}
+table.sim td:first-child,table.sim th:first-child{text-align:left}
 </style>
 </head>
 <body>
@@ -64,6 +69,26 @@
           
         </section>
         
+  
+    <section>
+      <h2>この予測の検証結果</h2>
+      <p class="subtitle" style="margin:0 0 8px">
+        4モデルの買い目を「1点1,000円・1日の合計1万円まで」で買い続けた場合を、
+        過去データでシミュレーションしました。
+      </p>
+      <table class="sim">
+        <tr><th>期間</th><th>日数</th><th>点数</th>
+            <th>投資</th><th>回収</th><th>回収率</th></tr>
+        <tr><td>開発期間</td><td>250日</td><td>2,825点</td><td>1,905,900円</td><td>2,436,350円</td><td><b>128%</b></td></tr><tr><td>検証期間</td><td>126日</td><td>1,216点</td><td>941,100円</td><td>1,212,500円</td><td><b>129%</b></td></tr>
+      </table>
+      <p class="subtitle" style="margin:8px 0 0">
+        「検証期間」はモデルの調整に一切使っていない期間です。1日あたりの平均投資は約7,500円。
+        ただし<b>プラスで終わる日は3割</b>で、残り7割はマイナスです。当たりは少なく
+        当たったときに大きいタイプなので、1日単位ではなく積み上げで見てください。
+        過去データによる検証であり、将来の的中・回収を保証するものではありません。
+      </p>
+    </section>
+    
   
         <section>
           <h2>期待値(8点 ／ 単勝 ／ 合計3,200円)</h2>

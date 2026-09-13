@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>競馬予測レポート・午後 2026-09-13</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --fg: #1a1a1a; --card-bg: #ffffff; --border: #e0e0dc;
+    --accent: #b3311f; --muted: #6b6b68; --good: #1f7a3f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161614; --fg: #ececea; --card-bg: #211f1c; --border: #3a3733; --muted: #a3a09b; --good: #4ecb7c; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 16px; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+    line-height: 1.5; max-width: 640px; margin-left: auto; margin-right: auto;
+  }
+  h1 { font-size: 1.3rem; margin-bottom: 4px; }
+  h2 { font-size: 1.05rem; border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-top: 28px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
+  .pick-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-top: 10px;
+  }
+  .pick-head { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); }
+  .pick-body { margin-top: 6px; font-size: 1.05rem; font-weight: 600; }
+  .pick-body .marks { color: var(--accent); }
+  .pick-foot { margin-top: 8px; display: flex; gap: 14px; font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .pick-foot .stake { color: var(--good); font-weight: 600; }
+  .race-block {
+    border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px;
+    margin-top: 10px; background: var(--card-bg);
+  }
+  .race-block-head { font-weight: 600; display: flex; justify-content: space-between; align-items: baseline; }
+  .race-block-head .badge-buy { color: var(--accent); font-size: 0.8rem; font-weight: 700; }
+  .race-block-head .badge-skip { color: var(--muted); font-size: 0.8rem; }
+  .no-rec { color: var(--muted); font-style: italic; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--border); }
+  .rec-table th, .rec-table td { text-align: left; }
+
+table.sim{border-collapse:collapse;width:100%;font-size:0.9rem}
+table.sim th,table.sim td{border:1px solid var(--line,#ddd);padding:6px 8px;text-align:right}
+table.sim th{background:rgba(127,127,127,.08);font-weight:600}
+table.sim tr.sum td{background:rgba(127,127,127,.05);font-weight:600}
+table.sim td:first-child,table.sim th:first-child{text-align:left}
+</style>
+</head>
+<body>
+  <h1>競馬予測レポート・午後</h1>
+  <div class="subtitle">2026-09-13(午後) ／ 全12レース中 1レースが買い対象(1点・参考配分 合計1,000円)</div>
+  <div class="subtitle" style="margin-top:-12px">内訳: 安定型 なし・一発型 なし・割安型 なし・大レース型 1点(1レース)・混戦型 なし・盲点型 なし</div>
+  <details class="subtitle" style="margin-top:-8px"><summary>モデルと表示の説明</summary>
+    <ul style="margin:6px 0 0; padding-left:20px">
+      <li><b>安定型</b>(旧: 本線): 当たりやすさ重視。上位4頭の三連複BOX(4点/レース)。的中率5割・配当は小さめ。</li>
+      <li><b>一発型</b>(旧: 穴狙い): 人気薄が売れ始めたレースで一発を狙う。ワイド2点+馬連2点(4点/レース)。ワイドは穴馬と取得時オッズ1・2位の組、馬連は同じ穴馬と別モデル(勝率)の1・2位の組。2026年9月8日に三連複1点を外し、相手の選び方と馬連を変更。</li>
+      <li><b>割安型</b>(旧: 期待値): 実力に比べてオッズが高い(割安な)馬の単勝1点。距離1401〜1800mのレースで、モデル勝率 × 取得時オッズ(08:25/11:55)が基準を超えた馬。的中率は6〜12%(中央値10番人気・32倍前後)。<b>確定見込み</b>は締切までのオッズの動きを推定した表示用の値で、選抜には使っていません。</li>
+      <li><b>大レース型</b>(旧: 重賞ねらい): 大きなレースだけを狙う単勝1点。午後便(発走13:00以降)のオープン特別・重賞のみ。別モデル(2026年9月7日に作り直し)の推定人気1〜3番手のうち、モデル勝率 × 取得時オッズが基準を超えた馬。的中率は16〜20%。</li>
+      <li><b>混戦型</b>(旧: 中穴): 本命が弱い混戦で中位人気を狙う単勝1点。1番人気が3倍以上の混戦で、取得時オッズ20〜40倍かつ別モデルの推定人気5〜10番手のうち、モデル勝率 × 推定オッズが基準を超えた馬。的中率は5〜8%。</li>
+      <li><b>盲点型</b>: 未勝利戦だけを狙う単勝1点(2026年9月12日から)。締切までの市場の動きでは埋まらない差を学習した専用モデルが、取得時オッズに対して期待値が基準を超えると判断した馬。的中率は約3割、1日0.7点で買い目が出るのは開催日の半分ほどです。</li>
+      <li><b>宝くじ型</b>: 混戦型の馬を1着に固定した三連単16点(2着=別モデルの3着内確率上位4頭、3着=上位5頭)、1点100円。6モデルの買い目や1日1万円の配分とは別枠。的中率は約3%(月1〜2回)で、当たれば10万円前後の払戻が中心。負けが1〜2か月続くことがある宝くじ枠(2026年9月8日から)。</li>
+      <li>金額は1日1万円の予算のうち、この便に配分した10,000円を前提とした参考配分です(推奨額ではありません)。</li>
+      <li><b>◎信頼度</b>: ◎の当たりやすさを過去の実測から3段階で示したもの(高=勝率44%/3着内80%、中=31%/66%、低=22%/49%。検証8期間・各段階1,300レース超)。</li>
+    </ul>
+  </details>
+  <details class="subtitle" style="margin-top:4px"><summary>前回(2026-09-12)の結果(6モデル): 投資6,000円 → 回収0円 (回収率0%) 0/6点的中<br>本格運用(09/01〜)の実測: 3開催日で 投資22,800円 → 回収25,160円 (回収率110%) 2/24点的中</summary><div style="margin:6px 0 0 1em; white-space:pre-line"><br>【一発型】投資4,000円 → 回収0円 (回収率0%) 0/4点的中・1レース<br>　─ 14:25 阪神 瀬戸内海特別 ワイド 10-11 1,000円 → 回収0円<br>　─ 14:25 阪神 瀬戸内海特別 ワイド 2-10 1,000円 → 回収0円<br>　─ 14:25 阪神 瀬戸内海特別 馬連 10-12 1,000円 → 回収0円<br>　─ 14:25 阪神 瀬戸内海特別 馬連 2-10 1,000円 → 回収0円<br><br>【割安型】投資1,000円 → 回収0円 (回収率0%) 0/1点的中・1レース<br>　─ 15:05 阪神 竹田城S 単勝 8 1,000円 → 回収0円<br><br>【大レース型】投資1,000円 → 回収0円 (回収率0%) 0/1点的中・1レース<br>　─ 15:30 中山 ラジオ日本賞 単勝 10 1,000円 → 回収0円</div></details>
+  
+        <section>
+          <h2>本日買うべきレース(1レース 1点 ／ 合計1,000円)</h2>
+          <p class="subtitle" style="margin:0 0 8px">
+            安定型 なし・一発型 なし・割安型 なし・大レース型 1点(1レース)・混戦型 なし・盲点型 なし。発走時刻順に並べています。
+          </p>
+          <ul><li><b>[大レース型]</b> 阪神11R 15:30 ローズS ／ 単勝 12(取得時9.1倍)<br><b>1点 で 1,000円</b></li></ul>
+          
+          
+        </section>
+        
+  
+    <section>
+      <h2>この予測の検証結果</h2>
+      <p class="subtitle" style="margin:0 0 8px">
+        買い目を「1点1,000円・1日の合計1万円まで(午前便に半分、午後便に残り)」で買い続けた場合を、
+        配信と同じ二段の配分で過去データにシミュレーションしました。
+        対象は<b>2025年4月12日〜2026年8月30日</b>の開催日132日で、
+        モデルの調整には一切使っていない期間です。
+      </p>
+      <table class="sim">
+        <tr><th>モデル</th><th>点数</th><th>投資</th><th>回収</th>
+            <th>回収率</th><th>的中率</th></tr>
+        <tr><td>安定型</td><td>484点</td><td>279,200円</td><td>320,680円</td><td><b>115%</b></td><td>50.4%</td></tr><tr><td>一発型</td><td>468点</td><td>270,800円</td><td>492,070円</td><td><b>182%</b></td><td>19.7%</td></tr><tr><td>割安型</td><td>93点</td><td>70,500円</td><td>214,920円</td><td><b>305%</b></td><td>9.7%</td></tr><tr><td>大レース型</td><td>283点</td><td>223,400円</td><td>296,790円</td><td><b>133%</b></td><td>19.8%</td></tr><tr><td>混戦型</td><td>224点</td><td>162,400円</td><td>311,840円</td><td><b>192%</b></td><td>5.8%</td></tr><tr><td>盲点型</td><td>92点</td><td>68,500円</td><td>81,970円</td><td><b>120%</b></td><td>30.4%</td></tr><tr class='sum'><td>6モデル合計</td><td>1,644点</td><td>1,074,800円</td><td>1,718,270円</td><td><b>160%</b></td><td></td></tr><tr><td>宝くじ型(別枠・1点100円)</td><td>3,584点</td><td>358,400円</td><td>1,310,330円</td><td><b>366%</b></td><td>2.7%</td></tr>
+      </table>
+      <p class="subtitle" style="margin:8px 0 0">※ 1日あたりの平均投資は約8,000円でした。「大レース型」は2026年9月7日に作り直したもので、午後便のオープン特別・重賞で推定人気1〜3番手のうち期待値が基準を超える馬の単勝、「混戦型」は同じ日に追加した1番人気3倍以上の混戦で20〜40倍の中位人気を狙う単勝です(検証は同じ期間・同じ配分)。「盲点型」は2026年9月12日に追加したもので、未勝利戦で市場が見落としている馬の単勝を1点買います(1日0.7点、買い目が出るのは開催日の約半分です)。宝くじ型(表の最下行)は混戦型の馬を1着に固定した三連単16点(2着は別モデルの3着内確率上位4頭、3着は上位5頭)で、1点100円・6モデルの配分とは別枠です。的中は224レース中6回(3%、月1〜2回)で、回収率は払戻数本に大きく依存する参考値です。負けが1〜2か月続くことがあります。</p>
+      <p class="subtitle" style="margin:8px 0 0">ただしプラスで終わる日はおよそ2日に1回(買い目のあった134日のうち60日)で、残りの日はマイナスです。とくに割安型(的中率10%)と混戦型(6%)は、外れが続いたあとに大きく返ってくる形です。割安型の回収率は学習の乱数だけで大きく動くため(同じ条件で作り直した1本ずつは OOS で 73〜284%)、2026年9月11日から5本を平均したモデルに切り替えました。この表の値はその平均版の実績です。1日単位ではなく積み上げで見てください。過去データによる検証であり、将来の的中・回収を保証するものではありません。</p>
+      <p class='subtitle' style='margin:12px 0 4px'><b>本格運用(2026/09/01〜)の実測</b> — 3開催日。上の表は過去データでの検証、こちらは実際に配信した買い目の結果です。</p><table class='sim'><thead><tr><th>モデル</th><th>投資</th><th>回収</th><th>回収率</th><th>的中</th></tr></thead><tbody><tr class='sum'><td>6モデル合計</td><td>22,800円</td><td>25,160円</td><td><b>110%</b></td><td>2/24点</td></tr><tr><td>安定型</td><td>0円</td><td>0円</td><td><b>0%</b></td><td>0/0点</td></tr><tr><td>一発型</td><td>11,200円</td><td>9,360円</td><td><b>84%</b></td><td>1/12点</td></tr><tr><td>割安型</td><td>6,000円</td><td>15,800円</td><td><b>263%</b></td><td>1/6点</td></tr><tr><td>大レース型</td><td>5,600円</td><td>0円</td><td><b>0%</b></td><td>0/6点</td></tr><tr><td>混戦型</td><td>0円</td><td>0円</td><td><b>0%</b></td><td>0/0点</td></tr><tr><td>盲点型</td><td>0円</td><td>0円</td><td><b>0%</b></td><td>0/0点</td></tr><tr><td>宝くじ型(別枠)</td><td>0円</td><td>0円</td><td><b>0%</b></td><td>0/0点</td></tr></tbody></table>
+    </section>
+    
+  <section>
+    <h2>全レースのおすすめ買い目</h2>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>13:10 3歳以上1勝クラス(阪神7R) ｜ ◎信頼度低(勝率22% ・ 3着内49%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr><td></td><td>2</td><td>プレダトゥール</td><td>亀田</td><td>10.5%</td><td>5.9倍</td><td>1</td></tr><tr style='font-weight:700'><td>△</td><td>6</td><td>ジューンアゲイン</td><td>☆田山</td><td>12.7%</td><td>6.0倍</td><td>2</td></tr><tr style='font-weight:700'><td>◎</td><td>5</td><td>ゲタリア</td><td>西村淳</td><td>15.9%</td><td>6.2倍</td><td>3</td></tr><tr style='font-weight:700'><td>○</td><td>13</td><td>ヴォンドゥ</td><td>▲森田</td><td>14.9%</td><td>6.3倍</td><td>4</td></tr><tr style='font-weight:700'><td>▲</td><td>10</td><td>フレイムスター</td><td>吉村</td><td>13.3%</td><td>6.8倍</td><td>5</td></tr><tr><td></td><td>16</td><td>ウォーターパラディ</td><td>国分恭</td><td>9.4%</td><td>7.4倍</td><td>6</td></tr><tr><td></td><td>15</td><td>バルミラクル</td><td>鮫島良</td><td>4.8%</td><td>14.7倍</td><td>7</td></tr><tr><td></td><td>7</td><td>ハードシングス</td><td>松若</td><td>5.0%</td><td>15.4倍</td><td>8</td></tr><tr><td></td><td>11</td><td>グランディマージュ</td><td>田口</td><td>2.6%</td><td>25.3倍</td><td>9</td></tr><tr><td></td><td>9</td><td>ワンウェイトゥヘル</td><td>長岡</td><td>2.6%</td><td>28.2倍</td><td>10</td></tr><tr><td></td><td>1</td><td>シャープインサイト</td><td>菱田</td><td>1.8%</td><td>47.6倍</td><td>11</td></tr><tr><td></td><td>12</td><td>ケイエイト</td><td>▲和田陽</td><td>1.3%</td><td>48.3倍</td><td>12</td></tr><tr><td></td><td>8</td><td>ロードヴェルテクス</td><td>松本</td><td>1.4%</td><td>49.5倍</td><td>13</td></tr><tr><td></td><td>3</td><td>ベストレーサー</td><td>小崎</td><td>1.3%</td><td>54.3倍</td><td>14</td></tr><tr><td></td><td>14</td><td>コンテナライン</td><td>★河原田</td><td>1.4%</td><td>58.8倍</td><td>15</td></tr><tr><td></td><td>4</td><td>ロイヤルテール</td><td>藤懸</td><td>1.1%</td><td>62.9倍</td><td>16</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・一発型): 【一発型】ワイド フォーメーション7→2,6(2点) ／ 【一発型】馬連 フォーメーション7→5,13(2点) ｜ 見送り理由: 穴馬のオッズの下落が足りない(13% / 基準25%以上)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>13:25 3歳以上1勝クラス(中山7R) ｜ ◎信頼度低(勝率22% ・ 3着内49%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>○</td><td>5</td><td>ダノンアスコルティ</td><td>岩田望</td><td>14.9%</td><td>5.7倍</td><td>1</td></tr><tr style='font-weight:700'><td>◎</td><td>15</td><td>タイセイアストロ</td><td>杉原</td><td>15.6%</td><td>6.2倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>6</td><td>ミスターマーボー</td><td>原</td><td>9.2%</td><td>7.7倍</td><td>3</td></tr><tr><td></td><td>8</td><td>ベアサナエチャン</td><td>松山</td><td>7.3%</td><td>9.6倍</td><td>4</td></tr><tr style='font-weight:700'><td>△</td><td>11</td><td>ナハトナナレオン</td><td>横山武</td><td>8.3%</td><td>10.8倍</td><td>5</td></tr><tr><td></td><td>7</td><td>ダイヤテソーロ</td><td>木幡巧</td><td>6.0%</td><td>11.6倍</td><td>6</td></tr><tr><td></td><td>9</td><td>ファンクション</td><td>武豊</td><td>7.2%</td><td>11.6倍</td><td>7</td></tr><tr><td></td><td>16</td><td>スワローシチー</td><td>田辺</td><td>5.2%</td><td>13.5倍</td><td>8</td></tr><tr><td></td><td>3</td><td>ツインピークス</td><td>◇小林美</td><td>5.8%</td><td>14.2倍</td><td>9</td></tr><tr><td></td><td>2</td><td>スマイルカーブ</td><td>菊沢</td><td>4.3%</td><td>18.2倍</td><td>10</td></tr><tr><td></td><td>4</td><td>ノーブルライナー</td><td>丹内</td><td>2.7%</td><td>21.5倍</td><td>11</td></tr><tr><td></td><td>1</td><td>ラヴスコール</td><td>鮫島駿</td><td>3.8%</td><td>21.6倍</td><td>12</td></tr><tr><td></td><td>10</td><td>シャオママル</td><td>丸田</td><td>3.6%</td><td>22.7倍</td><td>13</td></tr><tr><td></td><td>12</td><td>スペードギニー</td><td>△石神道</td><td>3.0%</td><td>26.2倍</td><td>14</td></tr><tr><td></td><td>13</td><td>ソレエスピアージャ</td><td>ミシェル</td><td>2.5%</td><td>29.9倍</td><td>15</td></tr><tr><td></td><td>14</td><td>クリノゴッホ</td><td>△石田</td><td>0.4%</td><td>92.0倍</td><td>16</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 15 タイセイアストロ（6.2倍・期待値1.42） ｜ 見送り理由: 期待値が基準に届かない(1.420 / 基準3.2)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>13:40 3歳以上1勝クラス(阪神8R) ｜ ◎信頼度中(勝率31% ・ 3着内66%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>3</td><td>アスクガンバーレ</td><td>ルメール</td><td>23.1%</td><td>3.2倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>11</td><td>サンライズオスカー</td><td>藤懸</td><td>18.6%</td><td>3.8倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>2</td><td>ココロヅヨサ</td><td>浜中</td><td>15.1%</td><td>5.9倍</td><td>3</td></tr><tr><td></td><td>5</td><td>メイショウソウテン</td><td>田口</td><td>8.9%</td><td>8.8倍</td><td>4</td></tr><tr style='font-weight:700'><td>△</td><td>8</td><td>アビラーシャ</td><td>中井</td><td>11.7%</td><td>8.8倍</td><td>5</td></tr><tr><td></td><td>1</td><td>ガイストライヒ</td><td>西村淳</td><td>5.3%</td><td>12.7倍</td><td>6</td></tr><tr><td></td><td>9</td><td>メイショウクモイ</td><td>☆田山</td><td>4.8%</td><td>15.3倍</td><td>7</td></tr><tr><td></td><td>4</td><td>レッドホット</td><td>佐々木</td><td>4.3%</td><td>20.7倍</td><td>8</td></tr><tr><td></td><td>6</td><td>グランドスウェル</td><td>西塚</td><td>3.1%</td><td>27.3倍</td><td>9</td></tr><tr><td></td><td>10</td><td>ラッキーベイ</td><td>松若</td><td>2.8%</td><td>29.9倍</td><td>10</td></tr><tr><td></td><td>7</td><td>マーベリックシチー</td><td>国分恭</td><td>2.0%</td><td>39.4倍</td><td>11</td></tr><tr><td></td><td>12</td><td>ブルーストレイル</td><td>城戸</td><td>0.4%</td><td>125.6倍</td><td>12</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・混戦型): 【混戦型】単勝 4 レッドホット（取得時20.7倍・期待値0.73） ｜ 見送り理由: 期待値が基準に届かない(0.725 / 基準1.2)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>13:55 3歳以上1勝クラス(中山8R) ｜ ◎信頼度低(勝率22% ・ 3着内49%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>○</td><td>16</td><td>グランルチャドール</td><td>石橋脩</td><td>13.3%</td><td>5.1倍</td><td>1</td></tr><tr style='font-weight:700'><td>◎</td><td>13</td><td>ラルフテソーロ</td><td>丹内</td><td>15.9%</td><td>5.3倍</td><td>2</td></tr><tr style='font-weight:700'><td>△</td><td>10</td><td>エルムラント</td><td>三浦</td><td>12.9%</td><td>5.4倍</td><td>3</td></tr><tr style='font-weight:700'><td>▲</td><td>1</td><td>ホウオウルクソール</td><td>◇今村</td><td>13.2%</td><td>7.4倍</td><td>4</td></tr><tr><td></td><td>14</td><td>シルフレイ</td><td>横山和</td><td>9.7%</td><td>8.3倍</td><td>5</td></tr><tr><td></td><td>6</td><td>リラキトス</td><td>◇小林美</td><td>6.2%</td><td>10.6倍</td><td>6</td></tr><tr><td></td><td>3</td><td>クラシオン</td><td>菊沢</td><td>7.4%</td><td>13.2倍</td><td>7</td></tr><tr><td></td><td>2</td><td>テンハートビート</td><td>ミシェル</td><td>6.5%</td><td>13.4倍</td><td>8</td></tr><tr><td></td><td>5</td><td>ペロ</td><td>丸山</td><td>4.0%</td><td>18.8倍</td><td>9</td></tr><tr><td></td><td>11</td><td>トップマジシャン</td><td>内田博</td><td>2.4%</td><td>35.6倍</td><td>10</td></tr><tr><td></td><td>15</td><td>ホウオウプレシャス</td><td>▲水沼</td><td>2.0%</td><td>40.9倍</td><td>11</td></tr><tr><td></td><td>9</td><td>ニシノヴィヴィ</td><td>原</td><td>1.8%</td><td>48.3倍</td><td>12</td></tr><tr><td></td><td>4</td><td>イラーナ</td><td>△石神道</td><td>2.5%</td><td>52.2倍</td><td>13</td></tr><tr><td></td><td>8</td><td>ブルーユンチェリー</td><td>武藤</td><td>1.3%</td><td>52.4倍</td><td>14</td></tr><tr><td></td><td>7</td><td>レイフロレット</td><td>柴田大</td><td>0.5%</td><td>83.1倍</td><td>15</td></tr><tr><td></td><td>12</td><td>コヴェナント</td><td>野中</td><td>0.3%</td><td>127.8倍</td><td>16</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 15 ホウオウプレシャス（40.9倍・期待値2.77） ｜ 見送り理由: 期待値が基準に届かない(2.770 / 基準3.2)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>14:10 能勢特別(阪神9R) ｜ ◎信頼度中(勝率31% ・ 3着内66%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>5</td><td>タンテドヴィーヴル</td><td>ルメール</td><td>27.7%</td><td>3.2倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>10</td><td>ミッキージャンプ</td><td>西村淳</td><td>23.0%</td><td>3.5倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>2</td><td>マジョレルブルー</td><td>戸崎圭</td><td>11.6%</td><td>6.8倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>4</td><td>ダイヤモンドハンズ</td><td>北村友</td><td>9.6%</td><td>7.2倍</td><td>4</td></tr><tr><td></td><td>7</td><td>シーミハットク</td><td>坂井</td><td>10.8%</td><td>7.8倍</td><td>5</td></tr><tr><td></td><td>3</td><td>サンライズバブル</td><td>吉田隼</td><td>7.5%</td><td>9.7倍</td><td>6</td></tr><tr><td></td><td>11</td><td>サミダレナイツ</td><td>酒井</td><td>3.7%</td><td>16.5倍</td><td>7</td></tr><tr><td></td><td>6</td><td>ヴァイザーバルコ</td><td>古川吉</td><td>1.7%</td><td>37.8倍</td><td>8</td></tr><tr><td></td><td>9</td><td>バセリーナ</td><td>斎藤</td><td>1.6%</td><td>40.0倍</td><td>9</td></tr><tr><td></td><td>8</td><td>コスモスプモーニ</td><td>Ｍデムーロ</td><td>1.4%</td><td>46.4倍</td><td>10</td></tr><tr><td></td><td>1</td><td>ヨシヒロ</td><td>小崎</td><td>1.3%</td><td>64.5倍</td><td>11</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 7 シーミハットク（7.8倍・期待値1.5） ｜ 見送り理由: 期待値が基準に届かない(1.500 / 基準3.2)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>14:25 習志野特別(中山9R) ｜ ◎信頼度高(勝率44% ・ 3着内80%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>1</td><td>イベントホライゾン</td><td>松山</td><td>30.8%</td><td>2.3倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>2</td><td>ブルーマエストロ</td><td>川田</td><td>18.5%</td><td>4.3倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>3</td><td>トレサフィール</td><td>横山武</td><td>13.0%</td><td>6.5倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>11</td><td>マイネルアレス</td><td>岩田望</td><td>8.7%</td><td>8.5倍</td><td>4</td></tr><tr><td></td><td>7</td><td>グロスビーク</td><td>津村</td><td>9.1%</td><td>9.8倍</td><td>5</td></tr><tr><td></td><td>4</td><td>グランカンタンテ</td><td>三浦</td><td>5.4%</td><td>17.4倍</td><td>6</td></tr><tr><td></td><td>5</td><td>スナークピカソ</td><td>丹内</td><td>5.5%</td><td>17.7倍</td><td>7</td></tr><tr><td></td><td>10</td><td>ワンモアスマイル</td><td>岩田康</td><td>3.7%</td><td>23.9倍</td><td>8</td></tr><tr><td></td><td>6</td><td>ヤマニンガラッシア</td><td>大野</td><td>3.4%</td><td>25.8倍</td><td>9</td></tr><tr><td></td><td>9</td><td>レッセパッセ</td><td>菊沢</td><td>1.5%</td><td>49.9倍</td><td>10</td></tr><tr><td></td><td>8</td><td>ホークマン</td><td>柴田大</td><td>0.4%</td><td>115.7倍</td><td>11</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 4 グランカンタンテ（17.4倍・期待値2.06） ｜ 見送り理由: 期待値が基準に届かない(2.060 / 基準3.2)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>14:50 仲秋S(阪神10R) ｜ ◎信頼度低(勝率22% ・ 3着内49%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>○</td><td>2</td><td>テラメリタ</td><td>ルメール</td><td>19.2%</td><td>3.0倍</td><td>1</td></tr><tr style='font-weight:700'><td>◎</td><td>8</td><td>インヴォーグ</td><td>幸</td><td>19.9%</td><td>4.7倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>4</td><td>エポックヴィーナス</td><td>田山</td><td>9.0%</td><td>9.7倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>15</td><td>コスモアンソロジー</td><td>佐々木</td><td>7.5%</td><td>12.4倍</td><td>4</td></tr><tr><td></td><td>3</td><td>モアリジット</td><td>古川奈</td><td>5.5%</td><td>12.6倍</td><td>5</td></tr><tr><td></td><td>6</td><td>ハギノアルデバラン</td><td>浜中</td><td>6.5%</td><td>13.0倍</td><td>6</td></tr><tr><td></td><td>1</td><td>チェルノボーグ</td><td>西塚</td><td>4.1%</td><td>15.1倍</td><td>7</td></tr><tr><td></td><td>11</td><td>ヨウシタンレイ</td><td>坂井</td><td>4.1%</td><td>17.0倍</td><td>8</td></tr><tr><td></td><td>13</td><td>レッドアトレーヴ</td><td>戸崎圭</td><td>6.4%</td><td>17.4倍</td><td>9</td></tr><tr><td></td><td>9</td><td>サンタンカ</td><td>吉村</td><td>4.8%</td><td>18.5倍</td><td>10</td></tr><tr><td></td><td>5</td><td>モンテシート</td><td>北村友</td><td>4.8%</td><td>20.9倍</td><td>11</td></tr><tr><td></td><td>7</td><td>ドゥカート</td><td>菱田</td><td>3.6%</td><td>24.2倍</td><td>12</td></tr><tr><td></td><td>10</td><td>リチャードバローズ</td><td>Ｍデムーロ</td><td>2.4%</td><td>33.3倍</td><td>13</td></tr><tr><td></td><td>14</td><td>サクセスアイ</td><td>藤懸</td><td>1.4%</td><td>68.7倍</td><td>14</td></tr><tr><td></td><td>12</td><td>スリリングチェイス</td><td>小沢</td><td>0.7%</td><td>95.2倍</td><td>15</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 5 モンテシート（20.9倍・期待値2.88） ｜ 見送り理由: 期待値が基準に届かない(2.880 / 基準3.2)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>15:05 初風S(中山10R) ｜ ◎信頼度中(勝率31% ・ 3着内66%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>10</td><td>イリフィ</td><td>川田</td><td>36.3%</td><td>3.7倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>8</td><td>ワンダラー</td><td>丹内</td><td>14.9%</td><td>4.3倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>9</td><td>アシャカトベ</td><td>横山武</td><td>13.4%</td><td>4.8倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>2</td><td>ドンレパルス</td><td>三浦</td><td>9.6%</td><td>5.5倍</td><td>4</td></tr><tr><td></td><td>5</td><td>アデランテ</td><td>吉田豊</td><td>9.8%</td><td>7.3倍</td><td>5</td></tr><tr><td></td><td>3</td><td>コパノヴィンセント</td><td>柴田大</td><td>8.5%</td><td>8.8倍</td><td>6</td></tr><tr><td></td><td>4</td><td>スプランドゥール</td><td>石神道</td><td>2.6%</td><td>21.9倍</td><td>7</td></tr><tr><td></td><td>6</td><td>ポッドソル</td><td>丸山</td><td>1.7%</td><td>33.0倍</td><td>8</td></tr><tr><td></td><td>7</td><td>メイショウコバト</td><td>石橋脩</td><td>2.2%</td><td>36.3倍</td><td>9</td></tr><tr><td></td><td>1</td><td>パルデンス</td><td>小林凌</td><td>0.9%</td><td>63.4倍</td><td>10</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・安定型): 三連複BOX 2-8-9-10(4点) ｜ 見送り理由: 選抜スコアが基準に届かない(-0.709 / 基準0.5)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>15:30 ローズS(阪神11R) ｜ ◎信頼度中(勝率31% ・ 3着内66%)</span>
+        <span class='badge-skip'>【見送り】選抜スコアが基準に届かない(-0.463 / 基準0.5)</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>7</td><td>モンローウォーク</td><td>戸崎圭</td><td>31.1%</td><td>2.2倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>6</td><td>イクシード</td><td>ルメール</td><td>17.1%</td><td>4.7倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>2</td><td>エンネ</td><td>坂井</td><td>13.4%</td><td>5.6倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>12</td><td>タイセイボーグ</td><td>西村淳</td><td>10.0%</td><td>9.1倍</td><td>4</td></tr><tr><td></td><td>1</td><td>アンジュドジョワ</td><td>北村友</td><td>6.3%</td><td>13.6倍</td><td>5</td></tr><tr><td></td><td>10</td><td>スウィートハピネス</td><td>佐々木</td><td>5.1%</td><td>19.9倍</td><td>6</td></tr><tr><td></td><td>11</td><td>レイクラシック</td><td>吉村</td><td>5.0%</td><td>20.5倍</td><td>7</td></tr><tr><td></td><td>3</td><td>スマートプリエール</td><td>田山</td><td>3.5%</td><td>24.1倍</td><td>8</td></tr><tr><td></td><td>5</td><td>ファストフォワード</td><td>小崎</td><td>2.3%</td><td>33.9倍</td><td>9</td></tr><tr><td></td><td>9</td><td>ナムラコスモス</td><td>田口</td><td>2.5%</td><td>37.5倍</td><td>10</td></tr><tr><td></td><td>8</td><td>ミリタリータトゥー</td><td>西塚</td><td>3.0%</td><td>38.8倍</td><td>11</td></tr><tr><td></td><td>4</td><td>アンディムジーク</td><td>古川吉</td><td>0.6%</td><td>124.8倍</td><td>12</td></tr></tbody></table></div><p style='margin:8px 0 0'><b>買い目</b>: 【大レース型】単勝 12 タイセイボーグ（取得時9.1倍・期待値1.34）</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>15:45 セントライト記念(中山11R) ｜ ◎信頼度低(勝率22% ・ 3着内49%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>8</td><td>ゴーイントゥスカイ</td><td>武豊</td><td>17.1%</td><td>4.1倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>10</td><td>バステール</td><td>川田</td><td>15.3%</td><td>5.3倍</td><td>2</td></tr><tr style='font-weight:700'><td>△</td><td>5</td><td>アスクエジンバラ</td><td>岩田康</td><td>12.9%</td><td>5.6倍</td><td>3</td></tr><tr style='font-weight:700'><td>▲</td><td>6</td><td>サヴォアフェール</td><td>松山</td><td>13.1%</td><td>5.9倍</td><td>4</td></tr><tr><td></td><td>9</td><td>サノノグレーター</td><td>田辺</td><td>12.4%</td><td>7.3倍</td><td>5</td></tr><tr><td></td><td>2</td><td>アウダーシア</td><td>津村</td><td>7.2%</td><td>10.9倍</td><td>6</td></tr><tr><td></td><td>16</td><td>ラディアントスター</td><td>池添</td><td>4.0%</td><td>21.2倍</td><td>7</td></tr><tr><td></td><td>15</td><td>エリプティクカーブ</td><td>横山武</td><td>3.4%</td><td>24.8倍</td><td>8</td></tr><tr><td></td><td>12</td><td>ラージアンサンブル</td><td>岩田望</td><td>3.5%</td><td>25.2倍</td><td>9</td></tr><tr><td></td><td>7</td><td>ジャスティンシカゴ</td><td>原</td><td>2.7%</td><td>33.3倍</td><td>10</td></tr><tr><td></td><td>4</td><td>リッツパーティー</td><td>丹内</td><td>2.3%</td><td>36.9倍</td><td>11</td></tr><tr><td></td><td>3</td><td>バドリナート</td><td>丸山</td><td>1.8%</td><td>49.8倍</td><td>12</td></tr><tr><td></td><td>1</td><td>ウェイクフィールド</td><td>横山和</td><td>1.6%</td><td>59.7倍</td><td>13</td></tr><tr><td></td><td>11</td><td>ミリオンクラウン</td><td>横山典</td><td>1.3%</td><td>74.9倍</td><td>14</td></tr><tr><td></td><td>13</td><td>フウセン</td><td>鮫島駿</td><td>1.2%</td><td>77.4倍</td><td>15</td></tr><tr><td></td><td>14</td><td>ティラーノ</td><td>石橋脩</td><td>0.2%</td><td>185.4倍</td><td>16</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・大レース型): 【大レース型】単勝 6 サヴォアフェール（取得時5.9倍・期待値1.00） ｜ 見送り理由: 期待値が基準に届かない(0.997 / 基準1.05)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>16:10 3歳以上2勝クラス(阪神12R) ｜ ◎信頼度中(勝率31% ・ 3着内66%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>7</td><td>アオイレーギーナ</td><td>幸</td><td>29.8%</td><td>3.0倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>14</td><td>ユウトザレン</td><td>吉村</td><td>20.1%</td><td>3.8倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>4</td><td>カーリキュー</td><td>斎藤</td><td>13.0%</td><td>6.0倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>8</td><td>ベンダバール</td><td>国分恭</td><td>8.5%</td><td>8.5倍</td><td>4</td></tr><tr><td></td><td>9</td><td>メイショウドライブ</td><td>田口</td><td>5.7%</td><td>11.8倍</td><td>5</td></tr><tr><td></td><td>6</td><td>ヒラボクカレラ</td><td>浜中</td><td>5.0%</td><td>15.3倍</td><td>6</td></tr><tr><td></td><td>2</td><td>ズバットマサムネ</td><td>北村友</td><td>3.1%</td><td>21.2倍</td><td>7</td></tr><tr><td></td><td>1</td><td>フレンズプラス</td><td>荻野琢</td><td>4.5%</td><td>22.8倍</td><td>8</td></tr><tr><td></td><td>10</td><td>リードプリンシパル</td><td>☆田山</td><td>2.1%</td><td>29.3倍</td><td>9</td></tr><tr><td></td><td>3</td><td>オトメナシャチョウ</td><td>松本</td><td>3.1%</td><td>34.2倍</td><td>10</td></tr><tr><td></td><td>5</td><td>ダズリングダンス</td><td>川須</td><td>1.9%</td><td>38.9倍</td><td>11</td></tr><tr><td></td><td>12</td><td>ブルーノート</td><td>藤懸</td><td>1.6%</td><td>41.4倍</td><td>12</td></tr><tr><td></td><td>11</td><td>バイファーザベスト</td><td>鮫島良</td><td>1.2%</td><td>61.5倍</td><td>13</td></tr><tr><td></td><td>13</td><td>ホープエトワール</td><td>▲森田</td><td>0.4%</td><td>108.1倍</td><td>14</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 1 フレンズプラス（22.8倍・期待値4.48） ｜ 見送り理由: 距離が対象外(1200m / 対象1401〜1800m)</p>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>16:30 3歳以上2勝クラス(中山12R) ｜ ◎信頼度中(勝率31% ・ 3着内66%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>4</td><td>ジェイエルモーダル</td><td>田辺</td><td>33.5%</td><td>2.6倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>7</td><td>ラストレガシー</td><td>岩田望</td><td>13.7%</td><td>5.5倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>9</td><td>ナイトスラッガー</td><td>横山武</td><td>9.2%</td><td>8.3倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>11</td><td>ブレードサクセス</td><td>丹内</td><td>7.7%</td><td>10.4倍</td><td>4</td></tr><tr><td></td><td>12</td><td>コーリンカルベラ</td><td>松山</td><td>6.1%</td><td>11.0倍</td><td>5</td></tr><tr><td></td><td>8</td><td>カゼノタカトシ</td><td>◇今村</td><td>8.1%</td><td>11.1倍</td><td>6</td></tr><tr><td></td><td>3</td><td>ニシノケンタマン</td><td>野中</td><td>4.8%</td><td>13.0倍</td><td>7</td></tr><tr><td></td><td>6</td><td>バードウォッチャー</td><td>岩田康</td><td>4.5%</td><td>16.1倍</td><td>8</td></tr><tr><td></td><td>1</td><td>コスモコンフェルマ</td><td>柴田大</td><td>4.0%</td><td>23.2倍</td><td>9</td></tr><tr><td></td><td>10</td><td>ブレゲアン</td><td>大野</td><td>2.9%</td><td>26.2倍</td><td>10</td></tr><tr><td></td><td>5</td><td>メイショウリリー</td><td>横山琉</td><td>2.4%</td><td>31.3倍</td><td>11</td></tr><tr><td></td><td>2</td><td>ハイラント</td><td>内田博</td><td>2.1%</td><td>38.6倍</td><td>12</td></tr><tr><td></td><td>13</td><td>サザンウォリアー</td><td>☆長浜</td><td>1.1%</td><td>61.2倍</td><td>13</td></tr></tbody></table></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 10 ブレゲアン（26.2倍・期待値1.36） ｜ 見送り理由: 期待値が基準に届かない(1.360 / 基準3.2)</p>
+    </div>
+    
+  </section>
+  <p class="subtitle" style="margin-top: 32px;">
+    ※本レポートは検証中のモデル(v2)による参考情報です。的中・回収を保証するものではありません。
+    記載の金額は1日1万円を前提にした参考配分で、推奨額ではありません。IPATへの自動投票は一切行いません。
+  </p>
+</body>
+</html>

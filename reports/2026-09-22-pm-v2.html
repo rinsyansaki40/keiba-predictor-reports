@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>競馬予測レポート・午後 2026-09-22</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --fg: #1a1a1a; --card-bg: #ffffff; --border: #e0e0dc;
+    --accent: #b3311f; --muted: #6b6b68; --good: #1f7a3f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161614; --fg: #ececea; --card-bg: #211f1c; --border: #3a3733; --muted: #a3a09b; --good: #4ecb7c; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 16px; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+    line-height: 1.5; max-width: 640px; margin-left: auto; margin-right: auto;
+  }
+  h1 { font-size: 1.3rem; margin-bottom: 4px; }
+  h2 { font-size: 1.05rem; border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-top: 28px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
+  .pick-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-top: 10px;
+  }
+  .pick-head { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); }
+  .pick-body { margin-top: 6px; font-size: 1.05rem; font-weight: 600; }
+  .pick-body .marks { color: var(--accent); }
+  .pick-foot { margin-top: 8px; display: flex; gap: 14px; font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .pick-foot .stake { color: var(--good); font-weight: 600; }
+  .race-block {
+    border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px;
+    margin-top: 10px; background: var(--card-bg);
+  }
+  .race-block-head { font-weight: 600; display: flex; justify-content: space-between; align-items: baseline; }
+  .race-block-head .badge-buy { color: var(--accent); font-size: 0.8rem; font-weight: 700; }
+  .race-block-head .badge-skip { color: var(--muted); font-size: 0.8rem; }
+  .no-rec { color: var(--muted); font-style: italic; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--border); }
+  .rec-table th, .rec-table td { text-align: left; }
+  .pace { border-left: 2px solid var(--line); padding-left: 10px; margin: 8px 0 0; }
+  .allrace { margin-top: 10px; font-size: 13px; }
+  .allrace summary { cursor: pointer; color: var(--muted); }
+  .allrace li { margin: 2px 0; }
+
+table.sim{border-collapse:collapse;width:100%;font-size:0.9rem}
+table.sim th,table.sim td{border:1px solid var(--line,#ddd);padding:6px 8px;text-align:right}
+table.sim th{background:rgba(127,127,127,.08);font-weight:600}
+table.sim tr.sum td{background:rgba(127,127,127,.05);font-weight:600}
+table.sim td:first-child,table.sim th:first-child{text-align:left}
+</style>
+</head>
+<body>
+  <h1>競馬予測レポート・午後</h1>
+  <div class="subtitle">2026-09-22(午後) ／ 全6レース中 0レースが買い対象(0点・参考配分 合計0円)</div>
+  <div class="subtitle" style="margin-top:-12px">内訳: 安定型 なし・一発型 なし・割安型 なし・大レース型 なし・混戦型 なし・盲点型 なし</div>
+  <details class="subtitle" style="margin-top:-8px"><summary>モデルと表示の説明</summary>
+    <ul style="margin:6px 0 0; padding-left:20px">
+      <li><b>安定型</b>(旧: 本線): 当たりやすさ重視。上位4頭の三連複BOX(4点/レース)。的中率5割・配当は小さめ。</li>
+      <li><b>一発型</b>(旧: 穴狙い): 人気薄が売れ始めたレースで一発を狙う。ワイド2点+馬連2点(4点/レース)。ワイドは穴馬と取得時オッズ1・2位の組、馬連は同じ穴馬と別モデル(勝率)の1・2位の組。2026年9月8日に三連複1点を外し、相手の選び方と馬連を変更。</li>
+      <li><b>割安型</b>(旧: 期待値): 実力に比べてオッズが高い(割安な)馬の単勝1点。距離1401〜1800mのレースで、モデル勝率 × 取得時オッズ(08:25/11:55)が基準を超えた馬。的中率は6〜12%(中央値10番人気・32倍前後)。<b>確定見込み</b>は締切までのオッズの動きを推定した表示用の値で、選抜には使っていません。</li>
+      <li><b>大レース型</b>(旧: 重賞ねらい): 大きなレースだけを狙う単勝1点。午後便(発走13:00以降)のオープン特別・重賞のみ。別モデル(2026年9月7日に作り直し)の推定人気1〜3番手のうち、モデル勝率 × 取得時オッズが基準を超えた馬。的中率は16〜20%。</li>
+      <li><b>混戦型</b>(旧: 中穴): 本命が弱い混戦で中位人気を狙う単勝1点。1番人気が3倍以上の混戦で、取得時オッズ20〜40倍かつ別モデルの推定人気5〜10番手のうち、モデル勝率 × 推定オッズが基準を超えた馬。的中率は5〜8%。</li>
+      <li><b>盲点型</b>: 未勝利戦だけを狙う単勝1点(2026年9月12日から)。締切までの市場の動きでは埋まらない差を学習した専用モデルが、取得時オッズに対して期待値が基準を超えると判断した馬。的中率は約3割、1日0.7点で買い目が出るのは開催日の半分ほどです。</li>
+      <li><b>宝くじ型</b>: 混戦型の馬を1着に固定した三連単16点(2着=別モデルの3着内確率上位4頭、3着=上位5頭)、1点100円。6モデルの買い目や1日1万円の配分とは別枠。的中率は約3%(月1〜2回)で、当たれば10万円前後の払戻が中心。負けが1〜2か月続くことがある宝くじ枠(2026年9月8日から)。</li>
+      <li>金額は1日1万円の予算のうち、この便に配分した9,000円を前提とした参考配分です(推奨額ではありません)。</li>
+      <li><b>◎信頼度</b>: ◎の当たりやすさを過去の実測から3段階で示したもの(高=勝率44%/3着内80%、中=31%/66%、低=22%/49%。検証8期間・各段階1,300レース超)。</li>
+    </ul>
+  </details>
+  <details class="subtitle" style="margin-top:4px"><summary>前回(2026-09-21)の結果(6モデル): 投資2,000円 → 回収0円 (回収率0%) 0/2点的中<br>本格運用(09/01〜)の実測: 7開催日で 投資43,600円 → 回収30,040円 (回収率69%) 4/48点的中</summary><div style="margin:6px 0 0 1em; white-space:pre-line">宝くじ型(三連単16点): 前回 投資1,600円 → 回収0円 (0%) 0/16点 ／ 本格運用(09/01〜) 3開催日 投資4,800円 → 回収0円 (0%) 0/48点<br><br>【大レース型】投資1,000円 → 回収0円 (回収率0%) 0/1点的中・1レース<br>　─ 15:45 阪神 神戸新聞杯 単勝 11 1,000円 → 回収0円<br><br>【混戦型】投資1,000円 → 回収0円 (回収率0%) 0/1点的中・1レース<br>　─ 11:35 阪神 2歳新馬 単勝 7 1,000円 → 回収0円<br><br>【宝くじ型(三連単16点)】投資1,600円 → 回収0円 (回収率0%) 0/16点的中・1レース<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;1-&gt;11 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;1-&gt;12 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;1-&gt;15 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;1-&gt;6 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;11-&gt;12 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;11-&gt;15 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;11-&gt;1 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;11-&gt;6 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;12-&gt;11 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;12-&gt;15 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;12-&gt;1 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;12-&gt;6 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;15-&gt;11 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;15-&gt;12 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;15-&gt;1 100円 → 回収0円<br>　─ 11:35 阪神 2歳新馬 三連単 7-&gt;15-&gt;6 100円 → 回収0円<br>　※ 16点は結果を取得できず未判定</div></details>
+  
+        <section>
+          <h2>本日買うべきレース</h2>
+          <p class="no-rec">本日は6モデルすべてで条件を満たすレースがありません。</p>
+        </section>
+        
+  
+  
+    <section>
+      <h2>この予測の検証結果</h2>
+      <p class="subtitle" style="margin:0 0 8px">
+        買い目を「1点1,000円・1日の合計1万円まで(午前便に半分、午後便に残り)」で買い続けた場合を、
+        配信と同じ二段の配分で過去データにシミュレーションしました。
+        対象は<b>2025年4月12日〜2026年8月30日</b>の開催日132日で、
+        モデルの調整には一切使っていない期間です。
+      </p>
+      <table class="sim">
+        <tr><th>モデル</th><th>点数</th><th>投資</th><th>回収</th>
+            <th>回収率</th><th>的中率</th></tr>
+        <tr><td>安定型</td><td>484点</td><td>286,000円</td><td>329,210円</td><td><b>115%</b></td><td>50.4%</td></tr><tr><td>一発型</td><td>468点</td><td>274,000円</td><td>502,290円</td><td><b>183%</b></td><td>19.7%</td></tr><tr><td>割安型</td><td>93点</td><td>71,700円</td><td>214,920円</td><td><b>300%</b></td><td>9.7%</td></tr><tr><td>大レース型</td><td>283点</td><td>224,000円</td><td>296,350円</td><td><b>132%</b></td><td>19.8%</td></tr><tr><td>混戦型</td><td>224点</td><td>163,800円</td><td>310,010円</td><td><b>189%</b></td><td>5.8%</td></tr><tr><td>盲点型</td><td>62点</td><td>47,100円</td><td>73,770円</td><td><b>157%</b></td><td>35.5%</td></tr><tr class='sum'><td>6モデル合計</td><td>1,614点</td><td>1,066,600円</td><td>1,726,550円</td><td><b>162%</b></td><td></td></tr><tr><td>宝くじ型(別枠・1点100円)</td><td>3,584点</td><td>358,400円</td><td>1,310,330円</td><td><b>366%</b></td><td>2.7%</td></tr>
+      </table>
+      <p class="subtitle" style="margin:8px 0 0">※ 1日あたりの平均投資は約8,000円でした。「大レース型」は2026年9月7日に作り直したもので、午後便のオープン特別・重賞で推定人気1〜3番手のうち期待値が基準を超える馬の単勝、「混戦型」は同じ日に追加した1番人気3倍以上の混戦で20〜40倍の中位人気を狙う単勝です(検証は同じ期間・同じ配分)。「盲点型」は2026年9月12日に追加したもので、未勝利戦で市場が見落としている馬の単勝を1点買います(1日0.5点、買い目が出るのは2〜3日に1回です)。宝くじ型(表の最下行)は混戦型の馬を1着に固定した三連単16点(2着は別モデルの3着内確率上位4頭、3着は上位5頭)で、1点100円・6モデルの配分とは別枠です。的中は224レース中6回(3%、月1〜2回)で、回収率は払戻数本に大きく依存する参考値です。負けが1〜2か月続くことがあります。</p>
+      <p class="subtitle" style="margin:8px 0 0">ただしプラスで終わる日はおよそ2日に1回(買い目のあった134日のうち61日)で、残りの日はマイナスです。とくに割安型(的中率10%)と混戦型(6%)は、外れが続いたあとに大きく返ってくる形です。割安型の回収率は学習の乱数だけで大きく動くため(同じ条件で作り直した1本ずつは OOS で 73〜284%)、2026年9月11日から5本を平均したモデルに切り替えました。この表の値はその平均版の実績です。1日単位ではなく積み上げで見てください。過去データによる検証であり、将来の的中・回収を保証するものではありません。</p>
+      <p class='subtitle' style='margin:12px 0 4px'><b>本格運用(2026/09/01〜)の実測</b> — 7開催日。上の表は過去データでの検証、こちらは実際に配信した買い目の結果です。</p><table class='sim'><thead><tr><th>モデル</th><th>投資</th><th>回収</th><th>回収率</th><th>的中</th></tr></thead><tbody><tr class='sum'><td>6モデル合計</td><td>43,600円</td><td>30,040円</td><td><b>69%</b></td><td>4/48点</td></tr><tr><td>安定型</td><td>6,400円</td><td>4,880円</td><td><b>76%</b></td><td>2/8点</td></tr><tr><td>一発型</td><td>15,200円</td><td>9,360円</td><td><b>62%</b></td><td>1/16点</td></tr><tr><td>割安型</td><td>8,000円</td><td>15,800円</td><td><b>198%</b></td><td>1/8点</td></tr><tr><td>大レース型</td><td>10,400円</td><td>0円</td><td><b>0%</b></td><td>0/12点</td></tr><tr><td>混戦型</td><td>2,600円</td><td>0円</td><td><b>0%</b></td><td>0/3点</td></tr><tr><td>盲点型</td><td>1,000円</td><td>0円</td><td><b>0%</b></td><td>0/1点</td></tr><tr><td>宝くじ型(別枠)</td><td>4,800円</td><td>0円</td><td><b>0%</b></td><td>0/48点</td></tr></tbody></table>
+    </section>
+    
+  <section>
+    <h2>全レースのおすすめ買い目</h2>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>13:10 3歳以上1勝クラス(中山7R) ｜ ◎信頼度高(勝率44% ・ 3着内80%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>7</td><td>ユアフェリシティ</td><td>原田和</td><td>53.8%</td><td>1.5倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>1</td><td>サムシングニュー</td><td>ミシェル</td><td>9.1%</td><td>7.6倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>3</td><td>タケルムサシ</td><td>斎藤</td><td>7.4%</td><td>12.4倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>13</td><td>ナックスプレンダー</td><td>吉田豊</td><td>5.2%</td><td>14.9倍</td><td>4</td></tr><tr><td></td><td>14</td><td>アンシュウマト</td><td>原優介</td><td>4.9%</td><td>15.1倍</td><td>5</td></tr><tr><td></td><td>12</td><td>レボルシオン</td><td>江田照</td><td>5.8%</td><td>15.6倍</td><td>6</td></tr><tr><td></td><td>2</td><td>ブレスドナイル</td><td>佐々木</td><td>4.7%</td><td>17.4倍</td><td>7</td></tr><tr><td></td><td>4</td><td>ビリオネアボーイ</td><td>木幡巧</td><td>2.0%</td><td>38.0倍</td><td>8</td></tr><tr><td></td><td>8</td><td>ホーナー</td><td>菊沢</td><td>3.5%</td><td>39.5倍</td><td>9</td></tr><tr><td></td><td>10</td><td>サムワンライクユー</td><td>内田博</td><td>1.7%</td><td>40.4倍</td><td>10</td></tr><tr><td></td><td>6</td><td>メトロポリターナ</td><td>丸田</td><td>0.8%</td><td>79.7倍</td><td>11</td></tr><tr><td></td><td>9</td><td>オウケンヴィーナス</td><td>木幡育</td><td>0.5%</td><td>85.5倍</td><td>12</td></tr><tr><td></td><td>5</td><td>ペルヴォルム</td><td>▲上里</td><td>0.3%</td><td>108.4倍</td><td>13</td></tr><tr><td></td><td>11</td><td>クリノゴッホ</td><td>黛</td><td>0.3%</td><td>109.3倍</td><td>14</td></tr></tbody></table></div><div class='pace'><p style='margin:8px 0 2px'><b>展開</b> ／ 想定ペース <b>スロー</b>（前に行きたい馬 0頭）</p><p class='subtitle' style='margin:0 0 2px'><b>逃げ</b> はっきりした逃げ馬はいない想定 ／ <b>先行</b> 7 ユアフェリシティ ／ <b>差し</b> 12 レボルシオン、11 クリノゴッホ、10 サムワンライクユー ほか5頭 ／ <b>追込</b> 4 ビリオネアボーイ、2 ブレスドナイル、8 ホーナー ほか2頭</p><p class='subtitle' style='margin:0'>前に行きたい馬が少なく、遅い流れになりやすい。逃げ・先行が残りやすい形です。</p></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 12 レボルシオン（15.6倍・期待値2.0） ｜ 見送り理由: 期待値が基準に届かない(2.000 / 基準3.2)</p><details class='allrace'><summary>競馬場で全レース買うなら ★厚張り</summary><ul style='margin:6px 0 0;padding-left:20px'><li><b>手堅い</b> 複勝 7 ユアフェリシティ <b>200円</b><span class='subtitle'> ／ 的中 64%・回収率 87%・当たれば平均 136円・<b>同じ券種を人気順で買った場合の 1.00 倍</b></span></li><li><b>中間</b> ワイド 7-8 ユアフェリシティ / ホーナー <b>300円</b><span class='subtitle'> ／ 的中 35%・回収率 85%・当たれば平均 244円・<b>同じ券種を人気順で買った場合の 1.05 倍</b></span></li><li><b>大きく</b> 単勝 7 ユアフェリシティ（1番人気 1.5倍） <b>500円</b><span class='subtitle'> ／ 的中 27%・回収率 90%・当たれば平均 335円・<b>同じ券種を人気順で買った場合の 1.12 倍</b></span></li></ul><p class='subtitle' style='margin:6px 0 0'>金額は<b>期待値の大きさ</b>で決めています。<b>5 レースに 4 レースは 400 円</b>のままで、妙味があるレースだけ大きく張ります（1 日 12R でおよそ 8,000 円、多い日で 15,000 円ほど）。<b>堅いレース</b>（1 番人気 1.5 倍）なので<b>複勝を厚く</b>しています。<b>★ 厚張り</b> — 期待値が 1.05 と高いので<b>金額を上げて</b>います（期待値が大きいほど「大きく」を厚く）。この金額の付け方を守ると、3 段すべて買った場合の回収率は 87% → <b>106%</b> でした（3 モデル × 23 窓 = 69 窓中 54 窓で改善）。</p><p class='subtitle' style='margin:6px 0 0'>この枠は<b>全レース買う人向け</b>で、上の 6 モデルとは別物です。全部を同じ金額で買うと控除率のぶん必ずマイナスになります（1 点 100 円ずつなら 85〜90%）。<b>上に書いた金額の付け方まで守ると</b>、検証期間では 100%（古い側）／106%（新しい側）まで上がりました。ただし<b>とんとん前後</b>で、勝てると約束できる水準ではありません。確実に回収率を狙うなら 6 モデルの買い目だけにしてください。<br>選び方自体も<b>同じ券種を人気順で買うより良い</b>ことを確かめてあります。とくに「大きく」は 1 番人気を買うより 7〜12% 上で、勝ち馬を市場どおりに引き直した並行世界と比べても偶然では説明できません（片側 p = 0.008 / 0.004）。</p></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>13:40 3歳以上1勝クラス(中山8R) ｜ ◎信頼度中(勝率31% ・ 3着内66%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>12</td><td>イモータリス</td><td>嶋田</td><td>22.2%</td><td>3.9倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>7</td><td>マーゴットソラーレ</td><td>斎藤</td><td>11.7%</td><td>6.2倍</td><td>2</td></tr><tr style='font-weight:700'><td>△</td><td>5</td><td>メアヴィア</td><td>小林美駒</td><td>8.1%</td><td>7.3倍</td><td>3</td></tr><tr><td></td><td>16</td><td>ベルウッドクレド</td><td>大野</td><td>9.7%</td><td>8.2倍</td><td>4</td></tr><tr style='font-weight:700'><td>▲</td><td>11</td><td>テイキットイージー</td><td>丹内</td><td>8.3%</td><td>8.9倍</td><td>5</td></tr><tr><td></td><td>15</td><td>サフランルージュ</td><td>木幡巧</td><td>11.7%</td><td>10.3倍</td><td>6</td></tr><tr><td></td><td>4</td><td>ラルガメンテ</td><td>菊沢一樹</td><td>5.0%</td><td>15.8倍</td><td>7</td></tr><tr><td></td><td>13</td><td>ブリックアブラック</td><td>▲佐藤</td><td>4.6%</td><td>17.9倍</td><td>8</td></tr><tr><td></td><td>1</td><td>プルーヴンウィナー</td><td>佐々木</td><td>3.9%</td><td>18.7倍</td><td>9</td></tr><tr><td></td><td>2</td><td>リリエンフェルト</td><td>原田和</td><td>3.4%</td><td>21.1倍</td><td>10</td></tr><tr><td></td><td>8</td><td>ウイントリベルガ</td><td>▲遠藤</td><td>2.7%</td><td>25.2倍</td><td>11</td></tr><tr><td></td><td>9</td><td>ピースヒロフェイス</td><td>石橋脩</td><td>3.3%</td><td>26.5倍</td><td>12</td></tr><tr><td></td><td>6</td><td>リュウジンマル</td><td>横山和</td><td>2.0%</td><td>31.8倍</td><td>13</td></tr><tr><td></td><td>10</td><td>フォーグッド</td><td>原</td><td>2.3%</td><td>38.9倍</td><td>14</td></tr><tr><td></td><td>14</td><td>マルカベント</td><td>小林脩</td><td>0.6%</td><td>84.3倍</td><td>15</td></tr><tr><td></td><td>3</td><td>コウセイケンタロス</td><td>柴田大</td><td>0.4%</td><td>102.0倍</td><td>16</td></tr></tbody></table></div><div class='pace'><p style='margin:8px 0 2px'><b>展開</b> ／ 想定ペース <b>スロー</b>（前に行きたい馬 1頭）</p><p class='subtitle' style='margin:0 0 2px'><b>逃げ</b> 5 メアヴィア ／ <b>先行</b> 7 マーゴットソラーレ、12 イモータリス ／ <b>差し</b> 16 ベルウッドクレド、4 ラルガメンテ、2 リリエンフェルト ／ <b>追込</b> 14 マルカベント、15 サフランルージュ、1 プルーヴンウィナー ほか7頭</p><p class='subtitle' style='margin:0'>前に行きたい馬が少なく、遅い流れになりやすい。逃げ・先行が残りやすい形です。</p></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 15 サフランルージュ（10.3倍・期待値1.96） ｜ 見送り理由: 期待値が基準に届かない(1.960 / 基準3.2)</p><details class='allrace'><summary>競馬場で全レース買うなら</summary><ul style='margin:6px 0 0;padding-left:20px'><li><b>手堅い</b> 複勝 12 イモータリス <b>100円</b><span class='subtitle'> ／ 的中 64%・回収率 87%・当たれば平均 136円・<b>同じ券種を人気順で買った場合の 1.00 倍</b></span></li><li><b>中間</b> 複勝 15 サフランルージュ <b>200円</b><span class='subtitle'> ／ 的中 35%・回収率 85%・当たれば平均 244円・<b>同じ券種を人気順で買った場合の 1.05 倍</b></span></li><li><b>大きく</b> 単勝 15 サフランルージュ（6番人気 10.3倍） <b>500円</b><span class='subtitle'> ／ 的中 27%・回収率 90%・当たれば平均 335円・<b>同じ券種を人気順で買った場合の 1.12 倍</b></span></li></ul><p class='subtitle' style='margin:6px 0 0'>金額は<b>期待値の大きさ</b>で決めています。<b>5 レースに 4 レースは 400 円</b>のままで、妙味があるレースだけ大きく張ります（1 日 12R でおよそ 8,000 円、多い日で 15,000 円ほど）。1 番人気が割れているので<b>単勝を厚く</b>しています。この金額の付け方を守ると、3 段すべて買った場合の回収率は 87% → <b>106%</b> でした（3 モデル × 23 窓 = 69 窓中 54 窓で改善）。</p><p class='subtitle' style='margin:6px 0 0'>この枠は<b>全レース買う人向け</b>で、上の 6 モデルとは別物です。全部を同じ金額で買うと控除率のぶん必ずマイナスになります（1 点 100 円ずつなら 85〜90%）。<b>上に書いた金額の付け方まで守ると</b>、検証期間では 100%（古い側）／106%（新しい側）まで上がりました。ただし<b>とんとん前後</b>で、勝てると約束できる水準ではありません。確実に回収率を狙うなら 6 モデルの買い目だけにしてください。<br>選び方自体も<b>同じ券種を人気順で買うより良い</b>ことを確かめてあります。とくに「大きく」は 1 番人気を買うより 7〜12% 上で、勝ち馬を市場どおりに引き直した並行世界と比べても偶然では説明できません（片側 p = 0.008 / 0.004）。</p></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>14:10 鋸山特別(中山9R) ｜ ◎信頼度低(勝率22% ・ 3着内49%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>14</td><td>ヴンダーバール</td><td>斎藤</td><td>18.6%</td><td>4.5倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>3</td><td>パースウェイド</td><td>田辺</td><td>18.1%</td><td>4.7倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>6</td><td>フィールオーサム</td><td>横山武</td><td>13.6%</td><td>5.7倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>11</td><td>ロイスター</td><td>西塚</td><td>10.4%</td><td>8.0倍</td><td>4</td></tr><tr><td></td><td>5</td><td>サファイアテソーロ</td><td>木幡巧</td><td>8.7%</td><td>9.1倍</td><td>5</td></tr><tr><td></td><td>2</td><td>ヴァズレーヌ</td><td>横山和生</td><td>6.2%</td><td>11.2倍</td><td>6</td></tr><tr><td></td><td>1</td><td>コンアフェット</td><td>丹内</td><td>5.5%</td><td>15.2倍</td><td>7</td></tr><tr><td></td><td>4</td><td>エアトベーレ</td><td>嶋田</td><td>4.5%</td><td>17.6倍</td><td>8</td></tr><tr><td></td><td>8</td><td>カスバートテソーロ</td><td>原</td><td>2.6%</td><td>28.6倍</td><td>9</td></tr><tr><td></td><td>12</td><td>レーヴドレフォン</td><td>丸田</td><td>2.2%</td><td>29.6倍</td><td>10</td></tr><tr><td></td><td>15</td><td>ステラスプレンダー</td><td>ミシェル</td><td>2.1%</td><td>30.4倍</td><td>11</td></tr><tr><td></td><td>13</td><td>セレーノ</td><td>丸山</td><td>2.5%</td><td>34.7倍</td><td>12</td></tr><tr><td></td><td>16</td><td>ユーヴェリア</td><td>国分恭</td><td>1.6%</td><td>36.5倍</td><td>13</td></tr><tr><td></td><td>9</td><td>ルージュマローネ</td><td>佐々木</td><td>1.1%</td><td>63.2倍</td><td>14</td></tr><tr><td></td><td>7</td><td>コパノエビータ</td><td>長浜</td><td>1.1%</td><td>67.4倍</td><td>15</td></tr><tr><td></td><td>10</td><td>ヴァリオーサ</td><td>大野</td><td>1.0%</td><td>76.8倍</td><td>16</td></tr></tbody></table></div><div class='pace'><p style='margin:8px 0 2px'><b>展開</b> ／ 想定ペース <b>ミドル</b>（前に行きたい馬 3頭）</p><p class='subtitle' style='margin:0 0 2px'><b>逃げ</b> 6 フィールオーサム ／ <b>先行</b> 9 ルージュマローネ、13 セレーノ、3 パースウェイド、14 ヴンダーバール、4 エアトベーレ ／ <b>差し</b> 15 ステラスプレンダー、2 ヴァズレーヌ、1 コンアフェット ほか2頭 ／ <b>追込</b> 7 コパノエビータ、16 ユーヴェリア、8 カスバートテソーロ ほか2頭</p><p class='subtitle' style='margin:0'>先行争いはほどほど。力どおりに決まりやすい流れです。</p></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・混戦型): 【混戦型】単勝 13 セレーノ（取得時34.7倍・期待値1.06） ｜ 見送り理由: 期待値が基準に届かない(1.061 / 基準1.2)</p><details class='allrace'><summary>競馬場で全レース買うなら ★厚張り</summary><ul style='margin:6px 0 0;padding-left:20px'><li><b>手堅い</b> 複勝 3 パースウェイド <b>100円</b><span class='subtitle'> ／ 的中 64%・回収率 87%・当たれば平均 136円・<b>同じ券種を人気順で買った場合の 1.00 倍</b></span></li><li><b>中間</b> 複勝 6 フィールオーサム <b>600円</b><span class='subtitle'> ／ 的中 35%・回収率 85%・当たれば平均 244円・<b>同じ券種を人気順で買った場合の 1.05 倍</b></span></li><li><b>大きく</b> 単勝 6 フィールオーサム（3番人気 5.7倍） <b>2,200円</b><span class='subtitle'> ／ 的中 27%・回収率 90%・当たれば平均 335円・<b>同じ券種を人気順で買った場合の 1.12 倍</b></span></li></ul><p class='subtitle' style='margin:6px 0 0'>金額は<b>期待値の大きさ</b>で決めています。<b>5 レースに 4 レースは 400 円</b>のままで、妙味があるレースだけ大きく張ります（1 日 12R でおよそ 8,000 円、多い日で 15,000 円ほど）。1 番人気が割れているので<b>単勝を厚く</b>しています。<b>★ 厚張り</b> — 期待値が 1.12 と高いので<b>金額を上げて</b>います（期待値が大きいほど「大きく」を厚く）。この金額の付け方を守ると、3 段すべて買った場合の回収率は 87% → <b>106%</b> でした（3 モデル × 23 窓 = 69 窓中 54 窓で改善）。</p><p class='subtitle' style='margin:6px 0 0'>この枠は<b>全レース買う人向け</b>で、上の 6 モデルとは別物です。全部を同じ金額で買うと控除率のぶん必ずマイナスになります（1 点 100 円ずつなら 85〜90%）。<b>上に書いた金額の付け方まで守ると</b>、検証期間では 100%（古い側）／106%（新しい側）まで上がりました。ただし<b>とんとん前後</b>で、勝てると約束できる水準ではありません。確実に回収率を狙うなら 6 モデルの買い目だけにしてください。<br>選び方自体も<b>同じ券種を人気順で買うより良い</b>ことを確かめてあります。とくに「大きく」は 1 番人気を買うより 7〜12% 上で、勝ち馬を市場どおりに引き直した並行世界と比べても偶然では説明できません（片側 p = 0.008 / 0.004）。</p></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>14:50 ディープインパクトC(中山10R) ｜ ◎信頼度低(勝率22% ・ 3着内49%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>5</td><td>デイトナチャンプ</td><td>横山武</td><td>21.4%</td><td>3.6倍</td><td>1</td></tr><tr style='font-weight:700'><td>▲</td><td>11</td><td>プリムツァール</td><td>田辺</td><td>17.9%</td><td>4.0倍</td><td>2</td></tr><tr style='font-weight:700'><td>○</td><td>9</td><td>アルデトップガン</td><td>丹内</td><td>21.4%</td><td>5.6倍</td><td>3</td></tr><tr><td></td><td>2</td><td>レッドレナート</td><td>横山和</td><td>8.6%</td><td>7.2倍</td><td>4</td></tr><tr style='font-weight:700'><td>△</td><td>7</td><td>アロンソア</td><td>川又</td><td>10.8%</td><td>7.4倍</td><td>5</td></tr><tr><td></td><td>6</td><td>セブンマイスター</td><td>佐々木</td><td>6.5%</td><td>12.4倍</td><td>6</td></tr><tr><td></td><td>1</td><td>フミサウンド</td><td>Ｍ．ミシェル</td><td>4.6%</td><td>12.7倍</td><td>7</td></tr><tr><td></td><td>8</td><td>ロゼル</td><td>丸山</td><td>3.3%</td><td>17.5倍</td><td>8</td></tr><tr><td></td><td>3</td><td>ジャルディニエ</td><td>斎藤</td><td>2.8%</td><td>32.8倍</td><td>9</td></tr><tr><td></td><td>4</td><td>エリム</td><td>原田和</td><td>1.5%</td><td>56.7倍</td><td>10</td></tr><tr><td></td><td>10</td><td>サヴァビアン</td><td>菊沢</td><td>1.0%</td><td>67.7倍</td><td>11</td></tr></tbody></table></div><div class='pace'><p style='margin:8px 0 2px'><b>展開</b> ／ 想定ペース <b>スロー</b>（前に行きたい馬 1頭）</p><p class='subtitle' style='margin:0 0 2px'><b>逃げ</b> はっきりした逃げ馬はいない想定 ／ <b>先行</b> 2 レッドレナート、11 プリムツァール、6 セブンマイスター、5 デイトナチャンプ ／ <b>差し</b> 8 ロゼル、1 フミサウンド ／ <b>追込</b> 7 アロンソア、3 ジャルディニエ、10 サヴァビアン ほか2頭</p><p class='subtitle' style='margin:0'>前に行きたい馬が少なく、遅い流れになりやすい。逃げ・先行が残りやすい形です。</p></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 9 アルデトップガン（5.6倍・期待値1.84） ｜ 見送り理由: 期待値が基準に届かない(1.840 / 基準3.2)</p><details class='allrace'><summary>競馬場で全レース買うなら</summary><ul style='margin:6px 0 0;padding-left:20px'><li><b>手堅い</b> 複勝 5 デイトナチャンプ <b>100円</b><span class='subtitle'> ／ 的中 64%・回収率 87%・当たれば平均 136円・<b>同じ券種を人気順で買った場合の 1.00 倍</b></span></li><li><b>中間</b> ワイド 5-9 デイトナチャンプ / アルデトップガン <b>100円</b><span class='subtitle'> ／ 的中 35%・回収率 85%・当たれば平均 244円・<b>同じ券種を人気順で買った場合の 1.05 倍</b></span></li><li><b>大きく</b> 単勝 5 デイトナチャンプ（1番人気 3.6倍） <b>200円</b><span class='subtitle'> ／ 的中 27%・回収率 90%・当たれば平均 335円・<b>同じ券種を人気順で買った場合の 1.12 倍</b></span></li></ul><p class='subtitle' style='margin:6px 0 0'>金額は<b>期待値の大きさ</b>で決めています。<b>5 レースに 4 レースは 400 円</b>のままで、妙味があるレースだけ大きく張ります（1 日 12R でおよそ 8,000 円、多い日で 15,000 円ほど）。1 番人気が割れているので<b>単勝を厚く</b>しています。この金額の付け方を守ると、3 段すべて買った場合の回収率は 87% → <b>106%</b> でした（3 モデル × 23 窓 = 69 窓中 54 窓で改善）。</p><p class='subtitle' style='margin:6px 0 0'>この枠は<b>全レース買う人向け</b>で、上の 6 モデルとは別物です。全部を同じ金額で買うと控除率のぶん必ずマイナスになります（1 点 100 円ずつなら 85〜90%）。<b>上に書いた金額の付け方まで守ると</b>、検証期間では 100%（古い側）／106%（新しい側）まで上がりました。ただし<b>とんとん前後</b>で、勝てると約束できる水準ではありません。確実に回収率を狙うなら 6 モデルの買い目だけにしてください。<br>選び方自体も<b>同じ券種を人気順で買うより良い</b>ことを確かめてあります。とくに「大きく」は 1 番人気を買うより 7〜12% 上で、勝ち馬を市場どおりに引き直した並行世界と比べても偶然では説明できません（片側 p = 0.008 / 0.004）。</p></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>15:30 JRAアニバーサリーS(中山11R) ｜ ◎信頼度低(勝率22% ・ 3着内49%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>12</td><td>リフレックス</td><td>横山武史</td><td>16.3%</td><td>5.2倍</td><td>1</td></tr><tr style='font-weight:700'><td>▲</td><td>5</td><td>サノノワンダー</td><td>田辺</td><td>14.4%</td><td>5.6倍</td><td>2</td></tr><tr style='font-weight:700'><td>○</td><td>3</td><td>ディーズゴールド</td><td>丹内祐次</td><td>14.7%</td><td>5.9倍</td><td>3</td></tr><tr style='font-weight:700'><td>△</td><td>2</td><td>キョウエイフロイデ</td><td>原</td><td>7.9%</td><td>8.3倍</td><td>4</td></tr><tr><td></td><td>10</td><td>ブルータス</td><td>石橋脩</td><td>9.1%</td><td>10.0倍</td><td>5</td></tr><tr><td></td><td>14</td><td>レディーフランシス</td><td>大野</td><td>5.7%</td><td>11.9倍</td><td>6</td></tr><tr><td></td><td>15</td><td>ゲキザル</td><td>小林脩</td><td>5.8%</td><td>12.6倍</td><td>7</td></tr><tr><td></td><td>9</td><td>ラオラシオン</td><td>斎藤</td><td>4.8%</td><td>15.6倍</td><td>8</td></tr><tr><td></td><td>8</td><td>ブロッケンボウ</td><td>ミシェル</td><td>3.5%</td><td>20.7倍</td><td>9</td></tr><tr><td></td><td>13</td><td>ハッスルダンク</td><td>江田照</td><td>3.9%</td><td>22.9倍</td><td>10</td></tr><tr><td></td><td>1</td><td>マーシヴィガラス</td><td>佐々木</td><td>3.0%</td><td>23.8倍</td><td>11</td></tr><tr><td></td><td>16</td><td>ルーラーリッチ</td><td>武藤</td><td>2.3%</td><td>31.5倍</td><td>12</td></tr><tr><td></td><td>11</td><td>ダカラフェスティヴ</td><td>長浜</td><td>2.5%</td><td>32.6倍</td><td>13</td></tr><tr><td></td><td>4</td><td>グレイテストソング</td><td>国分恭</td><td>2.9%</td><td>33.3倍</td><td>14</td></tr><tr><td></td><td>6</td><td>タンゴバイラリン</td><td>原田和</td><td>1.8%</td><td>42.3倍</td><td>15</td></tr><tr><td></td><td>7</td><td>オレデイイノカ</td><td>内田博</td><td>1.5%</td><td>49.7倍</td><td>16</td></tr></tbody></table></div><div class='pace'><p style='margin:8px 0 2px'><b>展開</b> ／ 想定ペース <b>ミドル</b>（前に行きたい馬 2頭）</p><p class='subtitle' style='margin:0 0 2px'><b>逃げ</b> 8 ブロッケンボウ、3 ディーズゴールド ／ <b>先行</b> 12 リフレックス ／ <b>差し</b> 1 マーシヴィガラス、9 ラオラシオン、7 オレデイイノカ ほか3頭 ／ <b>追込</b> 16 ルーラーリッチ、2 キョウエイフロイデ、6 タンゴバイラリン ほか4頭</p><p class='subtitle' style='margin:0'>先行争いはほどほど。力どおりに決まりやすい流れです。</p></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 4 グレイテストソング（33.3倍・期待値1.48） ｜ 見送り理由: 期待値が基準に届かない(1.480 / 基準3.2)</p><details class='allrace'><summary>競馬場で全レース買うなら ★厚張り</summary><ul style='margin:6px 0 0;padding-left:20px'><li><b>手堅い</b> 複勝 12 リフレックス <b>100円</b><span class='subtitle'> ／ 的中 64%・回収率 87%・当たれば平均 136円・<b>同じ券種を人気順で買った場合の 1.00 倍</b></span></li><li><b>中間</b> 複勝 3 ディーズゴールド <b>500円</b><span class='subtitle'> ／ 的中 35%・回収率 85%・当たれば平均 244円・<b>同じ券種を人気順で買った場合の 1.05 倍</b></span></li><li><b>大きく</b> 単勝 3 ディーズゴールド（3番人気 5.9倍） <b>1,800円</b><span class='subtitle'> ／ 的中 27%・回収率 90%・当たれば平均 335円・<b>同じ券種を人気順で買った場合の 1.12 倍</b></span></li></ul><p class='subtitle' style='margin:6px 0 0'>金額は<b>期待値の大きさ</b>で決めています。<b>5 レースに 4 レースは 400 円</b>のままで、妙味があるレースだけ大きく張ります（1 日 12R でおよそ 8,000 円、多い日で 15,000 円ほど）。1 番人気が割れているので<b>単勝を厚く</b>しています。<b>★ 厚張り</b> — 期待値が 1.10 と高いので<b>金額を上げて</b>います（期待値が大きいほど「大きく」を厚く）。この金額の付け方を守ると、3 段すべて買った場合の回収率は 87% → <b>106%</b> でした（3 モデル × 23 窓 = 69 窓中 54 窓で改善）。</p><p class='subtitle' style='margin:6px 0 0'>この枠は<b>全レース買う人向け</b>で、上の 6 モデルとは別物です。全部を同じ金額で買うと控除率のぶん必ずマイナスになります（1 点 100 円ずつなら 85〜90%）。<b>上に書いた金額の付け方まで守ると</b>、検証期間では 100%（古い側）／106%（新しい側）まで上がりました。ただし<b>とんとん前後</b>で、勝てると約束できる水準ではありません。確実に回収率を狙うなら 6 モデルの買い目だけにしてください。<br>選び方自体も<b>同じ券種を人気順で買うより良い</b>ことを確かめてあります。とくに「大きく」は 1 番人気を買うより 7〜12% 上で、勝ち馬を市場どおりに引き直した並行世界と比べても偶然では説明できません（片側 p = 0.008 / 0.004）。</p></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">
+        <span>16:10 3歳以上1勝クラス(中山12R) ｜ ◎信頼度中(勝率31% ・ 3着内66%)</span>
+        <span class='badge-skip'>【見送り】</span>
+      </div>
+      <div style='overflow-x:auto'><table class='rec-table'><thead><tr><th>印</th><th>馬番</th><th>馬名</th><th>騎手</th><th>予想勝率</th><th>単勝オッズ</th><th>人気</th></tr></thead><tbody><tr style='font-weight:700'><td>◎</td><td>13</td><td>ジェイエルキャリア</td><td>丸山</td><td>26.8%</td><td>3.1倍</td><td>1</td></tr><tr style='font-weight:700'><td>○</td><td>15</td><td>シルバードン</td><td>木幡巧</td><td>9.8%</td><td>7.9倍</td><td>2</td></tr><tr style='font-weight:700'><td>▲</td><td>3</td><td>フュルスティン</td><td>▲上里</td><td>8.3%</td><td>8.0倍</td><td>3</td></tr><tr><td></td><td>11</td><td>エコロバロン</td><td>菊沢</td><td>7.0%</td><td>9.3倍</td><td>4</td></tr><tr style='font-weight:700'><td>△</td><td>12</td><td>ソードスレイプニル</td><td>☆長浜</td><td>7.4%</td><td>12.4倍</td><td>5</td></tr><tr><td></td><td>14</td><td>エフエイト</td><td>横山和</td><td>5.1%</td><td>14.6倍</td><td>6</td></tr><tr><td></td><td>16</td><td>ノースブルースカイ</td><td>佐々木</td><td>6.4%</td><td>15.4倍</td><td>7</td></tr><tr><td></td><td>5</td><td>アレーティア</td><td>▲佐藤</td><td>4.7%</td><td>17.5倍</td><td>8</td></tr><tr><td></td><td>8</td><td>ホウオウガイア</td><td>丹内</td><td>3.9%</td><td>18.2倍</td><td>9</td></tr><tr><td></td><td>4</td><td>デルマエアロール</td><td>ミシェル</td><td>4.0%</td><td>18.9倍</td><td>10</td></tr><tr><td></td><td>1</td><td>キイチムーブメント</td><td>原</td><td>4.9%</td><td>19.8倍</td><td>11</td></tr><tr><td></td><td>2</td><td>ロードストラダーレ</td><td>丸田</td><td>4.0%</td><td>21.8倍</td><td>12</td></tr><tr><td></td><td>10</td><td>カサブランカキッド</td><td>野中悠太郎</td><td>2.8%</td><td>27.8倍</td><td>13</td></tr><tr><td></td><td>9</td><td>アルシャンティ</td><td>木幡初</td><td>2.5%</td><td>28.8倍</td><td>14</td></tr><tr><td></td><td>7</td><td>アルマグラース</td><td>武藤</td><td>1.3%</td><td>56.2倍</td><td>15</td></tr><tr><td></td><td>6</td><td>カシノリアーナ</td><td>▲遠藤</td><td>1.2%</td><td>64.2倍</td><td>16</td></tr></tbody></table></div><div class='pace'><p style='margin:8px 0 2px'><b>展開</b> ／ 想定ペース <b>スロー</b>（前に行きたい馬 1頭）</p><p class='subtitle' style='margin:0 0 2px'><b>逃げ</b> 16 ノースブルースカイ ／ <b>先行</b> 4 デルマエアロール、2 ロードストラダーレ ／ <b>差し</b> 5 アレーティア、9 アルシャンティ、3 フュルスティン ほか1頭 ／ <b>追込</b> 11 エコロバロン、12 ソードスレイプニル、14 エフエイト ほか6頭</p><p class='subtitle' style='margin:0'>前に行きたい馬が少なく、遅い流れになりやすい。逃げ・先行が残りやすい形です。</p></div><p style='margin:8px 0 0;color:var(--muted)'>参考(基準未満・割安型): 【割安型】単勝 12 ソードスレイプニル（12.4倍・期待値2.31） ｜ 見送り理由: 期待値が基準に届かない(2.310 / 基準3.2)</p><details class='allrace'><summary>競馬場で全レース買うなら</summary><ul style='margin:6px 0 0;padding-left:20px'><li><b>手堅い</b> 複勝 13 ジェイエルキャリア <b>100円</b><span class='subtitle'> ／ 的中 64%・回収率 87%・当たれば平均 136円・<b>同じ券種を人気順で買った場合の 1.00 倍</b></span></li><li><b>中間</b> 複勝 12 ソードスレイプニル <b>100円</b><span class='subtitle'> ／ 的中 35%・回収率 85%・当たれば平均 244円・<b>同じ券種を人気順で買った場合の 1.05 倍</b></span></li><li><b>大きく</b> 単勝 12 ソードスレイプニル（5番人気 12.4倍） <b>200円</b><span class='subtitle'> ／ 的中 27%・回収率 90%・当たれば平均 335円・<b>同じ券種を人気順で買った場合の 1.12 倍</b></span></li></ul><p class='subtitle' style='margin:6px 0 0'>金額は<b>期待値の大きさ</b>で決めています。<b>5 レースに 4 レースは 400 円</b>のままで、妙味があるレースだけ大きく張ります（1 日 12R でおよそ 8,000 円、多い日で 15,000 円ほど）。1 番人気が割れているので<b>単勝を厚く</b>しています。この金額の付け方を守ると、3 段すべて買った場合の回収率は 87% → <b>106%</b> でした（3 モデル × 23 窓 = 69 窓中 54 窓で改善）。</p><p class='subtitle' style='margin:6px 0 0'>この枠は<b>全レース買う人向け</b>で、上の 6 モデルとは別物です。全部を同じ金額で買うと控除率のぶん必ずマイナスになります（1 点 100 円ずつなら 85〜90%）。<b>上に書いた金額の付け方まで守ると</b>、検証期間では 100%（古い側）／106%（新しい側）まで上がりました。ただし<b>とんとん前後</b>で、勝てると約束できる水準ではありません。確実に回収率を狙うなら 6 モデルの買い目だけにしてください。<br>選び方自体も<b>同じ券種を人気順で買うより良い</b>ことを確かめてあります。とくに「大きく」は 1 番人気を買うより 7〜12% 上で、勝ち馬を市場どおりに引き直した並行世界と比べても偶然では説明できません（片側 p = 0.008 / 0.004）。</p></details>
+    </div>
+    
+  </section>
+  <p class="subtitle" style="margin-top: 32px;">
+    ※本レポートは検証中のモデル(v2)による参考情報です。的中・回収を保証するものではありません。
+    記載の金額は1日1万円を前提にした参考配分で、推奨額ではありません。IPATへの自動投票は一切行いません。
+  </p>
+</body>
+</html>

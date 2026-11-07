@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>競馬予測レポート 2026-11-08(午前)</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --fg: #1a1a1a; --card-bg: #ffffff; --border: #e0e0dc;
+    --accent: #b3311f; --muted: #6b6b68; --good: #1f7a3f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161614; --fg: #ececea; --card-bg: #211f1c; --border: #3a3733; --muted: #a3a09b; --good: #4ecb7c; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 16px; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+    line-height: 1.5; max-width: 640px; margin-left: auto; margin-right: auto;
+  }
+  h1 { font-size: 1.3rem; margin-bottom: 4px; }
+  h2 { font-size: 1.05rem; border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-top: 28px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
+  .pick-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-top: 10px;
+  }
+  .pick-head { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); }
+  .pick-body { margin-top: 6px; font-size: 1.05rem; font-weight: 600; }
+  .pick-body .bet-type { color: var(--accent); margin-right: 8px; }
+  .pick-foot { margin-top: 8px; display: flex; gap: 14px; font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .pick-foot .stake { color: var(--good); font-weight: 600; }
+  .race-block {
+    border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px;
+    margin-top: 10px; background: var(--card-bg);
+  }
+  .race-block-head { font-weight: 600; }
+  .honmei { font-size: 0.9rem; color: var(--muted); margin: 4px 0; }
+  .no-rec { color: var(--muted); font-style: italic; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--border); }
+  .odds-detail, .ref-detail { margin-top: 8px; font-size: 0.85rem; color: var(--muted); }
+  .odds-detail summary, .ref-detail summary { cursor: pointer; }
+  .niche-box { margin-top: 8px; border: 1px solid #b58900; border-radius: 6px; padding: 6px 8px; background: rgba(181,137,0,0.06); }
+  .niche-head { font-size: 0.82rem; font-weight: 600; color: #b58900; }
+  .niche-table { margin-top: 4px; }
+  .niche-reason { font-size: 0.78rem; color: var(--muted); }
+  .niche-total { font-weight: 400; color: var(--muted); }
+  .runner-box { margin-top: 8px; border: 1px dashed var(--muted); border-radius: 6px; padding: 6px 8px; }
+  .runner-head { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+  .conf-line { margin: 2px 0 4px; }
+  .conf-tag { font-size: 0.72rem; padding: 1px 6px; border-radius: 10px; }
+  .conf-high { background: rgba(38,139,210,0.14); color: #268bd2; }
+  .conf-mid { background: rgba(133,153,0,0.14); color: #859900; }
+  .ai-detail { margin-top: 8px; font-size: 0.85rem; }
+  .ai-detail summary { cursor: pointer; color: var(--muted); }
+  .ai-table td:first-child { font-weight: 700; }
+  .ai-table tr.ai-disagree { background: rgba(203,75,22,0.07); }
+</style>
+</head>
+<body>
+  <h1>競馬予測レポート</h1>
+  <div class="subtitle">2026-11-08(午前) ／ 予算5,000円(均等分割)</div>
+  
+        <section>
+          <h2>本日買うべきレース</h2>
+          <p class="no-rec">本日は推奨できる馬券がありませんでした。</p>
+        </section>
+        
+  <section>
+    <h2>全レースのおすすめ買い目</h2>
+    
+    <div class="race-block">
+      <div class="race-block-head">09:45 2歳未勝利(福島1R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 4 サノノソルジャー</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>馬連</td><td>3-14 イリスロッソ・タガノカハンカ</td><td>32.5倍</td><td>1.02</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr><tr><td>ワイド</td><td>3-4 イリスロッソ・サノノソルジャー</td><td>4.7倍</td><td>2.21</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬単</td><td>4-&gt;3 サノノソルジャー-&gt;イリスロッソ</td><td>7.4倍</td><td>0.92</td></tr><tr><td>三連複</td><td>2-4-5 シースファイア・サノノソルジャー・ドナビッグベン</td><td>37.9倍</td><td>0.98</td></tr><tr><td>三連単</td><td>3-&gt;4-&gt;7 イリスロッソ-&gt;サノノソルジャー-&gt;アースグリッパー</td><td>48.5倍</td><td>0.83</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>4 サノノソルジャー</td><td>1番手</td><td>26.1%</td><td>3.3倍</td><td>3.2倍</td></tr><tr><td>○</td><td>3 イリスロッソ</td><td>2番手</td><td>22.7%</td><td>3.9倍</td><td>4.0倍</td></tr><tr><td>▲</td><td>5 ドナビッグベン</td><td>3番手</td><td>17.4%</td><td>4.3倍</td><td>5.0倍</td></tr><tr class='ai-disagree'><td></td><td>7 アースグリッパー</td><td>4番手</td><td>7.7%</td><td>15.0倍</td><td>9.5倍</td></tr><tr class='ai-disagree'><td></td><td>15 マルモタワー</td><td>6番手</td><td>4.3%</td><td>39.0倍</td><td>15.7倍</td></tr><tr class='ai-disagree'><td></td><td>11 オラパ</td><td>10番手</td><td>4.3%</td><td>48.2倍</td><td>13.0倍</td></tr><tr class='ai-disagree'><td></td><td>14 タガノカハンカ</td><td>5番手</td><td>3.8%</td><td>28.1倍</td><td>21.2倍</td></tr><tr class='ai-disagree'><td></td><td>9 ベアアミーチ</td><td>8番手</td><td>3.5%</td><td>51.8倍</td><td>19.8倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">09:55 2歳未勝利(東京1R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 2 サノノファイター</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>2-7 サノノファイター・ブルーサンタ</td><td>6.4倍</td><td>2.00</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-7 タイセイアドーレ・ブルーサンタ</td><td>13.9倍</td><td>0.89</td></tr><tr><td>馬単</td><td>2-&gt;7 サノノファイター-&gt;ブルーサンタ</td><td>10.5倍</td><td>0.84</td></tr><tr><td>三連複</td><td>1-4-9 パワープレイ・ルボワ・ナックドリーム</td><td>60.2倍</td><td>0.88</td></tr><tr><td>三連単</td><td>7-&gt;2-&gt;6 ブルーサンタ-&gt;サノノファイター-&gt;タイセイアドーレ</td><td>44.6倍</td><td>0.76</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>2 サノノファイター</td><td>1番手</td><td>34.8%</td><td>3.1倍</td><td>2.0倍</td></tr><tr><td>○</td><td>7 ブルーサンタ</td><td>2番手</td><td>15.7%</td><td>4.9倍</td><td>5.9倍</td></tr><tr><td>▲</td><td>4 ルボワ</td><td>3番手</td><td>13.5%</td><td>5.1倍</td><td>6.5倍</td></tr><tr class='ai-disagree'><td></td><td>9 ナックドリーム</td><td>5番手</td><td>11.4%</td><td>6.9倍</td><td>7.1倍</td></tr><tr class='ai-disagree'><td></td><td>6 タイセイアドーレ</td><td>4番手</td><td>9.2%</td><td>7.6倍</td><td>12.0倍</td></tr><tr class='ai-disagree'><td></td><td>1 パワープレイ</td><td>6番手</td><td>7.2%</td><td>10.6倍</td><td>10.8倍</td></tr><tr class='ai-disagree'><td></td><td>3 セイウンサイフィー</td><td>10番手</td><td>2.6%</td><td>64.0倍</td><td>22.1倍</td></tr><tr class='ai-disagree'><td></td><td>10 ドッカイッチャッテ</td><td>9番手</td><td>2.2%</td><td>81.5倍</td><td>28.3倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:05 2歳未勝利(京都1R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 2 テリオスベラ</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>2-12 テリオスベラ・レグルスロウ</td><td>5.9倍</td><td>1.97</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>12-13 レグルスロウ・ツーハーツ</td><td>14.9倍</td><td>0.80</td></tr><tr><td>馬単</td><td>2-&gt;9 テリオスベラ-&gt;ランスオブナイト</td><td>18.3倍</td><td>0.86</td></tr><tr><td>三連複</td><td>9-12-13 ランスオブナイト・レグルスロウ・ツーハーツ</td><td>38.8倍</td><td>0.96</td></tr><tr><td>三連単</td><td>2-&gt;12-&gt;9 テリオスベラ-&gt;レグルスロウ-&gt;ランスオブナイト</td><td>46.6倍</td><td>0.73</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>2 テリオスベラ</td><td>1番手</td><td>27.4%</td><td>2.8倍</td><td>3.2倍</td></tr><tr><td>○</td><td>13 ツーハーツ</td><td>3番手</td><td>19.2%</td><td>8.7倍</td><td>3.3倍</td></tr><tr class='ai-disagree'><td>▲</td><td>5 スマートメモリー</td><td>5番手</td><td>13.6%</td><td>8.2倍</td><td>4.8倍</td></tr><tr><td></td><td>12 レグルスロウ</td><td>2番手</td><td>11.0%</td><td>6.1倍</td><td>14.9倍</td></tr><tr class='ai-disagree'><td></td><td>9 ランスオブナイト</td><td>4番手</td><td>8.0%</td><td>11.7倍</td><td>10.9倍</td></tr><tr class='ai-disagree'><td></td><td>7 リワナグ</td><td>6番手</td><td>7.2%</td><td>9.1倍</td><td>11.2倍</td></tr><tr class='ai-disagree'><td></td><td>11 ワイドウィンザー</td><td>7番手</td><td>3.3%</td><td>23.4倍</td><td>32.6倍</td></tr><tr class='ai-disagree'><td></td><td>1 シュライアハフト</td><td>9番手</td><td>2.9%</td><td>69.4倍</td><td>21.4倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:15 2歳未勝利(福島2R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 7 バクソウシャチョウ</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>5-7 メジェグレイス・バクソウシャチョウ</td><td>7.2倍</td><td>2.06</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>5-7 メジェグレイス・バクソウシャチョウ</td><td>6.0倍</td><td>0.88</td></tr><tr><td>馬単</td><td>5-&gt;3 メジェグレイス-&gt;フォンターナドーロ</td><td>27.0倍</td><td>0.88</td></tr><tr><td>三連複</td><td>3-5-6 フォンターナドーロ・メジェグレイス・ゴールドショーマン</td><td>63.5倍</td><td>0.94</td></tr><tr><td>三連単</td><td>3-&gt;7-&gt;5 フォンターナドーロ-&gt;バクソウシャチョウ-&gt;メジェグレイス</td><td>68.1倍</td><td>0.73</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>7 バクソウシャチョウ</td><td>1番手</td><td>23.9%</td><td>2.9倍</td><td>3.5倍</td></tr><tr><td>○</td><td>5 メジェグレイス</td><td>2番手</td><td>12.9%</td><td>4.0倍</td><td>9.2倍</td></tr><tr class='ai-disagree'><td>▲</td><td>11 アヴァロン</td><td>4番手</td><td>11.8%</td><td>7.1倍</td><td>6.8倍</td></tr><tr class='ai-disagree'><td></td><td>14 ニホンノヨアケゼヨ</td><td>6番手</td><td>10.1%</td><td>9.6倍</td><td>6.5倍</td></tr><tr><td></td><td>3 フォンターナドーロ</td><td>3番手</td><td>9.1%</td><td>6.4倍</td><td>11.9倍</td></tr><tr class='ai-disagree'><td></td><td>1 ユタライト</td><td>8番手</td><td>8.7%</td><td>34.2倍</td><td>6.2倍</td></tr><tr class='ai-disagree'><td></td><td>2 ライフイズアート</td><td>5番手</td><td>7.0%</td><td>10.4倍</td><td>13.3倍</td></tr><tr class='ai-disagree'><td></td><td>6 ゴールドショーマン</td><td>7番手</td><td>5.8%</td><td>17.3倍</td><td>13.3倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:25 2歳未勝利(東京2R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 6 クリスタルシュガー</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>三連単</td><td>10-&gt;6-&gt;9 タンタトリス-&gt;クリスタルシュガー-&gt;ポートマンロード</td><td>57.8倍</td><td>1.00</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr><tr><td>ワイド</td><td>6-10 クリスタルシュガー・タンタトリス</td><td>6.1倍</td><td>2.01</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-7 クリスタルシュガー・ソプラノクイーン</td><td>9.3倍</td><td>0.86</td></tr><tr><td>馬単</td><td>6-&gt;9 クリスタルシュガー-&gt;ポートマンロード</td><td>17.0倍</td><td>0.93</td></tr><tr><td>三連複</td><td>6-9-11 クリスタルシュガー・ポートマンロード・セレスティナ</td><td>28.4倍</td><td>0.80</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>6 クリスタルシュガー</td><td>1番手</td><td>48.2%</td><td>2.2倍</td><td>1.4倍</td></tr><tr><td>○</td><td>10 タンタトリス</td><td>2番手</td><td>15.5%</td><td>4.3倍</td><td>5.5倍</td></tr><tr><td>▲</td><td>7 ソプラノクイーン</td><td>3番手</td><td>8.0%</td><td>9.0倍</td><td>11.2倍</td></tr><tr class='ai-disagree'><td></td><td>2 スイートアリッサム</td><td>6番手</td><td>7.6%</td><td>15.0倍</td><td>9.4倍</td></tr><tr class='ai-disagree'><td></td><td>9 ポートマンロード</td><td>4番手</td><td>6.1%</td><td>10.5倍</td><td>16.8倍</td></tr><tr class='ai-disagree'><td></td><td>11 セレスティナ</td><td>5番手</td><td>4.6%</td><td>12.3倍</td><td>30.2倍</td></tr><tr class='ai-disagree'><td></td><td>3 ダンシングアワー</td><td>7番手</td><td>3.5%</td><td>13.9倍</td><td>47.5倍</td></tr><tr class='ai-disagree'><td></td><td>1 イントリー</td><td>9番手</td><td>2.6%</td><td>27.4倍</td><td>47.8倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:35 2歳未勝利(京都2R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 1 サルトヴェローチェ</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>馬単</td><td>1-&gt;7 サルトヴェローチェ-&gt;エルダークローネ</td><td>5.3倍</td><td>1.08</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr><tr><td>ワイド</td><td>1-7 サルトヴェローチェ・エルダークローネ</td><td>4.2倍</td><td>2.01</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>1-6 サルトヴェローチェ・オメガダフネ</td><td>32.3倍</td><td>0.89</td></tr><tr><td>三連複</td><td>4-7-8 カムトゥルー・エルダークローネ・キャンディリヒト</td><td>36.3倍</td><td>1.00</td></tr><tr><td>三連単</td><td>1-&gt;8-&gt;4 サルトヴェローチェ-&gt;キャンディリヒト-&gt;カムトゥルー</td><td>29.5倍</td><td>0.85</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>1 サルトヴェローチェ</td><td>1番手</td><td>54.2%</td><td>1.7倍</td><td>1.3倍</td></tr><tr><td>○</td><td>7 エルダークローネ</td><td>2番手</td><td>16.4%</td><td>4.8倍</td><td>5.2倍</td></tr><tr><td>▲</td><td>8 キャンディリヒト</td><td>3番手</td><td>11.1%</td><td>5.8倍</td><td>9.7倍</td></tr><tr class='ai-disagree'><td></td><td>4 カムトゥルー</td><td>4番手</td><td>5.4%</td><td>11.4倍</td><td>20.0倍</td></tr><tr class='ai-disagree'><td></td><td>5 トワイライトローズ</td><td>5番手</td><td>2.9%</td><td>22.5倍</td><td>44.7倍</td></tr><tr class='ai-disagree'><td></td><td>12 ハイグッドカンフー</td><td>8番手</td><td>2.8%</td><td>57.2倍</td><td>22.6倍</td></tr><tr class='ai-disagree'><td></td><td>6 オメガダフネ</td><td>6番手</td><td>1.4%</td><td>61.1倍</td><td>68.8倍</td></tr><tr class='ai-disagree'><td></td><td>11 アスレイ</td><td>7番手</td><td>1.4%</td><td>56.2倍</td><td>67.5倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:45 3歳以上1勝クラス(福島3R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 2 ルージュボニート</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>2-5 ルージュボニート・チャチャコマニ</td><td>9.7倍</td><td>2.07</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>2-5 ルージュボニート・チャチャコマニ</td><td>8.6倍</td><td>0.83</td></tr><tr><td>馬単</td><td>5-&gt;2 チャチャコマニ-&gt;ルージュボニート</td><td>17.8倍</td><td>0.83</td></tr><tr><td>三連複</td><td>5-13-14 チャチャコマニ・エリーニック・アンリーベイビー</td><td>60.2倍</td><td>0.75</td></tr><tr><td>三連単</td><td>2-&gt;5-&gt;13 ルージュボニート-&gt;チャチャコマニ-&gt;エリーニック</td><td>115.1倍</td><td>0.78</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>5 チャチャコマニ</td><td>2番手</td><td>18.6%</td><td>5.4倍</td><td>4.3倍</td></tr><tr><td>○</td><td>2 ルージュボニート</td><td>1番手</td><td>16.1%</td><td>4.2倍</td><td>5.9倍</td></tr><tr class='ai-disagree'><td>▲</td><td>15 プレイメイカー</td><td>7番手</td><td>10.8%</td><td>9.8倍</td><td>6.0倍</td></tr><tr class='ai-disagree'><td></td><td>13 エリーニック</td><td>5番手</td><td>9.9%</td><td>13.9倍</td><td>7.1倍</td></tr><tr><td></td><td>14 アンリーベイビー</td><td>3番手</td><td>7.9%</td><td>9.4倍</td><td>13.1倍</td></tr><tr class='ai-disagree'><td></td><td>12 クシマトゥルー</td><td>4番手</td><td>7.5%</td><td>16.0倍</td><td>13.4倍</td></tr><tr class='ai-disagree'><td></td><td>11 ギンケイ</td><td>6番手</td><td>6.4%</td><td>12.9倍</td><td>14.1倍</td></tr><tr class='ai-disagree'><td></td><td>6 サザンティスプーン</td><td>8番手</td><td>5.9%</td><td>23.3倍</td><td>11.2倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">10:55 2歳未勝利(東京3R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 14 シェーンリヒト</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>5-14 マハロハ・シェーンリヒト</td><td>7.3倍</td><td>1.90</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>5-7 マハロハ・タイセイソアリング</td><td>27.1倍</td><td>0.84</td></tr><tr><td>馬単</td><td>14-&gt;10 シェーンリヒト-&gt;ポルターガイスト</td><td>17.4倍</td><td>0.89</td></tr><tr><td>三連複</td><td>9-11-14 ピエナモルタル・ソヴリンゲート・シェーンリヒト</td><td>52.0倍</td><td>0.80</td></tr><tr><td>三連単</td><td>14-&gt;5-&gt;9 シェーンリヒト-&gt;マハロハ-&gt;ピエナモルタル</td><td>67.8倍</td><td>0.79</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>14 シェーンリヒト</td><td>1番手</td><td>38.8%</td><td>3.5倍</td><td>1.9倍</td></tr><tr><td>○</td><td>5 マハロハ</td><td>2番手</td><td>10.0%</td><td>8.3倍</td><td>10.7倍</td></tr><tr class='ai-disagree'><td>▲</td><td>11 ソヴリンゲート</td><td>8番手</td><td>10.0%</td><td>28.5倍</td><td>5.8倍</td></tr><tr><td></td><td>7 タイセイソアリング</td><td>3番手</td><td>9.4%</td><td>14.8倍</td><td>8.1倍</td></tr><tr class='ai-disagree'><td></td><td>15 マインドフルネス</td><td>6番手</td><td>7.6%</td><td>11.0倍</td><td>10.6倍</td></tr><tr class='ai-disagree'><td></td><td>10 ポルターガイスト</td><td>4番手</td><td>6.6%</td><td>18.3倍</td><td>14.6倍</td></tr><tr class='ai-disagree'><td></td><td>9 ピエナモルタル</td><td>5番手</td><td>5.5%</td><td>15.4倍</td><td>20.9倍</td></tr><tr class='ai-disagree'><td></td><td>4 カペラテソーロ</td><td>7番手</td><td>4.4%</td><td>25.9倍</td><td>25.5倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:05 2歳未勝利(京都3R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 4 メールデトワール</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>馬連</td><td>4-6 メールデトワール・ゴールデンプロミス</td><td>4.0倍</td><td>1.00</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr><tr><td>三連複</td><td>1-2-5 トップオブドリーム・フィソステギア・ベルウッドイタル</td><td>999.0倍</td><td>2.84</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr><tr><td>ワイド</td><td>4-6 メールデトワール・ゴールデンプロミス</td><td>3.3倍</td><td>2.26</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬単</td><td>1-&gt;2 トップオブドリーム-&gt;フィソステギア</td><td>31.0倍</td><td>0.95</td></tr><tr><td>三連単</td><td>4-&gt;1-&gt;2 メールデトワール-&gt;トップオブドリーム-&gt;フィソステギア</td><td>19.7倍</td><td>0.89</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>4 メールデトワール</td><td>1番手</td><td>41.2%</td><td>2.4倍</td><td>1.8倍</td></tr><tr><td>○</td><td>1 トップオブドリーム</td><td>2番手</td><td>27.1%</td><td>2.7倍</td><td>3.7倍</td></tr><tr><td>▲</td><td>6 ゴールデンプロミス</td><td>3番手</td><td>21.7%</td><td>5.3倍</td><td>3.3倍</td></tr><tr class='ai-disagree'><td></td><td>2 フィソステギア</td><td>4番手</td><td>4.3%</td><td>28.7倍</td><td>19.2倍</td></tr><tr class='ai-disagree'><td></td><td>3 ナポリ</td><td>5番手</td><td>4.2%</td><td>37.2倍</td><td>16.2倍</td></tr><tr class='ai-disagree'><td></td><td>5 ベルウッドイタル</td><td>6番手</td><td>1.5%</td><td>153.1倍</td><td>34.1倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:25 2歳新馬(東京4R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 14 ロスコンデレジェス</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>5-14 アメリカンノヴァ・ロスコンデレジェス</td><td>8.1倍</td><td>2.09</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>5-7 アメリカンノヴァ・スペルチェック</td><td>10.3倍</td><td>0.97</td></tr><tr><td>馬単</td><td>5-&gt;7 アメリカンノヴァ-&gt;スペルチェック</td><td>20.9倍</td><td>0.96</td></tr><tr><td>三連複</td><td>5-6-7 アメリカンノヴァ・エプリダルジャン・スペルチェック</td><td>46.2倍</td><td>0.94</td></tr><tr><td>三連単</td><td>14-&gt;5-&gt;8 ロスコンデレジェス-&gt;アメリカンノヴァ-&gt;ムーンレガリア</td><td>84.3倍</td><td>0.82</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>7 スペルチェック</td><td>3番手</td><td>25.6%</td><td>5.0倍</td><td>2.5倍</td></tr><tr><td>○</td><td>14 ロスコンデレジェス</td><td>1番手</td><td>21.3%</td><td>3.3倍</td><td>3.8倍</td></tr><tr><td>▲</td><td>5 アメリカンノヴァ</td><td>2番手</td><td>11.2%</td><td>4.0倍</td><td>13.7倍</td></tr><tr class='ai-disagree'><td></td><td>8 ムーンレガリア</td><td>4番手</td><td>8.3%</td><td>6.7倍</td><td>10.6倍</td></tr><tr class='ai-disagree'><td></td><td>6 エプリダルジャン</td><td>7番手</td><td>6.0%</td><td>16.3倍</td><td>12.9倍</td></tr><tr class='ai-disagree'><td></td><td>15 ジオイメル</td><td>8番手</td><td>5.5%</td><td>27.0倍</td><td>11.9倍</td></tr><tr class='ai-disagree'><td></td><td>3 クロヌドーレ</td><td>5番手</td><td>4.4%</td><td>14.8倍</td><td>33.4倍</td></tr><tr class='ai-disagree'><td></td><td>12 エンドレスリピート</td><td>6番手</td><td>4.3%</td><td>17.6倍</td><td>34.9倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">11:35 3歳以上1勝クラス(京都4R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 6 サトノグロリア</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>6-9 サトノグロリア・クリュギスト</td><td>6.3倍</td><td>1.96</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-9 サトノグロリア・クリュギスト</td><td>5.5倍</td><td>0.84</td></tr><tr><td>馬単</td><td>6-&gt;9 サトノグロリア-&gt;クリュギスト</td><td>10.7倍</td><td>0.85</td></tr><tr><td>三連複</td><td>7-9-10 アメリカンスタイル・クリュギスト・コルヴァス</td><td>53.1倍</td><td>0.98</td></tr><tr><td>三連単</td><td>9-&gt;6-&gt;10 クリュギスト-&gt;サトノグロリア-&gt;コルヴァス</td><td>48.3倍</td><td>0.77</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>6 サトノグロリア</td><td>1番手</td><td>34.2%</td><td>2.3倍</td><td>2.0倍</td></tr><tr><td>○</td><td>9 クリュギスト</td><td>2番手</td><td>18.5%</td><td>2.8倍</td><td>4.7倍</td></tr><tr><td>▲</td><td>1 ペトリコール</td><td>3番手</td><td>11.0%</td><td>3.3倍</td><td>11.8倍</td></tr><tr class='ai-disagree'><td></td><td>10 コルヴァス</td><td>4番手</td><td>8.3%</td><td>6.3倍</td><td>11.2倍</td></tr><tr class='ai-disagree'><td></td><td>13 アメリカンイズム</td><td>6番手</td><td>6.0%</td><td>11.5倍</td><td>14.3倍</td></tr><tr class='ai-disagree'><td></td><td>8 トラッドロア</td><td>8番手</td><td>5.5%</td><td>20.8倍</td><td>11.3倍</td></tr><tr class='ai-disagree'><td></td><td>7 アメリカンスタイル</td><td>5番手</td><td>5.4%</td><td>11.8倍</td><td>17.7倍</td></tr><tr class='ai-disagree'><td></td><td>12 アミラル</td><td>7番手</td><td>4.2%</td><td>21.0倍</td><td>17.4倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">12:15 2歳新馬(東京5R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 1 エウゲニオス</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>1-13 エウゲニオス・ダルマッコ</td><td>9.9倍</td><td>2.06</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>1-8 エウゲニオス・フューチャー</td><td>17.6倍</td><td>0.98</td></tr><tr><td>馬単</td><td>1-&gt;5 エウゲニオス-&gt;クロノブリーズ</td><td>16.4倍</td><td>0.95</td></tr><tr><td>三連複</td><td>1-3-4 エウゲニオス・ビクトリーコン・ウェザリング</td><td>35.5倍</td><td>0.79</td></tr><tr><td>三連単</td><td>5-&gt;1-&gt;13 クロノブリーズ-&gt;エウゲニオス-&gt;ダルマッコ</td><td>104.3倍</td><td>0.67</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>1 エウゲニオス</td><td>1番手</td><td>40.8%</td><td>3.0倍</td><td>1.7倍</td></tr><tr class='ai-disagree'><td>○</td><td>4 ウェザリング</td><td>6番手</td><td>9.6%</td><td>16.1倍</td><td>7.0倍</td></tr><tr class='ai-disagree'><td>▲</td><td>3 ビクトリーコン</td><td>4番手</td><td>8.0%</td><td>13.1倍</td><td>10.3倍</td></tr><tr class='ai-disagree'><td></td><td>8 フューチャー</td><td>7番手</td><td>7.6%</td><td>17.1倍</td><td>9.1倍</td></tr><tr><td></td><td>13 ダルマッコ</td><td>2番手</td><td>7.4%</td><td>11.1倍</td><td>16.1倍</td></tr><tr class='ai-disagree'><td></td><td>7 オーケーパートナー</td><td>9番手</td><td>5.6%</td><td>34.9倍</td><td>11.6倍</td></tr><tr><td></td><td>5 クロノブリーズ</td><td>3番手</td><td>5.1%</td><td>12.1倍</td><td>40.4倍</td></tr><tr class='ai-disagree'><td></td><td>15 タイセイノブレス</td><td>5番手</td><td>4.6%</td><td>23.3倍</td><td>29.1倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">12:25 2歳新馬(京都5R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 6 ダノンデスティニー</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>馬単</td><td>6-&gt;8 ダノンデスティニー-&gt;エクレアカミング</td><td>19.6倍</td><td>1.02</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr><tr><td>ワイド</td><td>3-6 オネスティ・ダノンデスティニー</td><td>5.9倍</td><td>2.18</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>6-8 ダノンデスティニー・エクレアカミング</td><td>11.0倍</td><td>0.96</td></tr><tr><td>三連複</td><td>3-4-5 オネスティ・トレヴァンクール・ミラクルミナクル</td><td>61.0倍</td><td>0.89</td></tr><tr><td>三連単</td><td>3-&gt;6-&gt;8 オネスティ-&gt;ダノンデスティニー-&gt;エクレアカミング</td><td>45.6倍</td><td>0.86</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>6 ダノンデスティニー</td><td>1番手</td><td>28.8%</td><td>3.4倍</td><td>2.7倍</td></tr><tr><td>○</td><td>3 オネスティ</td><td>2番手</td><td>24.6%</td><td>4.3倍</td><td>3.0倍</td></tr><tr><td>▲</td><td>5 ミラクルミナクル</td><td>3番手</td><td>11.5%</td><td>6.8倍</td><td>7.3倍</td></tr><tr class='ai-disagree'><td></td><td>4 トレヴァンクール</td><td>7番手</td><td>9.1%</td><td>24.2倍</td><td>6.5倍</td></tr><tr class='ai-disagree'><td></td><td>8 エクレアカミング</td><td>4番手</td><td>5.6%</td><td>9.4倍</td><td>32.0倍</td></tr><tr class='ai-disagree'><td></td><td>1 ポッドベローチェ</td><td>5番手</td><td>4.4%</td><td>24.9倍</td><td>23.6倍</td></tr><tr class='ai-disagree'><td></td><td>11 エイシンルゼン</td><td>8番手</td><td>4.4%</td><td>42.6倍</td><td>16.6倍</td></tr><tr class='ai-disagree'><td></td><td>2 キララハピネス</td><td>6番手</td><td>4.0%</td><td>28.0倍</td><td>29.1倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">12:40 2歳新馬(福島6R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 15 ネージュドレーヴ</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>8-15 ガニメデサルーン・ネージュドレーヴ</td><td>11.2倍</td><td>2.14</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>7-8 ドンアートマン・ガニメデサルーン</td><td>23.3倍</td><td>0.89</td></tr><tr><td>馬単</td><td>15-&gt;8 ネージュドレーヴ-&gt;ガニメデサルーン</td><td>19.9倍</td><td>0.91</td></tr><tr><td>三連複</td><td>6-7-8 タイセイブリオン・ドンアートマン・ガニメデサルーン</td><td>46.4倍</td><td>0.84</td></tr><tr><td>三連単</td><td>15-&gt;8-&gt;7 ネージュドレーヴ-&gt;ガニメデサルーン-&gt;ドンアートマン</td><td>110.7倍</td><td>0.72</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>8 ガニメデサルーン</td><td>2番手</td><td>18.5%</td><td>10.2倍</td><td>3.7倍</td></tr><tr><td>○</td><td>15 ネージュドレーヴ</td><td>1番手</td><td>16.2%</td><td>5.5倍</td><td>6.6倍</td></tr><tr><td>▲</td><td>6 タイセイブリオン</td><td>3番手</td><td>15.8%</td><td>10.1倍</td><td>4.5倍</td></tr><tr class='ai-disagree'><td></td><td>12 レッドシュヴァルツ</td><td>5番手</td><td>9.7%</td><td>13.0倍</td><td>8.4倍</td></tr><tr class='ai-disagree'><td></td><td>7 ドンアートマン</td><td>4番手</td><td>7.7%</td><td>16.6倍</td><td>13.5倍</td></tr><tr class='ai-disagree'><td></td><td>10 グロウビルド</td><td>6番手</td><td>5.7%</td><td>24.4倍</td><td>15.6倍</td></tr><tr class='ai-disagree'><td></td><td>2 エコロアリス</td><td>8番手</td><td>5.0%</td><td>28.9倍</td><td>15.5倍</td></tr><tr class='ai-disagree'><td></td><td>4 シングインザレイン</td><td>7番手</td><td>4.7%</td><td>26.0倍</td><td>21.3倍</td></tr></tbody></table></details>
+    </div>
+    
+    <div class="race-block">
+      <div class="race-block-head">12:50 3歳以上1勝クラス(東京6R)</div>
+      <p class='conf-line'><span class='conf-tag conf-high' title='exp_011: 未勝利/新馬/ダートは win AUC 0.85+(5窓で安定)'>AI精度: 高</span></p>
+      <p class='honmei'>◎本命: 13 アヴァランチ</p>
+      
+      <p class='no-rec'>推奨馬券なし</p>
+      <div class='runner-box'><div class='runner-head'>参考買い目(上限外 / 期待値1以上・賭け金なし)</div><table class='ref-table'><thead><tr><th>券種</th><th>買い目</th><th>推定オッズ</th><th>EV</th><th>区分</th></tr></thead><tbody><tr><td>ワイド</td><td>9-13 アンバサダネージュ・アヴァランチ</td><td>15.1倍</td><td>2.08</td><td class='niche-reason'>期待値1以上(金額推奨対象外)</td></tr></tbody></table></div>
+      <details class='ref-detail'><summary>参考: その他の券種(EV1未満)</summary><table class='ref-table'><thead><tr><th>券種</th><th>候補</th><th>推定オッズ</th><th>EV</th></tr></thead><tbody><tr><td>馬連</td><td>13-15 アヴァランチ・プリプリプリン</td><td>18.3倍</td><td>0.80</td></tr><tr><td>馬単</td><td>15-&gt;13 プリプリプリン-&gt;アヴァランチ</td><td>38.3倍</td><td>0.84</td></tr><tr><td>三連複</td><td>11-12-13 バルジール・マーガレットクレア・アヴァランチ</td><td>60.0倍</td><td>0.83</td></tr><tr><td>三連単</td><td>9-&gt;13-&gt;12 アンバサダネージュ-&gt;アヴァランチ-&gt;マーガレットクレア</td><td>154.3倍</td><td>0.58</td></tr></tbody></table></details>
+      <details class='ai-detail' open><summary>AI予想(◎○▲ は総合確率順。「AI予想」列は市場を見ないモデルの評価順)</summary><table class='ai-table'><thead><tr><th></th><th>馬</th><th>AI予想</th><th>総合確率</th><th>予測オッズ</th><th>取得オッズ</th></tr></thead><tbody><tr><td>◎</td><td>13 アヴァランチ</td><td>1番手</td><td>17.2%</td><td>5.0倍</td><td>4.4倍</td></tr><tr><td>○</td><td>15 プリプリプリン</td><td>3番手</td><td>13.7%</td><td>5.9倍</td><td>5.4倍</td></tr><tr><td>▲</td><td>9 アンバサダネージュ</td><td>2番手</td><td>12.7%</td><td>5.1倍</td><td>7.0倍</td></tr><tr class='ai-disagree'><td></td><td>12 マーガレットクレア</td><td>4番手</td><td>10.5%</td><td>6.7倍</td><td>8.2倍</td></tr><tr class='ai-disagree'><td></td><td>2 シェリアドレ</td><td>6番手</td><td>9.7%</td><td>7.5倍</td><td>7.6倍</td></tr><tr class='ai-disagree'><td></td><td>1 カセノアステリア</td><td>5番手</td><td>8.9%</td><td>6.1倍</td><td>11.0倍</td></tr><tr class='ai-disagree'><td></td><td>11 バルジール</td><td>7番手</td><td>5.9%</td><td>12.2倍</td><td>15.9倍</td></tr><tr class='ai-disagree'><td></td><td>7 ユーティジャーニー</td><td>8番手</td><td>5.7%</td><td>14.9倍</td><td>13.9倍</td></tr></tbody></table></details>
+    </div>
+    
+  </section>
+  <p class="subtitle" style="margin-top: 32px;">
+    ※本レポートは予測モデルによる参考情報です。的中・回収を保証するものではありません。
+    IPATへの自動投票は一切行いません。
+  </p>
+</body>
+</html>
